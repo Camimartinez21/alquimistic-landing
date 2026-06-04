@@ -1,0 +1,15 @@
+# === Seguridad: nunca subir claves ni accesos ===
+.env
+.env.*
+*.env
+secrets.*
+*.pem
+*.key
+credentials*.json
+
+# === Dependencias y build ===
+node_modules/
+.vercel/
+dist/
+.DS_Store
+Thumbs.db

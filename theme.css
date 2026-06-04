@@ -1,0 +1,109 @@
+/* ============================================================
+   ALQUIMISTIC HUB — Tema claro/oscuro + botón de toggle
+   El oscuro es el tema por defecto (definido en styles.css).
+   Aquí: la variable --inset (compartida), el botón de tema,
+   y el tema CLARO estilo iPhone — limpio, aireado, oro de acento.
+   ============================================================ */
+
+/* Token compartido para fondos "hundidos" (usado también en JS inline) */
+:root { --inset: rgba(0, 0, 0, 0.2); }
+
+/* ---------- Botón de toggle de tema ---------- */
+.theme-toggle {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: grid; place-items: center;
+  color: var(--text-2);
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  transition: color .2s, border-color .2s, background .2s, transform .2s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--gold-3); transform: translateY(-1px); }
+.theme-toggle svg { width: 18px; height: 18px; }
+/* Oscuro → muestra sol (clic = ir a claro). Claro → muestra luna. */
+.theme-toggle .ico-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .ico-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .ico-moon { display: block; }
+@media (max-width: 900px) {
+  .theme-toggle { width: 38px; height: 38px; }
+  /* En móvil el nav se aprieta: el CTA vive en el hero y el menú.
+     Dejamos solo marca + toggle + hamburguesa. */
+  .nav-actions .btn-primary { display: none; }
+}
+
+/* ============================================================
+   TEMA CLARO
+   ============================================================ */
+:root[data-theme="light"] {
+  /* Superficies — blanco cálido, mucho aire */
+  --bg: #faf9f6;
+  --bg-grad-top: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #faf9f7;
+  --surface-3: #f0eee8;
+  --inset: rgba(20, 18, 12, 0.04);
+  --border: rgba(20, 18, 12, 0.10);
+  --border-strong: rgba(20, 18, 12, 0.17);
+
+  /* Oro — tonos más profundos para que lean sobre blanco */
+  --gold-1: #a07815;
+  --gold-2: #b8902e;
+  --gold-3: #cda63f;
+  --gold-deep: #8a6612;
+  --accent: var(--gold-2);
+  --grad-gold: linear-gradient(135deg, #c9a23a 0%, #b8902e 45%, #936f18 100%);
+
+  /* Teal/cian — profundizados para contraste en claro */
+  --teal: #0f9b89;
+  --cyan: #0e8fd6;
+  --grad-iris: linear-gradient(120deg, #12a594, #0e8fd6);
+
+  /* Texto — casi negro cálido, jerarquía suave */
+  --text: #1b1813;
+  --text-2: #4c473f;
+  --text-3: #7d776b;
+  --text-faint: #aaa498;
+
+  /* Sombras y glow — suaves, sin pesadez */
+  --glow-gold: 0 0 0 1px rgba(184,144,46,.14), 0 18px 50px -22px rgba(184,144,46,.22);
+  --shadow-card: 0 1px 2px rgba(20,18,12,.05), 0 22px 48px -30px rgba(20,18,12,.20);
+}
+
+/* Fondo ambiente: en claro, halo cálido sutil y SIN grid (más Apple) */
+:root[data-theme="light"] body::before {
+  background:
+    radial-gradient(900px 600px at 50% -8%, rgba(184,144,46,.08), transparent 60%),
+    radial-gradient(700px 500px at 85% 18%, rgba(14,143,214,.04), transparent 60%),
+    linear-gradient(180deg, #ffffff, var(--bg) 38%);
+}
+:root[data-theme="light"] body::after { opacity: 0; }
+:root[data-theme="light"] ::selection { background: rgba(184,144,46,.22); color: var(--text); }
+
+/* Nav translúcido en claro */
+:root[data-theme="light"] .nav.scrolled { background: rgba(255,255,255,.72); border-bottom-color: var(--border); }
+:root[data-theme="light"] .nav.menu-open .nav-links { background: rgba(255,255,255,.97); }
+
+/* Superficies internas del mockup y tarjetas (eran overlays oscuros/blancos fijos) */
+:root[data-theme="light"] .dash-side { background: #f7f6f3; }
+:root[data-theme="light"] .dash-search { background: #f1efe9; }
+:root[data-theme="light"] .stat,
+:root[data-theme="light"] .dash-panel,
+:root[data-theme="light"] .mv-card,
+:root[data-theme="light"] .metric-row .m { background: #ffffff; }
+:root[data-theme="light"] .kanban .col { background: rgba(20,18,12,.04); }
+:root[data-theme="light"] .kanban .t { background: #ffffff; }
+:root[data-theme="light"] .mod-visual {
+  background: radial-gradient(circle at 70% 20%, rgba(184,144,46,.06), transparent 60%), #faf9f6;
+}
+:root[data-theme="light"] .av.dim { background: rgba(20,18,12,.06); color: var(--text-2); }
+
+/* Barras del gráfico: oro profundo para que se vean sobre blanco */
+:root[data-theme="light"] .bars .bar {
+  background: linear-gradient(180deg, rgba(184,144,46,.95), rgba(184,144,46,.22));
+}
+
+/* Sombras grandes suavizadas en claro */
+:root[data-theme="light"] .mockup {
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset, 0 50px 100px -45px rgba(20,18,12,.30), var(--glow-gold);
+}
+:root[data-theme="light"] .chip { box-shadow: 0 14px 34px -20px rgba(20,18,12,.28); }
+:root[data-theme="light"] .agent:hover { box-shadow: 0 30px 60px -34px rgba(20,18,12,.22); }
