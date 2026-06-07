@@ -235,7 +235,7 @@ h1,h2,h3,h4,h5 { font-family: var(--font-display); font-weight: 600; line-height
 .side-user:hover { background: var(--hover); }
 .avatar { width: 32px; height: 32px; border-radius: 9px; flex: none; display: grid; place-items: center; font-weight: 700; font-size: 13px; color: #1a1407; background: var(--grad-gold); }
 .avatar.sm { width: 26px; height: 26px; border-radius: 8px; font-size: 11px; }
-.side-user .meta { line-height: 1.25; min-width: 0; }
+.side-user .meta { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
 .side-user .meta .n { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .side-user .meta .r { font-size: 11px; color: var(--text-3); }
 .side-user .gear { margin-left: auto; color: var(--text-3); width: 16px; height: 16px; }

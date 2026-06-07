@@ -229,20 +229,22 @@ window.BOS = window.BOS || {};
      DOCUMENTOS
      ============================================================ */
   function documentos() {
-    var cards = D.docs.map(function (d) {
-      return '<div class="card doc-card"><div class="doc-ic">' + I(d.ic) + '</div><h4>' + d.t + '</h4>'
-        + '<div class="meta"><span class="avatar sm" style="width:20px;height:20px;font-size:9px;border-radius:6px">' + d.who.slice(0, 2).toUpperCase() + '</span>' + d.meta + '</div></div>';
-    }).join("");
-
+    var vault = '<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V10"/><path d="M12 14v1.5"/><path d="M8.5 12H10"/><path d="M14 12h1.5"/>';
+    var lock = '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>';
     return ''
-      + '<div class="ask" style="margin-bottom:20px"><div class="row" style="margin-bottom:12px;gap:9px"><span class="feed-av gold" style="border-radius:9px">' + I("sparkle") + '</span><b style="font-size:14px">Pregúntale a tus documentos</b></div>'
-      + '<div class="q"><span class="feed-av dim" style="border-radius:8px">' + I("search") + '</span><input value="¿Cuál es nuestro proceso de onboarding?" readonly><button class="btn btn-primary btn-sm">Preguntar</button></div>'
-      + '<div class="a"><b style="color:var(--text)">El onboarding tiene 4 pasos:</b> (1) bienvenida y firma, (2) configuración de accesos, (3) reunión de kickoff y (4) primera entrega a los 7 días. '
-      + '<span style="color:var(--gold-ink);font-weight:600">Ver “Proceso de onboarding” →</span></div></div>'
-
-      + '<div class="between" style="margin-bottom:14px"><div class="seg"><button class="on">Todos</button><button>Wiki</button><button>Plantillas</button><button>Legal</button></div>'
-      + '<button class="btn btn-primary btn-sm">' + I("upload") + ' <span>Subir documento</span></button></div>'
-      + '<div class="doc-grid">' + cards + '</div>';
+      + '<div style="display:grid;place-items:center;text-align:center;padding:52px 24px;min-height:440px">'
+      +   '<div style="max-width:520px">'
+      +     '<div style="position:relative;width:128px;height:128px;margin:0 auto 30px">'
+      +       '<div style="position:absolute;inset:-14px;border-radius:44px;background:radial-gradient(circle at 50% 42%, rgba(232,199,102,.30), transparent 70%);filter:blur(10px)"></div>'
+      +       '<div style="position:relative;width:128px;height:128px;border-radius:32px;border:1px solid var(--border-strong);background:var(--inset);display:grid;place-items:center;color:var(--gold-2)"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">' + vault + '</svg></div>'
+      +       '<div style="position:absolute;bottom:-4px;right:-4px;width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--border-strong);display:grid;place-items:center;color:var(--text-3)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + lock + '</svg></div>'
+      +     '</div>'
+      +     '<div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:700;margin-bottom:12px">La Bóveda</div>'
+      +     '<h2 style="font-size:27px;line-height:1.15;font-weight:700;margin:0 0 14px">La memoria estratégica de tu empresa</h2>'
+      +     '<p style="font-size:14.5px;color:var(--text-2);line-height:1.6;margin:0 auto 26px;max-width:430px">Aquí vive el conocimiento que hace única a tu empresa.</p>'
+      +     '<div style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:100px;border:1px solid var(--border-strong);background:var(--inset);font-size:12.5px;color:var(--text-2);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + lock + '</svg> La construimos contigo</div>'
+      +   '</div>'
+      + '</div>';
   }
 
   /* ============================================================
@@ -308,6 +310,6 @@ window.BOS = window.BOS || {};
     calendario:  { title: "Calendario", icon: "calendar", crumb: "Tiempo", render: calendario },
     agentes:     { title: "Agentes IA", icon: "sparkle", crumb: "Inteligencia", render: agentes },
     operaciones: { title: "Operaciones", icon: "gear", crumb: "Inteligencia", render: operaciones },
-    documentos:  { title: "Documentos", icon: "doc", crumb: "Conocimiento", render: documentos }
+    documentos:  { title: "Bóveda", icon: "vault", crumb: "Conocimiento", render: documentos }
   };
 })();

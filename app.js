@@ -140,11 +140,11 @@
       visual: opsVisual()
     },
     {
-      id: "docs", name: "GOLD", tag: "Conocimiento",
-      icon: '<path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L21 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/>',
-      title: "El conocimiento de tu negocio, vivo.",
-      desc: "Documentos, procesos y notas conectados a tus datos. Pregúntale a la IA y responde con tu propia información.",
-      points: ["Wiki interna y plantillas", "Búsqueda con IA sobre tus documentos", "Permisos por equipo y rol"],
+      id: "docs", name: "Bóveda", tag: "Conocimiento",
+      icon: '<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V10"/><path d="M12 14v1.5"/><path d="M8.5 12H10"/><path d="M14 12h1.5"/>',
+      title: "La memoria estratégica de tu empresa.",
+      desc: "Procesos, decisiones y experiencia empresarial conectados para que nunca dependan de una sola persona.",
+      points: ["Procesos, SOPs y decisiones, no solo archivos", "Pregúntale a la IA con tu propio conocimiento", "Tu segundo cerebro organizacional"],
       visual: docsVisual()
     },
     {
@@ -206,9 +206,16 @@
     return '<div class="feed-item"><span class="av ' + cls + '">⚡</span><span class="ft"><b>' + a + '</b> ' + b + '</span></div>';
   }
   function docsVisual() {
-    return '<div class="mv-card"><div style="display:flex;gap:9px;align-items:center;margin-bottom:12px"><span class="av ai" style="width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-size:11px;font-weight:700">IA</span><b style="font-size:12.5px">Pregúntale a tus documentos</b></div>'
-      + '<div style="background:var(--inset);border:1px solid var(--border);border-radius:10px;padding:11px 13px;font-size:12px;color:var(--text-3)">¿Cuál es nuestro proceso de onboarding?</div>'
-      + '<div style="margin-top:10px;font-size:12.5px;color:var(--text-2);line-height:1.55">El onboarding tiene 4 pasos: bienvenida, configuración, kickoff y primera entrega. <span style="color:var(--gold-2)">Ver documento →</span></div></div>';
+    var vlt = '<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V10"/><path d="M12 14v1.5"/><path d="M8.5 12H10"/><path d="M14 12h1.5"/>';
+    var lk = '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>';
+    return '<div class="mv-card" style="display:grid;place-items:center;text-align:center;padding:34px 22px;min-height:236px">'
+      + '<div style="position:relative;width:74px;height:74px;margin-bottom:16px">'
+      +   '<div style="position:absolute;inset:-10px;border-radius:28px;background:radial-gradient(circle at 50% 42%, rgba(232,199,102,.26), transparent 70%);filter:blur(8px)"></div>'
+      +   '<div style="position:relative;width:74px;height:74px;border-radius:20px;border:1px solid var(--border-strong);background:var(--inset);display:grid;place-items:center;color:var(--gold-2)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">' + vlt + '</svg></div>'
+      +   '<div style="position:absolute;bottom:-3px;right:-3px;width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--border-strong);display:grid;place-items:center;color:var(--text-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + lk + '</svg></div>'
+      + '</div>'
+      + '<div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">El conocimiento que hace única a tu empresa</div>'
+      + '<div style="font-size:11.5px;color:var(--text-3)">La construimos contigo en la activación</div></div>';
   }
   function calVisual() {
     var days = ["L", "M", "X", "J", "V"];

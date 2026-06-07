@@ -196,6 +196,12 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 }
 .hero .lead { max-width: 60ch; margin: 24px auto 0; }
 .hero-perso { max-width: 56ch; margin: 16px auto 0; font-size: 14.5px; font-weight: 600; color: var(--gold-2); letter-spacing: .01em; }
+.philo-heart { color: var(--gold-2); margin-left: 3px; }
+.philo-heart svg { vertical-align: -2px; }
+a:focus-visible, button:focus-visible, .btn:focus-visible, .mod-tab:focus-visible, .toggle-track:focus-visible, .theme-toggle:focus-visible, .nav-toggle:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 10px;
+}
+.mod-cta { text-align: center; margin-top: 38px; }
 
 /* Hero variant: left-aligned (Tweakable) */
 body.hero-left .hero { text-align: left; }

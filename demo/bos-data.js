@@ -4,7 +4,7 @@
    ============================================================ */
 window.BOS = window.BOS || {};
 
-BOS.user = { name: "Camila", full: "Camila Restrepo", role: "Fundadora · CEO", initials: "CR" };
+BOS.user = { name: "Camila", full: "Camila Martinez", role: "Fundadora · CEO", initials: "CM" };
 BOS.company = "Estudio Camila";
 
 /* color helpers for person faces */
