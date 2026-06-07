@@ -1,5 +1,5 @@
 /* ============================================================
-   ALQUIMISTIC HUB — interactions
+   ALQUIMISTIC BUSINESS OS — interactions
    ============================================================ */
 (function () {
   "use strict";
@@ -11,7 +11,7 @@
   var WA_NUMBER = "56976102990";
   function waLink(msg) {
     return "https://wa.me/" + WA_NUMBER +
-      "?text=" + encodeURIComponent(msg || "Hola Cami ✦ Quiero saber más de Alquimistic Hub.");
+      "?text=" + encodeURIComponent(msg || "Hola Cami ✦ Quiero saber más de Alquimistic.");
   }
   Array.prototype.slice.call(document.querySelectorAll("[data-wa]")).forEach(function (el) {
     el.setAttribute("href", waLink(el.getAttribute("data-wa")));
@@ -140,8 +140,8 @@
       visual: opsVisual()
     },
     {
-      id: "docs", name: "Documentación", tag: "Conocimiento",
-      icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>',
+      id: "docs", name: "GOLD", tag: "Conocimiento",
+      icon: '<path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L21 4"/><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/>',
       title: "El conocimiento de tu negocio, vivo.",
       desc: "Documentos, procesos y notas conectados a tus datos. Pregúntale a la IA y responde con tu propia información.",
       points: ["Wiki interna y plantillas", "Búsqueda con IA sobre tus documentos", "Permisos por equipo y rol"],
@@ -157,7 +157,7 @@
     },
     {
       id: "ia", name: "IA & Agentes", tag: "Inteligencia",
-      icon: '<path d="M12 2a4 4 0 0 1 4 4c1.5.5 3 2 3 4.5 0 1-.3 2-1 2.7.4.8.5 1.8 0 2.8-.6 1.3-2 2-3.5 2A4 4 0 0 1 12 22a4 4 0 0 1-2.5-1c-1.5 0-2.9-.7-3.5-2-.5-1-.4-2 0-2.8-.7-.7-1-1.7-1-2.7C5 8 6.5 6.5 8 6a4 4 0 0 1 4-4z"/>',
+      icon: '<path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>',
       title: "Una capa de IA sobre todo tu negocio.",
       desc: "Los agentes leen tus datos reales, sugieren acciones y ejecutan tareas. Tu negocio piensa contigo.",
       points: ["Agentes especializados por área", "Acciones ejecutadas automáticamente", "Respuestas basadas en tus datos"],

@@ -195,6 +195,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
   max-width: 16ch;
 }
 .hero .lead { max-width: 60ch; margin: 24px auto 0; }
+.hero-perso { max-width: 56ch; margin: 16px auto 0; font-size: 14.5px; font-weight: 600; color: var(--gold-2); letter-spacing: .01em; }
 
 /* Hero variant: left-aligned (Tweakable) */
 body.hero-left .hero { text-align: left; }
