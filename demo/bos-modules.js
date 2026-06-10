@@ -239,9 +239,7 @@ window.BOS = window.BOS || {};
       +       '<div style="position:relative;width:128px;height:128px;border-radius:32px;border:1px solid var(--border-strong);background:var(--inset);display:grid;place-items:center;color:var(--gold-2)"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">' + vault + '</svg></div>'
       +       '<div style="position:absolute;bottom:-4px;right:-4px;width:38px;height:38px;border-radius:50%;background:var(--surface);border:1px solid var(--border-strong);display:grid;place-items:center;color:var(--text-3)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + lock + '</svg></div>'
       +     '</div>'
-      +     '<div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:700;margin-bottom:12px">La Bóveda</div>'
-      +     '<h2 style="font-size:27px;line-height:1.15;font-weight:700;margin:0 0 14px">La memoria estratégica de tu empresa</h2>'
-      +     '<p style="font-size:14.5px;color:var(--text-2);line-height:1.6;margin:0 auto 26px;max-width:430px">Aquí vive el conocimiento que hace única a tu empresa.</p>'
+      +     '<div style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:700;margin-bottom:26px">La Bóveda</div>'
       +     '<div style="display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:100px;border:1px solid var(--border-strong);background:var(--inset);font-size:12.5px;color:var(--text-2);font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + lock + '</svg> La construimos contigo</div>'
       +   '</div>'
       + '</div>';
@@ -310,6 +308,6 @@ window.BOS = window.BOS || {};
     calendario:  { title: "Calendario", icon: "calendar", crumb: "Tiempo", render: calendario },
     agentes:     { title: "Agentes IA", icon: "sparkle", crumb: "Inteligencia", render: agentes },
     operaciones: { title: "Operaciones", icon: "gear", crumb: "Inteligencia", render: operaciones },
-    documentos:  { title: "Bóveda", icon: "vault", crumb: "Conocimiento", render: documentos }
+    documentos:  { title: "Bóveda", icon: "vault", crumb: "Privada", render: documentos }
   };
 })();
