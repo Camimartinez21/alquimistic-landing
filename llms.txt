@@ -1,0 +1,22 @@
+# Alquimistic Business OS
+
+> El sistema operativo inteligente para pymes. Centraliza clientes, proyectos, finanzas, operaciones y conocimiento en una sola plataforma, con agentes de IA que ejecutan tareas reales. Configurado para tu industria, personalizado para tu negocio.
+
+## Qué es
+Alquimistic Business OS unifica la operación de un negocio pequeño o mediano —CRM, proyectos, finanzas, operaciones y una "Bóveda" de conocimiento— y suma agentes de IA especializados (Comercial, Marketing, Operaciones, Financiero y un Agente CEO) que analizan información y ejecutan tareas.
+
+## Para quién
+Pymes, agencias, consultoras y negocios de servicios que quieren ordenar su operación, automatizar lo repetitivo y escalar con estructura.
+
+## Planes (USD por mes)
+- Semilla — $29: CRM + Proyectos + Bóveda, 1 usuario, 1 agente IA (Comercial).
+- Alquimia — $79 (el más elegido): todos los módulos, 4 usuarios, 4 agentes IA especializados, finanzas y automatizaciones avanzadas.
+- Expande — $189: todo lo de Alquimia, 10 usuarios, 5 agentes IA + Agente CEO, flujos personalizados.
+- Instalación inicial desde $79 (incluye activación y configuración guiada).
+
+## Cómo empezar
+Solicita un diagnóstico gratuito por WhatsApp: https://wa.me/56976102990
+
+## Enlaces
+- Sitio: https://www.alquimistic.com/
+- Demo en vivo: https://www.alquimistic.com/demo/

@@ -107,3 +107,14 @@
 }
 :root[data-theme="light"] .chip { box-shadow: 0 14px 34px -20px rgba(20,18,12,.28); }
 :root[data-theme="light"] .agent:hover { box-shadow: 0 30px 60px -34px rgba(20,18,12,.22); }
+
+/* ---------- Hero split: dashboard & phone en claro ---------- */
+:root[data-theme="light"] .hd-side { background: #f7f6f3; }
+:root[data-theme="light"] .hd-stat,
+:root[data-theme="light"] .hd-panel { background: #ffffff; }
+:root[data-theme="light"] .hd-range { background: #f1efe9; }
+:root[data-theme="light"] .hd-nav a.active { background: rgba(184,144,46,.14); }
+/* El teléfono conserva su marco oscuro; la pantalla sigue limpia y clara */
+:root[data-theme="light"] .phone-screen { background: #ffffff; }
+:root[data-theme="light"] .phone-bal { background: linear-gradient(180deg, rgba(184,144,46,.12), rgba(20,18,12,.02)); }
+:root[data-theme="light"] .phone-nav span { background: rgba(20,18,12,.08); }
