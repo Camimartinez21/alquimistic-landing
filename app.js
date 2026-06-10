@@ -140,12 +140,11 @@
       visual: opsVisual()
     },
     {
-      id: "docs", name: "Bóveda", tag: "Conocimiento",
+      id: "docs", name: "Bóveda", tag: "",
       icon: '<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V10"/><path d="M12 14v1.5"/><path d="M8.5 12H10"/><path d="M14 12h1.5"/>',
-      title: "La memoria estratégica de tu empresa.",
-      desc: "Procesos, decisiones y experiencia empresarial conectados para que nunca dependan de una sola persona.",
-      points: ["Procesos, SOPs y decisiones, no solo archivos", "Pregúntale a la IA con tu propio conocimiento", "Tu segundo cerebro organizacional"],
-      visual: docsVisual()
+      title: "", desc: "", points: [],
+      boveda: true,
+      image: "assets/vault-butterfly.png"
     },
     {
       id: "calendario", name: "Calendario", tag: "Tiempo",
@@ -205,18 +204,6 @@
   function feedRow(cls, a, b) {
     return '<div class="feed-item"><span class="av ' + cls + '">⚡</span><span class="ft"><b>' + a + '</b> ' + b + '</span></div>';
   }
-  function docsVisual() {
-    var vlt = '<rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5V10"/><path d="M12 14v1.5"/><path d="M8.5 12H10"/><path d="M14 12h1.5"/>';
-    var lk = '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>';
-    return '<div class="mv-card" style="display:grid;place-items:center;text-align:center;padding:34px 22px;min-height:236px">'
-      + '<div style="position:relative;width:74px;height:74px;margin-bottom:16px">'
-      +   '<div style="position:absolute;inset:-10px;border-radius:28px;background:radial-gradient(circle at 50% 42%, rgba(232,199,102,.26), transparent 70%);filter:blur(8px)"></div>'
-      +   '<div style="position:relative;width:74px;height:74px;border-radius:20px;border:1px solid var(--border-strong);background:var(--inset);display:grid;place-items:center;color:var(--gold-2)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">' + vlt + '</svg></div>'
-      +   '<div style="position:absolute;bottom:-3px;right:-3px;width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--border-strong);display:grid;place-items:center;color:var(--text-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + lk + '</svg></div>'
-      + '</div>'
-      + '<div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:5px">El conocimiento que hace única a tu empresa</div>'
-      + '<div style="font-size:11.5px;color:var(--text-3)">La construimos contigo en la activación</div></div>';
-  }
   function calVisual() {
     var days = ["L", "M", "X", "J", "V"];
     var h = '<div class="mv-card"><b style="font-size:12.5px">Esta semana</b><div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:14px">';
@@ -246,12 +233,16 @@
       tabsEl.appendChild(btn);
 
       var panel = document.createElement("div");
-      panel.className = "mod-panel" + (i === 0 ? " active" : "");
+      panel.className = "mod-panel" + (i === 0 ? " active" : "") + (m.boveda ? " mod-boveda" : "");
       panel.id = "panel-" + m.id;
-      var lis = m.points.map(function (p) { return '<li>' + ck + p + '</li>'; }).join("");
-      panel.innerHTML =
-        '<div class="mod-copy"><span class="tag">' + m.tag + '</span><h3>' + m.title + '</h3><p>' + m.desc + '</p><ul>' + lis + '</ul></div>'
-        + '<div class="mod-visual">' + m.visual + '</div>';
+      if (m.boveda) {
+        panel.innerHTML = '<div class="boveda-stage"><span class="boveda-glow"></span><img src="' + m.image + '" alt="Bóveda Alquimistic" loading="lazy" /></div>';
+      } else {
+        var lis = m.points.map(function (p) { return '<li>' + ck + p + '</li>'; }).join("");
+        panel.innerHTML =
+          '<div class="mod-copy"><span class="tag">' + m.tag + '</span><h3>' + m.title + '</h3><p>' + m.desc + '</p><ul>' + lis + '</ul></div>'
+          + '<div class="mod-visual">' + m.visual + '</div>';
+      }
       stageEl.appendChild(panel);
     });
 

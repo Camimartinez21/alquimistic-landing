@@ -3,7 +3,7 @@
 > El sistema operativo inteligente para pymes. Centraliza clientes, proyectos, finanzas, operaciones y conocimiento en una sola plataforma, con agentes de IA que ejecutan tareas reales. Configurado para tu industria, personalizado para tu negocio.
 
 ## Qué es
-Alquimistic Business OS unifica la operación de un negocio pequeño o mediano —CRM, proyectos, finanzas, operaciones y una "Bóveda" de conocimiento— y suma agentes de IA especializados (Comercial, Marketing, Operaciones, Financiero y un Agente CEO) que analizan información y ejecutan tareas.
+Alquimistic Business OS unifica la operación de un negocio pequeño o mediano —CRM, proyectos, finanzas, operaciones y la "Bóveda"— y suma agentes de IA especializados (Comercial, Marketing, Operaciones, Financiero y un Agente CEO) que analizan información y ejecutan tareas.
 
 ## Para quién
 Pymes, agencias, consultoras y negocios de servicios que quieren ordenar su operación, automatizar lo repetitivo y escalar con estructura.
