@@ -254,4 +254,70 @@
       stageEl.querySelectorAll(".mod-panel").forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
     });
   }
+
+  /* ---------- Mariposa guía: vuela y se posa recorriendo el scroll ----------
+     Una sola mariposa fija que se reubica por sección (alternando lados),
+     con aleteo durante el vuelo. No bloquea (pointer-events:none). */
+  var fly = document.getElementById("flyBtfly");
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (fly && !reduceMotion) {
+    // Waypoints relativos al viewport: {x,y como fracción, rot en grados}.
+    var spots = {
+      top:        { x: 0.74, y: 0.18, rot: -6 },   // hero (sobre el dashboard)
+      problema:   { x: 0.12, y: 0.30, rot: 9 },
+      solucion:   { x: 0.84, y: 0.24, rot: -9 },
+      modulos:    { x: 0.10, y: 0.22, rot: 7 },
+      agentes:    { x: 0.85, y: 0.30, rot: -11 },
+      beneficios: { x: 0.12, y: 0.22, rot: 8 },
+      planes:     { x: 0.86, y: 0.20, rot: -6 },
+      casos:      { x: 0.12, y: 0.26, rot: 9 },
+      cta:        { x: 0.50, y: 0.16, rot: 0 }
+    };
+    var current = "top";
+
+    function place(spot, animate) {
+      var vw = window.innerWidth, vh = window.innerHeight;
+      var bw = fly.offsetWidth || 80;
+      var x = spot.x * vw - bw / 2;
+      var y = spot.y * vh - bw / 2;
+      // mantener la mariposa siempre visible y debajo del nav
+      x = Math.max(8, Math.min(x, vw - bw - 8));
+      y = Math.max(74, Math.min(y, vh - bw - 16));
+      if (!animate) fly.style.transition = "none";
+      fly.style.transform = "translate3d(" + x + "px," + y + "px,0) rotate(" + spot.rot + "deg)";
+      if (!animate) { void fly.offsetHeight; fly.style.transition = ""; }
+    }
+
+    function flyTo(id) {
+      if (id === current) return;
+      var spot = spots[id];
+      if (!spot) return;
+      current = id;
+      fly.classList.add("is-flying");
+      place(spot, true);
+      clearTimeout(fly._land);
+      fly._land = setTimeout(function () { fly.classList.remove("is-flying"); }, 1750);
+    }
+
+    place(spots.top, false); // posición inicial en el hero
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && spots[e.target.id]) flyTo(e.target.id);
+      });
+    }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
+
+    ["problema", "solucion", "modulos", "agentes", "beneficios", "planes", "casos", "cta"]
+      .forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) io.observe(el);
+      });
+
+    // Volver al hero al llegar arriba del todo
+    window.addEventListener("scroll", function () {
+      if (window.scrollY < 90 && current !== "top") flyTo("top");
+    }, { passive: true });
+
+    window.addEventListener("resize", function () { place(spots[current] || spots.top, false); });
+  }
 })();
