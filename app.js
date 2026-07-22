@@ -19,6 +19,21 @@
     el.setAttribute("rel", "noopener");
   });
 
+  /* ---------- Wizard "Crea tu Sistema" (el embudo al Business OS) ----------
+     El botón PRIMARIO del sitio ya no va a WhatsApp: lleva al wizard que arma
+     el Business OS personalizado (landing → wizard → pago → descarga). WhatsApp
+     queda como opción SECUNDARIA ("hablar con Cami").
+
+     ⬇️  UNA sola línea para cambiar cuando el subdominio esté apuntado por DNS:
+         reemplazar por  "https://app.alquimistic.com/crear-mi-sistema"
+     Hoy apunta al deploy en Vercel para que el embudo funcione desde ya.
+     ------------------------------------------------------------------------- */
+  var WIZARD_URL = "https://alquimistic-hub-app.vercel.app/crear-mi-sistema";
+  Array.prototype.slice.call(document.querySelectorAll("[data-wizard]")).forEach(function (el) {
+    var sep = WIZARD_URL.indexOf("?") === -1 ? "?" : "&";
+    el.setAttribute("href", WIZARD_URL + sep + "utm_source=landing");
+  });
+
   /* ---------- Toggle de tema claro/oscuro ---------- */
   var themeBtn = document.getElementById("themeToggle");
   if (themeBtn) {

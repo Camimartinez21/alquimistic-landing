@@ -243,6 +243,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .mod-tab:focus-visibl
 
 /* Hero CTA + trust (left-aligned in split) */
 .hero-cta { display: flex; gap: 14px; justify-content: flex-start; margin-top: 32px; flex-wrap: wrap; }
+.hero-alt { margin-top: 16px; font-size: 13.5px; color: var(--text-3); }
+.hero-alt a { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(232,199,102,.5); }
+.hero-alt a:hover { color: var(--text); }
 .hero-trust { margin-top: 30px; display: flex; gap: 22px; justify-content: flex-start; flex-wrap: wrap; color: var(--text-3); font-size: 13px; }
 .hero-trust b { color: var(--text); font-weight: 700; }
 

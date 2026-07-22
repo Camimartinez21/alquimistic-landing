@@ -233,6 +233,7 @@
 .cta-box > * { position: relative; }
 .cta-box h2 { font-size: clamp(30px,5vw,56px); max-width: 18ch; margin: 0 auto; }
 .cta-box .lead { margin: 22px auto 0; max-width: 52ch; }
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
 .cta-box .btn { margin-top: 36px; }
 
 /* ---------- Footer ---------- */
