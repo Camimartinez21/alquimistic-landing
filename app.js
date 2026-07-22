@@ -31,7 +31,11 @@
   var WIZARD_URL = "https://alquimistic-hub-app.vercel.app/crear-mi-sistema";
   Array.prototype.slice.call(document.querySelectorAll("[data-wizard]")).forEach(function (el) {
     var sep = WIZARD_URL.indexOf("?") === -1 ? "?" : "&";
-    el.setAttribute("href", WIZARD_URL + sep + "utm_source=landing");
+    // `nuevo` fuerza al wizard a EMPEZAR DESDE EL INICIO, ignorando cualquier
+    // progreso guardado en el navegador. Sin esto, quien ya abrió el wizard
+    // antes (o lo completó) volvería a ver su resultado guardado en vez de
+    // arrancar limpio — que es justo lo que debe hacer el botón de la landing.
+    el.setAttribute("href", WIZARD_URL + sep + "nuevo=1&utm_source=landing");
   });
 
   /* ---------- Toggle de tema claro/oscuro ---------- */
