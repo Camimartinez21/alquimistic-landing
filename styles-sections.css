@@ -168,6 +168,9 @@
 .price-toggle.annual .toggle-track .knob { transform: translateX(26px); }
 .toggle-label { font-size: 14.5px; color: var(--text-3); font-weight: 600; transition: color .25s; }
 .toggle-label.on { color: var(--text); }
+/* La prueba de 7 días: lo primero que se lee bajo los precios. */
+.trial-note { max-width: 560px; margin: 14px auto 0; font-size: 14px; line-height: 1.6; color: var(--text-2); }
+.trial-note b { color: var(--text); font-weight: 700; }
 .save-pill { font-size: 11.5px; font-weight: 700; color: var(--teal); border: 1px solid rgba(95,227,209,.3); background: rgba(95,227,209,.08); padding: 3px 10px; border-radius: 100px; }
 
 .plans { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 50px; align-items: stretch; }
