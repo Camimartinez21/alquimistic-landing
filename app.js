@@ -24,11 +24,12 @@
      el Business OS personalizado (landing → wizard → pago → descarga). WhatsApp
      queda como opción SECUNDARIA ("hablar con Cami").
 
-     ⬇️  UNA sola línea para cambiar cuando el subdominio esté apuntado por DNS:
-         reemplazar por  "https://app.alquimistic.com/crear-mi-sistema"
-     Hoy apunta al deploy en Vercel para que el embudo funcione desde ya.
+     El dominio propio: quien entra por la landing NO tiene por qué ver el
+     nombre del proveedor donde está alojada la app. Un enlace a un *.vercel.app
+     en medio de la venta se ve prestado, y además ata el embudo a una URL que
+     puede cambiar sola en cualquier redeploy.
      ------------------------------------------------------------------------- */
-  var WIZARD_URL = "https://alquimistic-hub-app.vercel.app/crear-mi-sistema";
+  var WIZARD_URL = "https://app.alquimistic.com/crear-mi-sistema";
   Array.prototype.slice.call(document.querySelectorAll("[data-wizard]")).forEach(function (el) {
     var sep = WIZARD_URL.indexOf("?") === -1 ? "?" : "&";
     // `nuevo` fuerza al wizard a EMPEZAR DESDE EL INICIO, ignorando cualquier
