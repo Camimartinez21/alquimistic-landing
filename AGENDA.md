@@ -3,17 +3,16 @@
 > Compañera de `AGENDA.md` y `NORTE.md` del repo **alquimistic-hub-app**, que
 > es donde vive el producto. Este repo es sólo la vitrina.
 
-## 🔴 LEE ESTO PRIMERO — estado al 2026-08-25
+## 🔴 LEE ESTO PRIMERO — estado al 2026-08-27
 
-### Hay 2 commits en una rama que no están en `main`
+### Ya está todo mergeado
 
-```
-159c6bd  feat(planes): la landing cuenta los 7 días y qué pasa en la instalación
-1e63774  El botón del wizard apunta al dominio propio
-```
+El 2026-08-27 se mergeó el PR #2 junto con el PR #14 del hub. `main` ya tiene
+el botón del wizard apuntando al dominio propio y estos documentos. No queda
+trabajo esperando afuera.
 
-Rama: **`claude/arriendos-payments-freemium-64orfx`** (el mismo nombre que la
-rama del hub — se mergean juntas).
+Si al abrir www.alquimistic.com el botón todavía te lleva a un `*.vercel.app`,
+es la caché del navegador: recarga forzado (Ctrl+Shift+R).
 
 ### ⚠️ Dos textos que ya NO son ciertos
 
