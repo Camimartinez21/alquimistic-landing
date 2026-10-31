@@ -3,28 +3,28 @@
 > Cami crea el sistema que tu negocio necesita: páginas, apps, tiendas y la oficina digital de tu negocio, conectadas a tu propia IA para que se operen solas y evolucionen contigo. Hecho en Chile.
 
 ## Qué es
-Alquimistic es el estudio de Cami, desde Santiago, Chile. Construye sistemas con inteligencia artificial para emprendedoras y emprendedores que quieren dejar de improvisar. Primero el problema, después la herramienta. Cada sistema se entrega funcionando y a nombre de su dueña: su código, sus datos y sus cuentas.
+Alquimistic es el estudio de Cami, desde Santiago, Chile. Construye sistemas con inteligencia artificial para emprendedoras y emprendedores que quieren dejar de improvisar. Primero el problema, después la herramienta. Cada sistema se entrega funcionando y a nombre de su dueña o dueño: su código, sus datos y sus cuentas.
 
 ## Qué puede crear
 - Página web y Google: que te encuentren y te reserven.
-- App propia: tu marca en el celular de tus clientas.
+- App propia: tu marca en el celular de tus clientes.
 - Tienda online: catálogo, pedidos y pagos.
 - Membresías y comunidad: ingresos que se repiten cada mes.
 - Agenda y reservas: conectada a la herramienta que ya usas.
 - La oficina de tu negocio: clientes, fechas, archivos y finanzas en un solo lugar.
 
 ## La oficina (la app de Alquimistic, app.alquimistic.com)
-La app donde la persona administra su negocio completo: clientas, ventas, agenda, archivos, finanzas, marketing y bóveda.
-Módulos: Hoy · Clientas · Ventas · Agenda · Archivos · Finanzas · Marketing · Bóveda · IA.
-IA conectada (próximamente): la propia IA de la persona (Claude, ChatGPT o Gemini) se conecta a la oficina y acciona en tiempo real: consulta los datos reales, anota ventas, agenda citas y prepara mensajes a clientas. Como es la IA que la persona ya tiene, no paga una IA aparte. El camino técnico es exponer la oficina como servidor MCP.
+La app donde la persona administra su negocio completo: clientes, ventas, agenda, finanzas, marketing y una bóveda donde viven los archivos.
+Módulos: Hoy · Clientes · Ventas · Agenda · Finanzas · Marketing · Bóveda · IA.
+IA conectada (próximamente): la propia IA de la persona (Claude, ChatGPT o Gemini) se conecta a la oficina y acciona en tiempo real: consulta los datos reales, anota ventas, agenda citas y prepara mensajes a clientes. Como es la IA que la persona ya tiene, no paga una IA aparte. El camino técnico es exponer la oficina como servidor MCP.
 
 ## Cómo trabaja (Metamorfosis)
 1. Oruga: conversamos y entiende tu negocio y tu problema.
 2. Crisálida: diseña y construye tu sistema.
 3. Mariposa: te lo entrega funcionando, conectado a tu IA, con una guía simple para que lo administres tú.
 
-## Formas de trabajar juntas (pesos chilenos)
-- Oruga — gratis: la oficina Alquimistic básica para ordenar clientas y ventas.
+## Formas de trabajar (pesos chilenos)
+- Oruga — gratis: la oficina Alquimistic básica para ordenar clientes y ventas.
 - Mariposa — [$ precio] al mes: la oficina completa, conectada a tu IA, con actualizaciones y respaldo.
 - Proyecto a medida — se cotiza: página, app o tienda, con pago único.
 Después de la entrega solo se pagan los servicios donde vive el sistema (hosting, base de datos), explicados antes de empezar. La entrega incluye una sesión para dejar todo conectado; los ajustes posteriores se cotizan aparte.
