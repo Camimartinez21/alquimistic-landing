@@ -186,3 +186,12 @@
   /* Aquí el teléfono se esconde: la oficina usa todo el ancho */
   .hero-dash .hd-main { padding-right: 15px; }
 }
+
+/* ---------- Hero: teléfono simple y menú completo ---------- */
+.phone-screen { min-height: 0; padding-bottom: 18px; }
+.phone-top { margin-bottom: 12px; }
+.phone-top .ph-greet b { font-size: 13px; }
+.phone-bal .k { color: var(--gold-2); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 8px; }
+.phone-acts { flex: none; }
+.hd-nav a { padding-block: 6px; }
+.oc-ai svg { width: 19px; height: 19px; }

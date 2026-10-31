@@ -11,7 +11,7 @@
   var WA_NUMBER = "56976102990";
   function waLink(msg) {
     return "https://wa.me/" + WA_NUMBER +
-      "?text=" + encodeURIComponent(msg || "Hola Cami ✦ Quiero saber más de Alquimistic.");
+      "?text=" + encodeURIComponent(msg || "Hola Cami, quiero saber más de Alquimistic.");
   }
   Array.prototype.slice.call(document.querySelectorAll("[data-wa]")).forEach(function (el) {
     el.setAttribute("href", waLink(el.getAttribute("data-wa")));
