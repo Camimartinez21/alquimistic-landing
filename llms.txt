@@ -3,7 +3,7 @@
 > Cami crea el sistema que tu negocio necesita: páginas, apps, tiendas y la oficina digital de tu negocio, conectadas a tu propia IA para que se operen solas y evolucionen contigo. Hecho en Chile.
 
 ## Qué es
-Alquimistic es el estudio de Cami, desde Santiago, Chile. Construye sistemas con inteligencia artificial para emprendedoras y emprendedores que quieren dejar de improvisar. Primero entiende el problema del negocio, después elige la herramienta. Cada sistema se entrega funcionando y a nombre de su dueña: su código, sus datos y sus cuentas.
+Alquimistic es el estudio de Cami, desde Santiago, Chile. Construye sistemas con inteligencia artificial para emprendedoras y emprendedores que quieren dejar de improvisar. Primero el problema, después la herramienta. Cada sistema se entrega funcionando y a nombre de su dueña: su código, sus datos y sus cuentas.
 
 ## Qué puede crear
 - Página web y Google: que te encuentren y te reserven.
@@ -23,7 +23,7 @@ IA conectada (próximamente): la propia IA de la persona (Claude, ChatGPT o Gemi
 2. Crisálida: diseña y construye tu sistema.
 3. Mariposa: te lo entrega funcionando, conectado a tu IA, con una guía simple para que lo administres tú.
 
-## Formas de trabajar (pesos chilenos)
+## Formas de trabajar juntas (pesos chilenos)
 - Oruga — gratis: la oficina Alquimistic básica para ordenar clientas y ventas.
 - Mariposa — [$ precio] al mes: la oficina completa, conectada a tu IA, con actualizaciones y respaldo.
 - Proyecto a medida — se cotiza: página, app o tienda, con pago único.
@@ -31,7 +31,7 @@ Después de la entrega solo se pagan los servicios donde vive el sistema (hostin
 
 ## Proyectos
 - Soberana by Oppa Beauty Store (app propia, belleza): https://www.oppasoberana.cl
-- Minissimas (página web de un salón, en construcción).
+- Minissimas (página web de un salón, en construcción): su página propia, conectada a su agenda en AgendaPro.
 - Colego (producto propio, app para organizar celebraciones de curso): https://colego-one.vercel.app
 
 ## Cómo empezar
