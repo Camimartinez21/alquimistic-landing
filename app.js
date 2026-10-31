@@ -109,28 +109,41 @@
   var fly = document.getElementById("flyBtfly");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (fly && !reduceMotion) {
-    // Waypoints relativos al viewport: {x,y como fracción, rot en grados}.
+    // Perchas: la mariposa se posa en la ESQUINA de un elemento importante de
+    // cada sección (un poco hacia afuera, donde no hay texto) y lo acompaña al
+    // hacer scroll. ax/ay = esquina (0 izquierda/arriba, 1 derecha/abajo).
+    // "movil" = otra percha cuando la pantalla es angosta.
     var spots = {
-      top:          { x: 0.74, y: 0.18, rot: -6 },   // hero (sobre la oficina)
-      problema:     { x: 0.12, y: 0.30, rot: 9 },
-      crear:        { x: 0.86, y: 0.22, rot: -9 },
-      proyectos:    { x: 0.10, y: 0.20, rot: 7 },
-      oficina:      { x: 0.86, y: 0.26, rot: -11 },
-      metamorfosis: { x: 0.50, y: 0.16, rot: 0 },    // la mariposa se posa sobre su propia historia
-      formas:       { x: 0.12, y: 0.22, rot: 8 },
-      "sobre-mi":   { x: 0.86, y: 0.20, rot: -6 },
-      faq:          { x: 0.12, y: 0.26, rot: 9 },
-      cta:          { x: 0.50, y: 0.16, rot: 0 }
+      top:          { sel: ".hero-visual", ax: 1, ay: 0, rot: -8, movil: { sel: ".hero-cta", ax: 1, ay: 0, rot: -8 } },
+      problema:     { sel: "#problema .section-head .h2", ax: 1, ay: 0, rot: -6 },
+      crear:        { sel: "#crear .goals", ax: 1, ay: 0, rot: -9 },
+      proyectos:    { sel: '.pc-card[data-pos="0"]', ax: 1, ay: 0, rot: -10 },
+      oficina:      { sel: ".office-chat", ax: 1, ay: 0, rot: -8 },
+      metamorfosis: { sel: "#metamorfosis .meta-step:last-child", ax: 1, ay: 0, rot: -6 },
+      formas:       { sel: "#formas .plan.popular", ax: 1, ay: 0, rot: -10 },
+      "sobre-mi":   { sel: ".about-photo", ax: 0, ay: 0, rot: 8 },
+      faq:          { sel: "#faq .faq", ax: 1, ay: 0, rot: -6 },
+      cta:          { sel: ".cta-box", ax: 1, ay: 0, rot: -8 }
     };
     var current = "top";
+    var angosta = window.matchMedia("(max-width: 899px)");
 
     function place(spot, animate) {
+      if (angosta.matches && spot.movil) spot = spot.movil;
       var vw = window.innerWidth, vh = window.innerHeight;
       var bw = fly.offsetWidth || 80;
-      var x = spot.x * vw - bw / 2;
-      var y = spot.y * vh - bw / 2;
-      // mantener la mariposa siempre visible y debajo del nav
-      x = Math.max(8, Math.min(x, vw - bw - 8));
+      var el = document.querySelector(spot.sel);
+      var x, y;
+      if (el) {
+        var r = el.getBoundingClientRect();
+        // centrada en la esquina, corrida un cuarto de su tamaño hacia afuera
+        x = r.left + spot.ax * r.width - bw / 2 + (spot.ax ? 1 : -1) * bw * 0.22;
+        y = r.top + spot.ay * r.height - bw / 2 - (spot.ay ? -1 : 1) * bw * 0.28;
+      } else {
+        x = vw * 0.86 - bw / 2; y = vh * 0.2;
+      }
+      // siempre visible y debajo del nav
+      x = Math.max(6, Math.min(x, vw - bw - 6));
       y = Math.max(74, Math.min(y, vh - bw - 16));
       if (!animate) fly.style.transition = "none";
       fly.style.transform = "translate3d(" + x + "px," + y + "px,0) rotate(" + spot.rot + "deg)";
@@ -142,13 +155,29 @@
       var spot = spots[id];
       if (!spot) return;
       current = id;
+      fly.classList.remove("is-perched");
       fly.classList.add("is-flying");
       place(spot, true);
       clearTimeout(fly._land);
-      fly._land = setTimeout(function () { fly.classList.remove("is-flying"); }, 1750);
+      fly._land = setTimeout(function () {
+        fly.classList.remove("is-flying");
+        fly.classList.add("is-perched");
+        place(spots[current], true);
+      }, 1750);
     }
 
+    // Mientras está posada, sigue a su elemento al hacer scroll (y al girar el carrusel)
+    var follow = false;
+    function seguir() {
+      follow = false;
+      place(spots[current] || spots.top, true);
+    }
+    function pedirSeguir() { if (!follow) { follow = true; requestAnimationFrame(seguir); } }
+    window.addEventListener("scroll", pedirSeguir, { passive: true });
+    setInterval(function () { if (current === "proyectos") pedirSeguir(); }, 800);
+
     place(spots.top, false); // posición inicial en el hero
+    fly.classList.add("is-perched");
 
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

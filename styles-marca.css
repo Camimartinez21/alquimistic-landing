@@ -221,3 +221,7 @@ h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
    overflow hidden no basta: se podía arrastrar la página hacia el lado) */
 html, body { overflow-x: hidden; }
 @supports (overflow: clip) { html, body { overflow-x: clip; } }
+
+/* Mariposa guía: vuela lento entre secciones (1,7 s) y, ya posada,
+   acompaña a su elemento con un seguimiento corto y suave */
+.fly-butterfly.is-perched { transition: transform .35s cubic-bezier(.22,.61,.36,1); }
