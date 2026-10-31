@@ -14,9 +14,9 @@ Alquimistic es el estudio de Cami, desde Santiago, Chile. Construye sistemas con
 - La oficina de tu negocio: clientes, fechas, archivos y finanzas en un solo lugar.
 
 ## La oficina (la app de Alquimistic, app.alquimistic.com)
-El lugar donde el negocio se ordena: clientas, fechas, archivos, números y bóveda. Cada mañana dice qué mueve la aguja hoy: qué vender, a quién escribirle y qué se está acabando.
-Módulos: Hoy · Mis clientas · Mis ventas · Mi agenda · Mis archivos · Bóveda · Mi IA.
-Mi IA (próximamente): conectar la oficina a Claude, ChatGPT o Gemini para preguntarle con los datos reales del negocio.
+La app donde la persona administra su negocio completo: clientas, ventas, agenda, archivos, finanzas, marketing y bóveda.
+Módulos: Hoy · Mis clientas · Mis ventas · Mi agenda · Mis archivos · Mis finanzas · Marketing · Bóveda · Mi IA.
+Mi IA (próximamente): la propia IA de la persona (Claude, ChatGPT o Gemini) se conecta a la oficina y acciona en tiempo real: consulta los datos reales, anota ventas, agenda citas y prepara mensajes a clientas. Como es la IA que la persona ya tiene, no paga una IA aparte. El camino técnico es exponer la oficina como servidor MCP.
 
 ## Cómo trabaja (Metamorfosis)
 1. Oruga: conversamos y entiende tu negocio y tu problema.
