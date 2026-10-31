@@ -31,11 +31,11 @@ modo claro/oscuro, WhatsApp y el botón al wizard (ahora "Crear mi oficina").
 
 ### ⚠️ La app todavía vende otra cosa
 
-`llms.txt` ya dice lo nuevo (Oruga gratis / Mariposa al mes / proyecto a
+`llms.txt` ya dice lo nuevo (Oficina Esencial gratis / Oficina Completa al mes / proyecto a
 medida). **El hub no se tocó** (Cami pidió trabajar sólo en la landing):
 el wizard sigue recomendando Semilla / Alquimia / Expande y
 `src/lib/planes.ts` sigue con esos tres planes en pesos. Alinearlos es la
-próxima conversación con Cami, cuando decida el precio de Mariposa.
+próxima conversación con Cami, cuando decida el precio de la Oficina Completa.
 
 ## Qué hay en este repo
 
