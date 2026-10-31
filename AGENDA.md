@@ -55,11 +55,20 @@ El rediseño vive en la rama `claude/nice-goldberg-1uznz7` (sin mergear a
    desvanece bajo cada título. Foto de Cami en `assets/cami.jpg`.
    **Tono:** el manual (primera persona) es para redes; la landing sigue
    mirando a quien lee, sin "yo, yo, yo" (decisión de Cami).
-   Pendiente de decidir: sumar «Metamorfosis» al botón de WhatsApp.
-2. **Cami debe confirmar cuatro promesas** que escribió Claude: la Oficina
-   Esencial gratis incluye Agenda y queda "lista en minutos"; la Oficina
-   Completa permite sumar personas; antes de empezar se sabe "cuándo está
-   listo"; "Beneficios y fidelización" como servicio.
+   «Metamorfosis» ya va en el mensaje de WhatsApp (el botón no cambia).
+2. **Las cuatro promesas (respuesta de Cami, 2026-10-31):**
+   - *Esencial gratis con Agenda, "lista en minutos"*: se sostiene, el wizard
+     ya crea el sistema personalizado por industria (le toca una "cirugía",
+     pero la esencia está).
+   - *"Suma personas a tu equipo"*: la app lo permite, pero falta definir
+     cómo: **cobrar asientos adicionales** y qué puede ver cada persona.
+     Es construcción de la app.
+   - *"Sabes cuánto cuesta y cuándo está listo"*: Cami aún no tiene precios de
+     proyectos; saldrán de la videollamada de diagnóstico (pidió ayuda).
+   - *"Beneficios y fidelización"*: se queda; cada sistema es único (Soberana
+     es el ejemplo).
+   Sin reseñas ni testimonios en la landing: eso va en redes.
+   WhatsApp: todos los mensajes dicen "vengo por la Metamorfosis" (opción B).
 3. ✅ Precio de la Oficina Completa: **$21.900 al mes** (Cami, 2026-10-31), ya en `index.html` y `llms.txt`. **Falta llevarlo al hub** (`src/lib/planes.ts` y el wizard). Colego entra con captura cuando termine su diseño. (Se sacó el testimonio de Oppa por decisión de Cami; la foto de Cami ya está.)
 4. Revisar en tablet y celular y, cuando Cami lo apruebe, mergear a `main`.
 
