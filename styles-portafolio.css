@@ -154,3 +154,35 @@
 .oc-tools { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 14px; border-top: 1px solid var(--border); }
 .oc-tools span { font-size: 12px; font-weight: 600; color: var(--text-3); padding: 5px 12px; border-radius: 100px; border: 1px solid var(--border); }
 :root[data-theme="light"] .oc-msg.ai { background: #f3f1ec; }
+
+/* ---------- Problema (híbrido): nube de 9 etiquetas con íconos ---------- */
+.problem .chaos.chaos-9 { height: 340px; max-width: 900px; }
+.chaos .chip .ic { width: 18px; height: 18px; color: var(--gold-2); flex: none; }
+.chaos .chip.danger .ic { color: #e58b8b; }
+/* Tablet y celular: la nube se ordena en filas, sin huecos, pero conserva
+   la inclinación y el flotar para que se sienta el caos. */
+@media (max-width: 900px) {
+  .problem .chaos.chaos-9 { height: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 10px; margin-top: 36px; max-width: 640px; }
+  .problem .chaos.chaos-9 .chip { position: static; font-size: 13.5px; padding: 10px 14px; }
+}
+
+/* ---------- Hero: el teléfono no tapa la oficina ---------- */
+.hero-visual { text-align: left; }
+@media (min-width: 621px) {
+  /* Reserva el espacio que ocupa el teléfono flotante a la derecha */
+  .hero-dash .hd-main { padding-right: 150px; }
+}
+@media (max-width: 900px) {
+  .hero-visual { max-width: 560px; }
+  .phone { right: -14px; bottom: -40px; width: 150px; }
+  .hero-dash .hd-main { padding-right: 130px; }
+}
+@media (max-width: 760px) {
+  /* En pantallas medianas la barra lateral se esconde para que quepa todo */
+  .hero-dash { grid-template-columns: 1fr; }
+  .hd-side { display: none; }
+}
+@media (max-width: 620px) {
+  /* Aquí el teléfono se esconde: la oficina usa todo el ancho */
+  .hero-dash .hd-main { padding-right: 15px; }
+}
