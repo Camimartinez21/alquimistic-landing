@@ -225,3 +225,12 @@ html, body { overflow-x: hidden; }
 /* Mariposa guía: vuela lento entre secciones (1,7 s) y, ya posada,
    acompaña a su elemento con un seguimiento corto y suave */
 .fly-butterfly.is-perched { transition: transform .35s cubic-bezier(.22,.61,.36,1); }
+
+/* Mariposa guía 20% más chica (antes clamp(56px, 6.4vw, 94px)) y con aleteo
+   más rápido y marcado mientras vuela */
+.fly-butterfly { width: clamp(45px, 5.1vw, 75px); }
+.fly-butterfly.is-flying img { animation: aleteo .3s ease-in-out infinite; }
+@keyframes aleteo {
+  0%, 100% { transform: scaleX(1) translateY(0); }
+  50% { transform: scaleX(.66) translateY(-2px); }
+}

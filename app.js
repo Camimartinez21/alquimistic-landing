@@ -176,29 +176,34 @@
       }
       var b = destino(spot);
       var dx = b.x - a.x, dy = b.y - a.y;
-      var vaiven = (dx === 0 ? 1 : Math.sign(dx)) * Math.max(40, Math.abs(dx) * 0.18);
       var vh = window.innerHeight;
-      // Sube en arco si hay cielo arriba; si está pegada al borde, baja en
-      // picada y vuelve a subir (como vuela una mariposa de verdad).
-      var alto = Math.min(a.y, b.y) - 90 - Math.abs(dx) * 0.12;
-      var ola = -18;
-      if (alto < 110) { alto = Math.max(a.y, b.y) + 120 + Math.abs(dx) * 0.1; ola = 22; }
-      alto = Math.max(80, Math.min(alto, vh * 0.72));
-      var p1 = { x: a.x + dx * 0.28 - vaiven * 0.4, y: alto - ola, rot: a.rot - 16 * Math.sign(dx || 1) };
-      var p2 = { x: a.x + dx * 0.62 + vaiven, y: alto + ola, rot: b.rot + 14 * Math.sign(dx || 1) };
-      var p3 = { x: b.x - vaiven * 0.25, y: b.y - 34, rot: b.rot - 6 };
+      var dir = dx === 0 ? 1 : Math.sign(dx);
+      // Curva suave: un arco delicado hacia arriba; si no hay cielo arriba,
+      // una bajada leve. El control de la curva va un poco corrido (vaivén).
+      var cy = Math.min(a.y, b.y) - 50 - Math.abs(dx) * 0.06;
+      if (cy < 100) cy = Math.max(a.y, b.y) + 60 + Math.abs(dx) * 0.04;
+      cy = Math.max(80, Math.min(cy, vh * 0.7));
+      var cx = (a.x + b.x) / 2 + dir * Math.min(60, Math.abs(dx) * 0.1);
+
+      // Recorre la curva con un zigzag suave (más vivo al centro, quieto en
+      // los extremos) y un balanceo de alas, como vuela una mariposa.
+      var frames = [], N = 16;
+      for (var i = 0; i <= N; i++) {
+        var t = i / N, u = 1 - t;
+        var x = u * u * a.x + 2 * u * t * cx + t * t * b.x;
+        var y = u * u * a.y + 2 * u * t * cy + t * t * b.y;
+        var vivo = Math.sin(Math.PI * t);               // 0 en las puntas, 1 al centro
+        y += Math.sin(t * Math.PI * 6) * 10 * vivo;      // sube y baja
+        x += Math.sin(t * Math.PI * 3) * 7 * vivo;       // se mece de lado
+        var rot = a.rot + (b.rot - a.rot) * t + Math.sin(t * Math.PI * 4) * 9 * vivo;
+        frames.push({ transform: tf({ x: x, y: y, rot: rot }) });
+      }
 
       if (volando) volando.cancel();
       fly.classList.remove("is-perched");
       fly.classList.add("is-flying");
       fly.style.transition = "none";
-      volando = fly.animate([
-        { transform: tf(a) },
-        { transform: tf(p1), offset: 0.32 },
-        { transform: tf(p2), offset: 0.64 },
-        { transform: tf(p3), offset: 0.86 },
-        { transform: tf(b) }
-      ], { duration: 1900, easing: "cubic-bezier(.45,.05,.3,1)", fill: "forwards" });
+      volando = fly.animate(frames, { duration: 2900, easing: "cubic-bezier(.37,0,.25,1)", fill: "forwards" });
       pos = b;
       volando.onfinish = function () {
         fly.style.transform = tf(b);
