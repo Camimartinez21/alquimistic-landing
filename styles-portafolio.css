@@ -173,7 +173,7 @@
   .hero-dash .hd-main { padding-right: 150px; }
 }
 @media (max-width: 900px) {
-  .hero-visual { max-width: 560px; }
+  .hero-visual { max-width: 560px; width: 100%; }
   .phone { right: -14px; bottom: -40px; width: 150px; }
   .hero-dash .hd-main { padding-right: 130px; }
 }
