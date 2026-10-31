@@ -206,3 +206,13 @@ h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
 :root[data-theme="light"] .brand-badge img,
 :root[data-theme="light"] .meta-ic-img img,
 :root[data-theme="light"] .hd-brand img { filter: saturate(1.4) brightness(.72) contrast(1.3); }
+
+/* ---------- Inicio: dos botones lado a lado ----------
+   "Cuéntame tu negocio" (WhatsApp) + "Crear mi oficina gratis" (wizard).
+   La columna del texto se ensancha un poco para que quepan juntos. */
+@media (min-width: 1041px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr); }
+}
+.hero-cta { gap: 12px; }
+.hero-cta + .hero-alt { margin-top: 14px; }
+.hero-cta .btn-lg { padding: 16px 24px; }

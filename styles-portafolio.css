@@ -372,3 +372,36 @@
 .about-text { display: flex; flex-direction: column; gap: 12px; max-width: 54ch; }
 .about-text p { font-size: 16px; line-height: 1.7; color: var(--text-2); }
 .about-text .about-hi { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); letter-spacing: -.02em; }
+/* Colego en modo claro: portada crema con halos, texto en tinta */
+:root[data-theme="light"] .pc-card--pronto { background: #fffdf8; border-color: rgba(20,18,12,.10); }
+:root[data-theme="light"] .pc-card--pronto .pc-shot {
+  background:
+    radial-gradient(260px 220px at 30% 22%, rgba(95,227,209,.22), transparent 70%),
+    radial-gradient(240px 220px at 78% 40%, rgba(201,163,91,.22), transparent 70%),
+    #fffaf0;
+}
+:root[data-theme="light"] .pc-card--pronto .pc-pronto { color: #b8902e; }
+:root[data-theme="light"] .pc-card--pronto .pc-live { color: #1b1813; }
+:root[data-theme="light"] .pc-card--pronto .pc-live i { background: #b8902e; }
+:root[data-theme="light"] .pc-card--pronto .pc-live .tag-soon { color: #0f9b89; }
+:root[data-theme="light"] .pc-card--pronto .pc-info {
+  color: #1b1813;
+  background: linear-gradient(180deg, rgba(255,253,248,0) 0%, rgba(255,253,248,.9) 32%, #fffdf8 100%);
+}
+:root[data-theme="light"] .pc-card--pronto .pc-info h3 { color: #1b1813; }
+:root[data-theme="light"] .pc-card--pronto .pc-info p { color: #4c473f; }
+.pc > * { min-width: 0; }
+
+/* Borde dorado en las tarjetas de proyectos (pedido de Cami).
+   La activa con un filo más vivo y un brillo suave; las de atrás, más tenues. */
+.pc-card,
+:root[data-theme="light"] .pc-card--pronto { border: 1px solid rgba(201,163,91,.45); }
+.pc-card[data-pos="0"] {
+  border-color: rgba(227,200,140,.85);
+  box-shadow: 0 40px 80px -40px rgba(0,0,0,.85), 0 0 0 1px rgba(201,163,91,.18), 0 0 34px -12px rgba(201,163,91,.45);
+}
+:root[data-theme="light"] .pc-card { border-color: rgba(184,144,46,.45); }
+:root[data-theme="light"] .pc-card[data-pos="0"] {
+  border-color: #c9a23a;
+  box-shadow: 0 40px 80px -40px rgba(20,18,12,.45), 0 0 0 1px rgba(184,144,46,.15), 0 0 30px -12px rgba(184,144,46,.4);
+}
