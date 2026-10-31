@@ -117,6 +117,16 @@ arrancar limpio.
 
 ## Reglas al tocar esto
 
+- **Preguntas frecuentes: se editan SOLO en `_faq.py`** y después se corre
+  `python -I _faq.py`. Ese script escribe la lista en tres lugares a la vez:
+  el FAQ visible de `index.html`, el `FAQPage` (JSON-LD para Google) y la
+  sección de `llms.txt` (para ChatGPT, Claude, Perplexity). Si se edita a
+  mano en un solo lugar, Google y la IA leen otra cosa que la persona.
+- **Buscadores (2026-10-31):** título y descripción con lo que la gente busca
+  (páginas web, apps, IA, Chile); JSON-LD con la empresa, Cami (Person), sus
+  redes, las tres ofertas con precio y el FAQ. `sitemap.xml` sólo con la
+  portada; `demo/` va con `noindex` (vende la oferta vieja).
+
 - **`llms.txt` es el canon.** Si cambia un plan, un precio o cómo funciona el
   producto, cambia acá PRIMERO y después en el hub — o al revés, pero nunca
   sólo en uno. Hoy están desalineados a propósito, a la espera de Cami (ver arriba).
