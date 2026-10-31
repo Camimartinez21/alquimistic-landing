@@ -37,6 +37,22 @@ el wizard sigue recomendando Semilla / Alquimia / Expande y
 `src/lib/planes.ts` sigue con esos tres planes en pesos. Alinearlos es la
 próxima conversación con Cami, cuando decida el precio de la Oficina Completa.
 
+### Próxima sesión: seguir con el manual de marca
+
+El rediseño vive en la rama `claude/nice-goldberg-1uznz7` (sin mergear a
+`main`; alquimistic.com no ha cambiado). Pendiente, en orden:
+
+1. **Leer el manual de marca** de Cami. Está en Claude Design (proyecto
+   `053799f9-76ed-430f-9e51-32dd11e9dade`, archivo `Manual de Marca.dc.html`).
+   Desde la nube no se pudo abrir; en el escritorio, con `/design-login` o
+   pidiéndolo desde Claude Design. Ajustar colores, tipografías y tono.
+2. **Cami debe confirmar cuatro promesas** que escribió Claude: la Oficina
+   Esencial gratis incluye Agenda y queda "lista en minutos"; la Oficina
+   Completa permite sumar personas; antes de empezar se sabe "cuándo está
+   listo"; "Beneficios y fidelización" como servicio.
+3. Precio de la Oficina Completa, pantallazos, frase de Oppa y foto de Cami.
+4. Revisar en tablet y celular y, cuando Cami lo apruebe, mergear a `main`.
+
 ### Gustos de Cami para el diseño (anotados en la sesión)
 
 - Nada de rayas decorativas: ni líneas verticales al lado de citas ni guiones
