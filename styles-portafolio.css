@@ -405,3 +405,7 @@
   border-color: #c9a23a;
   box-shadow: 0 40px 80px -40px rgba(20,18,12,.45), 0 0 0 1px rgba(184,144,46,.15), 0 0 30px -12px rgba(184,144,46,.4);
 }
+/* Celular: las tarjetas laterales asoman, pero recortadas al borde */
+@media (max-width: 899px) {
+  .pc-stage { overflow: hidden; overflow: clip; overflow-clip-margin: 0; }
+}

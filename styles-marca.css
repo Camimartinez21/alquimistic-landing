@@ -64,14 +64,14 @@
     linear-gradient(180deg, var(--bg-grad-top), var(--bg) 40%);
 }
 :root:not([data-theme="light"]) body::after {
-  inset: -15%;
+  inset: 0;
   opacity: 1;
   -webkit-mask-image: none; mask-image: none;
-  background-size: auto;
   background:
     radial-gradient(520px 420px at 18% 22%, rgba(95,227,209,.10), transparent 70%),
     radial-gradient(460px 380px at 84% 46%, rgba(95,227,209,.07), transparent 70%),
     radial-gradient(420px 360px at 30% 82%, rgba(95,227,209,.06), transparent 70%);
+  background-size: 130% 130%;
   animation: haloDeriva 38s ease-in-out infinite alternate;
 }
 :root:not([data-theme="light"]) ::selection { background: rgba(201,163,91,.28); color: var(--text); }
@@ -84,21 +84,21 @@
     linear-gradient(180deg, #ffffff, var(--bg) 38%);
 }
 :root[data-theme="light"] body::after {
-  inset: -15%;
+  inset: 0;
   opacity: 1;
   -webkit-mask-image: none; mask-image: none;
-  background-size: auto;
   background:
     radial-gradient(520px 420px at 16% 20%, rgba(95,227,209,.16), transparent 70%),
     radial-gradient(460px 380px at 86% 50%, rgba(95,227,209,.10), transparent 70%),
     radial-gradient(420px 360px at 28% 84%, rgba(240,171,252,.08), transparent 70%);
+  background-size: 130% 130%;
   animation: haloDeriva 38s ease-in-out infinite alternate;
 }
 
 @keyframes haloDeriva {
-  0%   { transform: translate3d(0, 0, 0); }
-  50%  { transform: translate3d(4%, -3%, 0); }
-  100% { transform: translate3d(-3%, 4%, 0); }
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 30%; }
+  100% { background-position: 30% 100%; }
 }
 @media (prefers-reduced-motion: reduce) { body::after { animation: none !important; } }
 
@@ -216,3 +216,8 @@ h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
 .hero-cta { gap: 12px; }
 .hero-cta + .hero-alt { margin-top: 14px; }
 .hero-cta .btn-lg { padding: 16px 24px; }
+
+/* Celular: nada puede asomar por los costados (en un teléfono real
+   overflow hidden no basta: se podía arrastrar la página hacia el lado) */
+html, body { overflow-x: hidden; }
+@supports (overflow: clip) { html, body { overflow-x: clip; } }
