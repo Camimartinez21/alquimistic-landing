@@ -37,6 +37,14 @@ el wizard sigue recomendando Semilla / Alquimia / Expande y
 `src/lib/planes.ts` sigue con esos tres planes en pesos. Alinearlos es la
 próxima conversación con Cami, cuando decida el precio de la Oficina Completa.
 
+### Gustos de Cami para el diseño (anotados en la sesión)
+
+- Nada de rayas decorativas: ni líneas verticales al lado de citas ni guiones
+  largos (—) en los textos visibles.
+- Sin estrellas ✦ ni íconos de destellos para la IA.
+- Lenguaje neutro: "clientes", no "clientas". Pocos posesivos (mi, mis, tu).
+- Que no suene "yo, yo, yo": los textos miran a la persona que lee.
+
 ## Qué hay en este repo
 
 ```
