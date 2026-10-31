@@ -1,33 +1,33 @@
 # Alquimistic
 
-> Cami crea el sistema que tu negocio necesita: páginas, apps, tiendas y la oficina digital de tu negocio, conectadas a tu propia IA para que se operen solas y evolucionen contigo. Hecho en Chile.
+> Cami crea el sistema que tu negocio necesita: páginas, apps, tiendas y la oficina digital de tu negocio, conectadas a tu propia IA para que se operen solas y crezcan contigo. Hecho en Chile.
 
 ## Qué es
 Alquimistic es el estudio de Cami, desde Santiago, Chile. Construye sistemas con inteligencia artificial para emprendedoras y emprendedores que quieren dejar de improvisar. Primero el problema, después la herramienta. Cada sistema se entrega funcionando y a nombre de su dueña o dueño: su código, sus datos y sus cuentas.
 
-## Qué puede crear
-- Página web y Google: que te encuentren y te reserven.
-- App propia: tu marca en el celular de tus clientes.
-- Tienda online: catálogo, pedidos y pagos.
-- Membresías y comunidad: ingresos que se repiten cada mes.
-- Agenda y reservas: conectada a la herramienta que ya usas.
-- La oficina de tu negocio: clientes, fechas, archivos y finanzas en un solo lugar.
+## Qué puede crear (por etapa de crecimiento)
+1. Que te encuentren — página web y Google; agenda y reservas conectadas a la herramienta que ya usas.
+2. Que te compren — tienda online (catálogo, pedidos y pagos); app propia con tu marca en el celular de tus clientes.
+3. Que vuelvan — membresías y comunidad (ingresos que se repiten cada mes); beneficios y fidelización (cashback, descuentos, premios).
+4. Que funcione sin ti — la oficina del negocio (clientes, fechas, archivos y finanzas en un solo lugar) con la propia IA conectada.
+Se puede partir por una pieza y sumar las demás cuando el negocio lo pida.
 
 ## La oficina (la app de Alquimistic, app.alquimistic.com)
 La app donde la persona administra su negocio completo: clientes, ventas, agenda, finanzas, marketing y una bóveda donde viven los archivos.
 Módulos: Hoy · Clientes · Ventas · Agenda · Finanzas · Marketing · Bóveda · IA.
 IA conectada (próximamente): la propia IA de la persona (Claude, ChatGPT o Gemini) se conecta a la oficina y acciona en tiempo real: consulta los datos reales, anota ventas, agenda citas y prepara mensajes a clientes. Como es la IA que la persona ya tiene, no paga una IA aparte. El camino técnico es exponer la oficina como servidor MCP.
 
-## Cómo trabaja (Metamorfosis)
-1. Oruga: conversamos y entiende tu negocio y tu problema.
-2. Crisálida: diseña y construye tu sistema.
-3. Mariposa: te lo entrega funcionando, conectado a tu IA, con una guía simple para que lo administres tú.
+## Cómo trabaja (Metamorfosis: de improvisar a operar con sistema)
+1. Diagnóstico — conversación sin costo para entender el negocio: qué vende, dónde se pierde tiempo y qué frena el crecimiento. Termina en una propuesta clara.
+2. Construcción — diseño y desarrollo a la medida, con avances visibles.
+3. Despegue — entrega funcionando, conectada a la IA del cliente, con una guía simple. El sistema sigue creciendo con el negocio.
+Antes de empezar se sabe qué se construye, cuánto cuesta y cuándo está listo.
 
 ## Formas de trabajar (pesos chilenos)
-- Oruga — gratis: la oficina Alquimistic básica para ordenar clientes y ventas.
-- Mariposa — [$ precio] al mes: la oficina completa, conectada a tu IA, con actualizaciones y respaldo.
-- Proyecto a medida — se cotiza: página, app o tienda, con pago único.
-Después de la entrega solo se pagan los servicios donde vive el sistema (hosting, base de datos), explicados antes de empezar. La entrega incluye una sesión para dejar todo conectado; los ajustes posteriores se cotizan aparte.
+- Oficina Esencial — gratis: clientes y ventas en un solo lugar, agenda; lista para usar en minutos.
+- Oficina Completa — [$ precio] al mes: todos los módulos (finanzas, marketing, bóveda), conectada a la IA, suma personas al equipo, actualizaciones y respaldo.
+- Proyecto a medida — se cotiza, pago único: página, app, tienda o membresías. Incluye diagnóstico sin costo, código y cuentas a nombre del cliente y una sesión de entrega.
+Después de la entrega solo se pagan los servicios donde vive el sistema (hosting, base de datos), explicados antes de empezar. Los ajustes posteriores se cotizan aparte.
 
 ## Proyectos
 - Soberana by Oppa Beauty Store (app propia, belleza): https://www.oppasoberana.cl

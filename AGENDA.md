@@ -26,7 +26,7 @@ modo claro/oscuro, WhatsApp y el botón al wizard (ahora "Crear mi oficina").
 |---|---|
 | `[pantallazo de Soberana]`, `[pantallazo de Minissimas]`, `[pantallazo de Colego]` | `index.html`, sección Proyectos. Guardar en `assets/proyectos/` y cambiar el `<div class="shot-placeholder">` por el `<img>` que está comentado justo arriba |
 | `"[frase de Oppa]"` | Proyecto Soberana |
-| `[$ precio]` | Plan Mariposa, en `index.html` **y** en `llms.txt` |
+| `[$ precio]` | Plan Oficina Completa (antes "Mariposa"), en `index.html` **y** en `llms.txt` |
 | `[foto de Cami]` | Sección Sobre mí (`assets/cami.jpg`, igual que los pantallazos) |
 
 ### ⚠️ La app todavía vende otra cosa
