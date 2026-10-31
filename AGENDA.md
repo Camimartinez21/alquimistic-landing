@@ -3,43 +3,50 @@
 > Compañera de `AGENDA.md` y `NORTE.md` del repo **alquimistic-hub-app**, que
 > es donde vive el producto. Este repo es sólo la vitrina.
 
-## 🔴 LEE ESTO PRIMERO — estado al 2026-08-27
+## 🔴 LEE ESTO PRIMERO — estado al 2026-10-31
 
-### Ya está todo mergeado
+### La landing ahora es el portafolio de Cami
 
-El 2026-08-27 se mergeó el PR #2 junto con el PR #14 del hub. `main` ya tiene
-el botón del wizard apuntando al dominio propio y estos documentos. No queda
-trabajo esperando afuera.
+El 2026-10-31 Cami rediseñó la oferta: Alquimistic deja de venderse como
+"Business OS" con agentes y planes en dólares, y pasa a ser **Cami creando el
+sistema que cada negocio necesita** (páginas, apps, tiendas y la oficina).
+La landing muestra sus proyectos y lleva a conversar con ella por WhatsApp.
+El texto lo escribió Cami; se usó tal cual.
 
-Si al abrir www.alquimistic.com el botón todavía te lleva a un `*.vercel.app`,
-es la caché del navegador: recarga forzado (Ctrl+Shift+R).
+Se sacó: planes Semilla / Alquimia / Expande en USD, "implementación desde
+USD 79", "socios fundadores", Agente CEO / equipo de IA, métricas inventadas
+(12h, -70%…) y el enlace a `demo/`. Se conservó: diseño, paleta, mariposa,
+modo claro/oscuro, WhatsApp y el botón al wizard (ahora "Crear mi oficina").
 
-### ⚠️ Dos textos que ya NO son ciertos
+**La oficina = la app de Alquimistic** (app.alquimistic.com).
 
-`llms.txt` es, según `NORTE.md` del hub, **la definición canónica del producto
-y los planes**. Hoy dice dos cosas que el producto dejó de hacer:
+### Marcadores que Cami tiene que completar (se ven en la página)
 
-1. **Precios en dólares** (US$29 / 79 / 189). El 2026-08-25 Cami decidió
-   **cobrar en pesos**: 29.000 / 79.000 / 189.000 CLP, por Flow. La app ya
-   muestra pesos (`src/lib/planes.ts` en el hub, campo `precioClp`). La landing
-   todavía no. **Es decisión de Cami** cambiar los precios de su página
-   pública — no se tocó sin preguntarle.
-2. **"Instalación inicial desde $79"**. En el wizard ese cobro aparte se sacó:
-   ahora la instalación se cuenta como parte del servicio ("la hacemos
-   contigo"), no como un pago único. La landing sigue ofreciéndola como cobro.
+| Marcador | Dónde |
+|---|---|
+| `[pantallazo de Soberana]`, `[pantallazo de Minissimas]`, `[pantallazo de Colego]` | `index.html`, sección Proyectos. Guardar en `assets/proyectos/` y cambiar el `<div class="shot-placeholder">` por el `<img>` que está comentado justo arriba |
+| `"[frase de Oppa]"` | Proyecto Soberana |
+| `[$ precio]` | Plan Mariposa, en `index.html` **y** en `llms.txt` |
+| `[foto de Cami]` | Sección Sobre mí (`assets/cami.jpg`, igual que los pantallazos) |
 
-Quien retome esto: preguntarle a Cami qué quiere que diga la landing antes de
-tocar precios. Son su página de venta.
+### ⚠️ La app todavía vende otra cosa
+
+`llms.txt` ya dice lo nuevo (Oruga gratis / Mariposa al mes / proyecto a
+medida). **El hub no se tocó** (Cami pidió trabajar sólo en la landing):
+el wizard sigue recomendando Semilla / Alquimia / Expande y
+`src/lib/planes.ts` sigue con esos tres planes en pesos. Alinearlos es la
+próxima conversación con Cami, cuando decida el precio de Mariposa.
 
 ## Qué hay en este repo
 
 ```
-index.html            la venta. 5 botones con `data-wizard` van al wizard
+index.html            el portafolio. Botones `data-wa` → WhatsApp; `data-wizard` → wizard
 app.js                el JS de la landing. Ahí vive WIZARD_URL
 llms.txt              ⚠️ definición CANÓNICA del producto y los planes
 theme.css             tokens (claro/oscuro)
 styles.css            base
-styles-sections.css   secciones
+styles-sections.css   secciones (base heredada)
+styles-portafolio.css las secciones del portafolio (2026-10)
 demo/                 "Estudio Camila" — la REFERENCIA VISUAL del producto.
                       El OS real debe sentirse así (ver NORTE del hub).
 assets/               imágenes
@@ -51,8 +58,8 @@ hay `package.json` ni tests. Se despliega solo al pushear.
 ### El embudo
 
 ```
-alquimistic.com  →  botón "Crea tu sistema"  →  app.alquimistic.com/crear-mi-sistema
-                 →  botón secundario         →  WhatsApp de Cami (wa.me/56976102990)
+alquimistic.com  →  "Cuéntame tu negocio"  →  WhatsApp de Cami (wa.me/56976102990)   ← principal
+                 →  "Crear mi oficina"     →  app.alquimistic.com/crear-mi-sistema
 ```
 
 `WIZARD_URL` está en **una sola línea de `app.js`**. Apuntaba a
@@ -69,7 +76,7 @@ arrancar limpio.
 
 - **`llms.txt` es el canon.** Si cambia un plan, un precio o cómo funciona el
   producto, cambia acá PRIMERO y después en el hub — o al revés, pero nunca
-  sólo en uno. Los dos documentos hoy están desalineados (ver arriba).
+  sólo en uno. Hoy están desalineados a propósito, a la espera de Cami (ver arriba).
 - **`demo/` no es la landing**: es la referencia de diseño del producto. No se
   vende desde ahí.
 - Sin framework a propósito. Si algo pide React, probablemente va en el hub.
