@@ -113,22 +113,25 @@
     // cada sección (un poco hacia afuera, donde no hay texto) y lo acompaña al
     // hacer scroll. ax/ay = esquina (0 izquierda/arriba, 1 derecha/abajo).
     // "movil" = otra percha cuando la pantalla es angosta.
+    // Alterna lados: derecha, izquierda, derecha… para que cruce la página.
     var spots = {
       top:          { sel: ".hero-visual", ax: 1, ay: 0, rot: -8, movil: { sel: ".hero-cta", ax: 1, ay: 0, rot: -8 } },
-      problema:     { sel: "#problema .section-head .h2", ax: 1, ay: 0, rot: -6 },
+      problema:     { sel: "#problema .section-head .h2", ax: 0, ay: 0, rot: 8 },
       crear:        { sel: "#crear .goals", ax: 1, ay: 0, rot: -9 },
-      proyectos:    { sel: '.pc-card[data-pos="0"]', ax: 1, ay: 0, rot: -10 },
+      proyectos:    { sel: '.pc-card[data-pos="0"]', ax: 0, ay: 0, rot: 10 },
       oficina:      { sel: ".office-chat", ax: 1, ay: 0, rot: -8 },
-      metamorfosis: { sel: "#metamorfosis .meta-step:last-child", ax: 1, ay: 0, rot: -6 },
+      metamorfosis: { sel: "#metamorfosis .meta-step:first-child", ax: 0, ay: 0, rot: 7 },
       formas:       { sel: "#formas .plan.popular", ax: 1, ay: 0, rot: -10 },
       "sobre-mi":   { sel: ".about-photo", ax: 0, ay: 0, rot: 8 },
       faq:          { sel: "#faq .faq", ax: 1, ay: 0, rot: -6 },
-      cta:          { sel: ".cta-box", ax: 1, ay: 0, rot: -8 }
+      cta:          { sel: ".cta-box", ax: 0, ay: 0, rot: 8 }
     };
     var current = "top";
     var angosta = window.matchMedia("(max-width: 899px)");
+    var volando = null;      // animación de vuelo en curso
+    var pos = null;          // última posición aplicada {x, y, rot}
 
-    function place(spot, animate) {
+    function destino(spot) {
       if (angosta.matches && spot.movil) spot = spot.movil;
       var vw = window.innerWidth, vh = window.innerHeight;
       var bw = fly.offsetWidth || 80;
@@ -145,25 +148,67 @@
       // siempre visible y debajo del nav
       x = Math.max(6, Math.min(x, vw - bw - 6));
       y = Math.max(74, Math.min(y, vh - bw - 16));
+      return { x: x, y: y, rot: spot.rot };
+    }
+    function tf(p) { return "translate3d(" + p.x + "px," + p.y + "px,0) rotate(" + p.rot + "deg)"; }
+
+    function place(spot, animate) {
+      if (volando) return; // durante el vuelo manda la curva
+      var p = destino(spot);
+      pos = p;
       if (!animate) fly.style.transition = "none";
-      fly.style.transform = "translate3d(" + x + "px," + y + "px,0) rotate(" + spot.rot + "deg)";
+      fly.style.transform = tf(p);
       if (!animate) { void fly.offsetHeight; fly.style.transition = ""; }
     }
 
+    // Vuelo en curva: sube, se mece hacia un lado y baja a su percha,
+    // aleteando todo el camino.
     function flyTo(id) {
       if (id === current) return;
       var spot = spots[id];
       if (!spot) return;
       current = id;
+      var a = pos || destino(spots.top);
+      if (volando) {
+        // cambia de rumbo en pleno vuelo: parte desde donde va ahora
+        var m = new DOMMatrix(getComputedStyle(fly).transform);
+        a = { x: m.m41, y: m.m42, rot: Math.round(Math.atan2(m.b, m.a) * 180 / Math.PI) };
+      }
+      var b = destino(spot);
+      var dx = b.x - a.x, dy = b.y - a.y;
+      var vaiven = (dx === 0 ? 1 : Math.sign(dx)) * Math.max(40, Math.abs(dx) * 0.18);
+      var vh = window.innerHeight;
+      // Sube en arco si hay cielo arriba; si está pegada al borde, baja en
+      // picada y vuelve a subir (como vuela una mariposa de verdad).
+      var alto = Math.min(a.y, b.y) - 90 - Math.abs(dx) * 0.12;
+      var ola = -18;
+      if (alto < 110) { alto = Math.max(a.y, b.y) + 120 + Math.abs(dx) * 0.1; ola = 22; }
+      alto = Math.max(80, Math.min(alto, vh * 0.72));
+      var p1 = { x: a.x + dx * 0.28 - vaiven * 0.4, y: alto - ola, rot: a.rot - 16 * Math.sign(dx || 1) };
+      var p2 = { x: a.x + dx * 0.62 + vaiven, y: alto + ola, rot: b.rot + 14 * Math.sign(dx || 1) };
+      var p3 = { x: b.x - vaiven * 0.25, y: b.y - 34, rot: b.rot - 6 };
+
+      if (volando) volando.cancel();
       fly.classList.remove("is-perched");
       fly.classList.add("is-flying");
-      place(spot, true);
-      clearTimeout(fly._land);
-      fly._land = setTimeout(function () {
+      fly.style.transition = "none";
+      volando = fly.animate([
+        { transform: tf(a) },
+        { transform: tf(p1), offset: 0.32 },
+        { transform: tf(p2), offset: 0.64 },
+        { transform: tf(p3), offset: 0.86 },
+        { transform: tf(b) }
+      ], { duration: 1900, easing: "cubic-bezier(.45,.05,.3,1)", fill: "forwards" });
+      pos = b;
+      volando.onfinish = function () {
+        fly.style.transform = tf(b);
+        volando.cancel();
+        volando = null;
+        fly.style.transition = "";
         fly.classList.remove("is-flying");
         fly.classList.add("is-perched");
-        place(spots[current], true);
-      }, 1750);
+        place(spots[current], true); // por si hubo scroll durante el vuelo
+      };
     }
 
     // Mientras está posada, sigue a su elemento al hacer scroll (y al girar el carrusel)
