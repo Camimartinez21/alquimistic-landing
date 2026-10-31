@@ -169,4 +169,85 @@
 
     window.addEventListener("resize", function () { place(spots[current] || spots.top, false); });
   }
+
+  /* ---------- Carrusel de proyectos ----------
+     Píldoras a la izquierda, tarjetas apiladas a la derecha. Avanza solo cada
+     5,5 s, se pausa al pasar el mouse o al enfocar, y no se mueve solo si la
+     persona pidió menos movimiento. */
+  var pc = document.querySelector("[data-pc]");
+  if (pc) {
+    var pcPills = Array.prototype.slice.call(pc.querySelectorAll(".pc-pill"));
+    var pcCards = Array.prototype.slice.call(pc.querySelectorAll(".pc-card"));
+    var pcN = pcCards.length, pcCur = 0, pcTimer = null;
+    var pcCalm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function pcOff(i) {
+      var d = i - pcCur;
+      if (d > pcN / 2) d -= pcN;
+      if (d < -pcN / 2) d += pcN;
+      return d;
+    }
+    function pcShow(i) {
+      pcCur = (i + pcN) % pcN;
+      pcCards.forEach(function (c, k) {
+        var d = pcOff(k);
+        c.setAttribute("data-pos", d === 0 ? "0" : d === -1 ? "-1" : d === 1 ? "1" : "far");
+        c.setAttribute("aria-hidden", d === 0 ? "false" : "true");
+        Array.prototype.forEach.call(c.querySelectorAll("a"), function (a) { a.tabIndex = d === 0 ? 0 : -1; });
+      });
+      pcPills.forEach(function (b, k) {
+        var d = pcOff(k);
+        b.style.setProperty("--d", d);
+        b.classList.toggle("is-on", d === 0);
+        b.setAttribute("aria-selected", d === 0 ? "true" : "false");
+        b.tabIndex = d === 0 ? 0 : -1;
+      });
+      // En celular las píldoras van en fila: mover la fila hasta la activa (sin mover la página)
+      var list = pc.querySelector(".pc-list");
+      if (list.scrollWidth > list.clientWidth + 4) {
+        list.scrollTo({ left: Math.max(0, pcPills[pcCur].offsetLeft - 18), behavior: "smooth" });
+      }
+    }
+    function pcStop() { if (pcTimer) { clearInterval(pcTimer); pcTimer = null; } }
+    function pcPlay() {
+      pcStop();
+      if (!pcCalm) pcTimer = setInterval(function () { pcShow(pcCur + 1); }, 5500);
+    }
+
+    pcPills.forEach(function (b, k) {
+      b.addEventListener("click", function () { pcShow(k); pcPlay(); });
+    });
+    pcCards.forEach(function (c, k) {
+      c.addEventListener("click", function (e) {
+        if (c.getAttribute("data-pos") !== "0") { e.preventDefault(); pcShow(k); pcPlay(); }
+      });
+    });
+    pc.querySelector(".pc-list").addEventListener("keydown", function (e) {
+      var go = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+      if (!go) return;
+      e.preventDefault();
+      pcShow(pcCur + go);
+      pcPills[pcCur].focus();
+      pcPlay();
+    });
+
+    // Deslizar con el dedo en el celular
+    var pcX = null;
+    var pcStage = pc.querySelector(".pc-stage");
+    pcStage.addEventListener("touchstart", function (e) { pcX = e.touches[0].clientX; }, { passive: true });
+    pcStage.addEventListener("touchend", function (e) {
+      if (pcX === null) return;
+      var dx = e.changedTouches[0].clientX - pcX;
+      pcX = null;
+      if (Math.abs(dx) > 40) { pcShow(pcCur + (dx < 0 ? 1 : -1)); pcPlay(); }
+    });
+
+    pc.addEventListener("mouseenter", pcStop);
+    pc.addEventListener("mouseleave", pcPlay);
+    pc.addEventListener("focusin", pcStop);
+    pc.addEventListener("focusout", function (e) { if (!pc.contains(e.relatedTarget)) pcPlay(); });
+
+    pcShow(0);
+    pcPlay();
+  }
 })();

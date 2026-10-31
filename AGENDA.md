@@ -24,10 +24,8 @@ modo claro/oscuro, WhatsApp y el botón al wizard (ahora "Crear mi oficina").
 
 | Marcador | Dónde |
 |---|---|
-| `[pantallazo de Soberana]`, `[pantallazo de Minissimas]`, `[pantallazo de Colego]` | `index.html`, sección Proyectos. Guardar en `assets/proyectos/` y cambiar el `<div class="shot-placeholder">` por el `<img>` que está comentado justo arriba |
-| `"[frase de Oppa]"` | Proyecto Soberana |
-| `[$ precio]` | Plan Oficina Completa (antes "Mariposa"), en `index.html` **y** en `llms.txt` |
-| `[foto de Cami]` | Sección Sobre mí (`assets/cami.jpg`, igual que los pantallazos) |
+| Colego **en diseño** | Su tarjeta del carrusel no tiene captura ni enlace (portada con ícono y etiqueta "En diseño"). Cuando esté lista: poner `assets/proyectos/colego.jpg`, quitar `pc-card--pronto` y descomentar el enlace en `index.html` |
+| Reseña de **Somos ERA** (4.º proyecto del carrusel) | La escribió Claude con lo que se ve en somosera.cl; Cami debe confirmarla o cambiarla. La captura (`assets/proyectos/somosera.jpg`) se sacó de la web en vivo el 2026-10-31 |
 
 ### ⚠️ La app todavía vende otra cosa
 
@@ -42,15 +40,27 @@ próxima conversación con Cami, cuando decida el precio de la Oficina Completa.
 El rediseño vive en la rama `claude/nice-goldberg-1uznz7` (sin mergear a
 `main`; alquimistic.com no ha cambiado). Pendiente, en orden:
 
-1. **Leer el manual de marca** de Cami. Está en Claude Design (proyecto
-   `053799f9-76ed-430f-9e51-32dd11e9dade`, archivo `Manual de Marca.dc.html`).
-   Desde la nube no se pudo abrir; en el escritorio, con `/design-login` o
-   pidiéndolo desde Claude Design. Ajustar colores, tipografías y tono.
+1. ✅ **Manual de marca aplicado** (2026-10-31). Todo vive en
+   `styles-marca.css` (se carga al final): en oscuro, carbón cálido #141311,
+   oro #C9A35B, crema #F4EFE6, sin turquesa ni celeste sueltos. **El modo claro
+   es el de siempre** (`theme.css`: #FAF9F6, oro #B8902E): Cami lo prefirió
+   por lejos al claro del manual, y el manual se corrige a eso. Rosa latido
+   #F2A9C8 sólo en el corazón.
+   **Fondo con halos** en toda la página y en ambos modos (como el inicio del
+   wizard): halos turquesa que se mueven lento + verde bruma abajo en oscuro.
+   Reemplazan la grilla. **Botón principal en oscuro = "metal líquido"**:
+   píldora carbón con borde que gira en oro + irisación de la mariposa. En
+   claro el botón sigue en oro sólido (gusto de Cami). Etiquetas en
+   JetBrains Mono; entrada = fundido + 12 px, 600 ms; línea de oro que se
+   desvanece bajo cada título. Foto de Cami en `assets/cami.jpg`.
+   **Tono:** el manual (primera persona) es para redes; la landing sigue
+   mirando a quien lee, sin "yo, yo, yo" (decisión de Cami).
+   Pendiente de decidir: sumar «Metamorfosis» al botón de WhatsApp.
 2. **Cami debe confirmar cuatro promesas** que escribió Claude: la Oficina
    Esencial gratis incluye Agenda y queda "lista en minutos"; la Oficina
    Completa permite sumar personas; antes de empezar se sabe "cuándo está
    listo"; "Beneficios y fidelización" como servicio.
-3. Precio de la Oficina Completa, pantallazos, frase de Oppa y foto de Cami.
+3. ✅ Precio de la Oficina Completa: **$21.900 al mes** (Cami, 2026-10-31), ya en `index.html` y `llms.txt`. **Falta llevarlo al hub** (`src/lib/planes.ts` y el wizard). Colego entra con captura cuando termine su diseño. (Se sacó el testimonio de Oppa por decisión de Cami; la foto de Cami ya está.)
 4. Revisar en tablet y celular y, cuando Cami lo apruebe, mergear a `main`.
 
 ### Gustos de Cami para el diseño (anotados en la sesión)

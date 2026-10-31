@@ -34,8 +34,8 @@
   --iris-violet: #8b5cf6;
   --iris-rose: #f0abfc;
   --grad-iris: linear-gradient(120deg, #5fe3d1 0%, #38bdf8 36%, #8b5cf6 72%, #f0abfc 100%);
-  --iris-soft: rgba(95, 227, 209, .16);
-  --iris-glow: 0 0 22px rgba(95, 227, 209, .22), 0 0 34px rgba(139, 92, 246, .12);
+  --iris-soft: rgba(201,163,91, .16);
+  --iris-glow: 0 0 22px rgba(201,163,91, .22), 0 0 34px rgba(242,169,200, .12);
 
   /* Text */
   --text: #f6f3ec;
@@ -56,7 +56,7 @@
   --grid-op: 0.5;
 
   /* Shadow / glow */
-  --glow-gold: 0 0 0 1px rgba(232,199,102,.16), 0 18px 60px -18px rgba(232,199,102,.28);
+  --glow-gold: 0 0 0 1px rgba(201,163,91,.16), 0 18px 60px -18px rgba(201,163,91,.28);
   --shadow-card: 0 1px 0 rgba(255,255,255,.04) inset, 0 24px 60px -30px rgba(0,0,0,.9);
 }
 
@@ -81,8 +81,8 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(900px 600px at 50% -10%, rgba(232,199,102,.10), transparent 60%),
-    radial-gradient(700px 500px at 85% 20%, rgba(56,189,248,.05), transparent 60%),
+    radial-gradient(900px 600px at 50% -10%, rgba(201,163,91,.10), transparent 60%),
+    radial-gradient(700px 500px at 85% 20%, rgba(201,163,91,.05), transparent 60%),
     linear-gradient(180deg, var(--bg-grad-top), var(--bg) 40%);
 }
 body::after {
@@ -104,7 +104,7 @@ img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
-::selection { background: rgba(232,199,102,.28); color: #fff; }
+::selection { background: rgba(201,163,91,.28); color: #fff; }
 
 /* ---------- Layout ---------- */
 .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gut); }
@@ -118,7 +118,7 @@ section { position: relative; }
   padding: 7px 14px;
   border: 1px solid var(--border-strong);
   border-radius: 100px;
-  background: rgba(232,199,102,.05);
+  background: rgba(201,163,91,.05);
 }
 .eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-2); box-shadow: 0 0 10px var(--gold-2); }
 
@@ -148,16 +148,16 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 .btn-primary {
   color: #1a1407;
   background: var(--grad-gold);
-  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 14px 34px -12px rgba(232,199,102,.55);
+  box-shadow: 0 1px 0 rgba(255,255,255,.4) inset, 0 14px 34px -12px rgba(201,163,91,.55);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 20px 44px -12px rgba(232,199,102,.7); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 20px 44px -12px rgba(201,163,91,.7); }
 .btn-ghost {
   color: var(--text);
   border: 1px solid var(--border-strong);
   background: rgba(255,255,255,.02);
   backdrop-filter: blur(8px);
 }
-.btn-ghost:hover { border-color: var(--gold-3); background: rgba(232,199,102,.06); transform: translateY(-2px); }
+.btn-ghost:hover { border-color: var(--gold-3); background: rgba(201,163,91,.06); transform: translateY(-2px); }
 .btn-lg { padding: 17px 32px; font-size: 16px; }
 
 /* ---------- Nav ---------- */
@@ -176,11 +176,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 .brand-badge {
   width: 40px; height: 40px; border-radius: 12px;
   display: grid; place-items: center;
-  background: radial-gradient(circle at 35% 25%, rgba(232,199,102,.18), rgba(255,255,255,.02));
+  background: radial-gradient(circle at 35% 25%, rgba(201,163,91,.18), rgba(255,255,255,.02));
   border: 1px solid var(--border-strong);
   overflow: hidden;
 }
-.brand-badge img { width: 30px; height: 30px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(232,199,102,.4)); }
+.brand-badge img { width: 30px; height: 30px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(201,163,91,.4)); }
 .brand-name { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -.01em; }
 .brand-name .sub { display: block; font-family: var(--font-body); font-weight: 500; font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--text-3); margin-top: -2px; }
 
@@ -244,7 +244,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .mod-tab:focus-visibl
 /* Hero CTA + trust (left-aligned in split) */
 .hero-cta { display: flex; gap: 14px; justify-content: flex-start; margin-top: 32px; flex-wrap: wrap; }
 .hero-alt { margin-top: 16px; font-size: 13.5px; color: var(--text-3); }
-.hero-alt a { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(232,199,102,.5); }
+.hero-alt a { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(201,163,91,.5); }
 .hero-alt a:hover { color: var(--text); }
 .hero-trust { margin-top: 30px; display: flex; gap: 22px; justify-content: flex-start; flex-wrap: wrap; color: var(--text-3); font-size: 13px; }
 .hero-trust b { color: var(--text); font-weight: 700; }
@@ -258,7 +258,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .mod-tab:focus-visibl
   box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 60px 120px -50px rgba(0,0,0,.95), var(--glow-gold);
   overflow: hidden;
 }
-.mockup-glow { position: absolute; left: 44%; top: 50%; width: 86%; height: 380px; transform: translate(-50%,-50%); background: radial-gradient(ellipse at center, rgba(232,199,102,.16), transparent 70%); filter: blur(24px); z-index: -1; }
+.mockup-glow { position: absolute; left: 44%; top: 50%; width: 86%; height: 380px; transform: translate(-50%,-50%); background: radial-gradient(ellipse at center, rgba(201,163,91,.16), transparent 70%); filter: blur(24px); z-index: -1; }
 
 /* Mariposa guía — recorre el scroll: vuela y se posa por la página.
    position:fixed; JS fija el transform (translate+rotate) por waypoint. */
@@ -279,7 +279,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .mod-tab:focus-visibl
   height: 100%;
   object-fit: contain;
   transform-origin: 50% 50%;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,.42)) drop-shadow(0 0 12px rgba(95,227,209,.16));
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.42)) drop-shadow(0 0 12px rgba(201,163,91,.16));
 }
 .fly-butterfly.is-flying img { animation: wingFlutter .5s ease-in-out infinite; }
 @keyframes wingFlutter {

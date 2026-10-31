@@ -25,14 +25,15 @@ Antes de empezar se sabe qué se construye, cuánto cuesta y cuándo está listo
 
 ## Formas de trabajar (pesos chilenos)
 - Oficina Esencial — gratis: clientes y ventas en un solo lugar, agenda; lista para usar en minutos.
-- Oficina Completa — [$ precio] al mes: todos los módulos (finanzas, marketing, bóveda), conectada a la IA, suma personas al equipo, actualizaciones y respaldo.
+- Oficina Completa — $21.900 al mes: todos los módulos (finanzas, marketing, bóveda), conectada a la IA, suma personas al equipo, actualizaciones y respaldo.
 - Proyecto a medida — se cotiza, pago único: página, app, tienda o membresías. Incluye diagnóstico sin costo, código y cuentas a nombre del cliente y una sesión de entrega.
 Después de la entrega solo se pagan los servicios donde vive el sistema (hosting, base de datos), explicados antes de empezar. Los ajustes posteriores se cotizan aparte.
 
 ## Proyectos
 - Soberana by Oppa Beauty Store (app propia, belleza): https://www.oppasoberana.cl
 - Minissimas (página web de un salón, en construcción): su página propia, conectada a su agenda en AgendaPro.
-- Colego (producto propio, app para organizar celebraciones de curso): https://colego-one.vercel.app
+- Colego (producto propio, app para organizar celebraciones de curso; en diseño).
+- Somos ERA Consciente (página web, rituales de comida consciente): https://somosera.cl
 
 ## Cómo empezar
 Conversar con Cami por WhatsApp: https://wa.me/56976102990

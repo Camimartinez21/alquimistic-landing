@@ -26,11 +26,12 @@
 <link rel="icon" type="image/png" href="assets/logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="styles-sections.css" />
 <link rel="stylesheet" href="styles-portafolio.css" />
 <link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles-marca.css" />
 <!-- Tema claro/oscuro: se aplica ANTES de pintar para evitar parpadeo -->
 <script>
   (function () {
@@ -70,7 +71,7 @@
 <nav class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top">
-      <span class="brand-badge"><img src="assets/logo.png" alt="Alquimistic" /></span>
+      <span class="brand-badge"><img src="assets/logo-64.png" srcset="assets/logo-64.png 64w, assets/logo-96.png 96w, assets/logo-128.png 128w" sizes="32px" alt="Alquimistic" /></span>
       <span class="brand-name">Alquimistic</span>
     </a>
     <div class="nav-links">
@@ -117,7 +118,7 @@
       <div class="mockup-glow"></div>
       <div class="mockup hero-dash">
         <aside class="hd-side">
-          <div class="hd-brand"><img src="assets/logo.png" alt="" /><span>Alquimistic<small>OFICINA</small></span></div>
+          <div class="hd-brand"><img src="assets/logo-64.png" srcset="assets/logo-64.png 64w, assets/logo-96.png 96w, assets/logo-128.png 128w" sizes="22px" alt="" /><span>Alquimistic<small>OFICINA</small></span></div>
           <nav class="hd-nav">
             <a class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>Hoy</a>
             <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Clientes</a>
@@ -246,56 +247,83 @@
     <p class="lead" data-reveal data-delay="1">Negocios reales que pasaron de improvisar a operar con sistema.</p>
   </div>
 
-  <div class="projects">
-    <!-- Soberana -->
-    <article class="project" data-reveal>
-      <div class="project-shot">
-        <!-- Reemplazar por <img src="assets/proyectos/soberana.png" alt="App Soberana by Oppa Beauty Store"> -->
-        <div class="shot-placeholder">[pantallazo de Soberana]</div>
-      </div>
-      <div class="project-body">
-        <span class="project-tag">App propia · Belleza</span>
-        <h3>Soberana by Oppa Beauty Store</h3>
-        <p>Oppa vendía en lives de TikTok. Hoy tiene su propia app con tienda mayorista desde una unidad, 3% de cashback, membresías, academia y comunidad.</p>
-        <div class="project-result">
-          <span class="pr-k">Resultado destacado</span>
-          <span class="pr-v">12 membresías vendidas el primer mes.</span>
+  <!-- Carrusel de proyectos: píldoras a la izquierda, tarjetas apiladas a la derecha (app.js → data-pc) -->
+  <div class="pc" data-reveal data-pc>
+    <div class="pc-list" role="tablist" aria-label="Proyectos">
+      <button class="pc-pill" type="button" role="tab" data-i="0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        Soberana by Oppa
+      </button>
+      <button class="pc-pill" type="button" role="tab" data-i="1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+        Minissimas
+      </button>
+      <button class="pc-pill" type="button" role="tab" data-i="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.9-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.3c2.3.1 4 1.6 4.5 4.2"/></svg>
+        Colego
+      </button>
+      <button class="pc-pill" type="button" role="tab" data-i="3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16.5 4.5a8 8 0 1 0 3 10.5 6.5 6.5 0 0 1-3-10.5z"/></svg>
+        Somos ERA
+      </button>
+    </div>
+
+    <div class="pc-stage">
+      <!-- Soberana -->
+      <article class="pc-card pc-card--claro" role="tabpanel" data-i="0">
+        <div class="pc-shot">
+          <img src="assets/proyectos/soberana.jpg" alt="App Soberana by Oppa Beauty Store: compra mayorista, cashback, academia y comunidad" loading="lazy" />
         </div>
-        <blockquote class="project-quote">"[frase de Oppa]"</blockquote>
-        <a class="btn btn-ghost" href="https://www.oppasoberana.cl" target="_blank" rel="noopener">Ver proyecto
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg>
-        </a>
-      </div>
-    </article>
+        <span class="pc-live"><i></i>App propia · Belleza</span>
+        <div class="pc-info">
+          <h3>Soberana by Oppa</h3>
+          <p>Oppa vendía en lives de TikTok. Ahora tiene su propia app: compra mayorista desde una unidad, 3% de cashback y capacitaciones.</p>
+          <p class="pc-result">12 membresías vendidas el primer mes.</p>
+          <a class="pc-link" href="https://www.oppasoberana.cl" target="_blank" rel="noopener">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
 
-    <!-- Minissimas -->
-    <article class="project" data-reveal>
-      <div class="project-shot">
-        <!-- Reemplazar por <img src="assets/proyectos/minissimas.png" alt="Página de Minissimas"> -->
-        <div class="shot-placeholder">[pantallazo de Minissimas]</div>
-      </div>
-      <div class="project-body">
-        <span class="project-tag">Página web · Salón <span class="tag-soon">En construcción</span></span>
-        <h3>Minissimas</h3>
-        <p>Un salón con 109 reseñas de 5 estrellas que no aparecía en Google. Su página propia, conectada a su agenda en AgendaPro, para que la encuentren y reserven.</p>
-      </div>
-    </article>
+      <!-- Minissimas -->
+      <article class="pc-card pc-card--bajo" role="tabpanel" data-i="1">
+        <div class="pc-shot">
+          <img src="assets/proyectos/minissimas.jpg" alt="Propuesta de diseño de Minissimas Beauty Spa: web y reserva en línea" loading="lazy" />
+        </div>
+        <span class="pc-live"><i></i>Página web · Salón <span class="tag-soon">En construcción</span></span>
+        <div class="pc-info">
+          <h3>Minissimas</h3>
+          <p>Un salón con 109 reseñas de 5 estrellas que no aparecía en Google. Su página propia, conectada a su agenda en AgendaPro, para que la encuentren y reserven.</p>
+        </div>
+      </article>
 
-    <!-- Colego -->
-    <article class="project" data-reveal>
-      <div class="project-shot">
-        <!-- Reemplazar por <img src="assets/proyectos/colego.png" alt="App Colego"> -->
-        <div class="shot-placeholder">[pantallazo de Colego]</div>
-      </div>
-      <div class="project-body">
-        <span class="project-tag">Producto propio · App</span>
-        <h3>Colego</h3>
-        <p>Una app chilena para organizar paseos de curso, licenciaturas, cumpleaños y celebraciones: encuestas, cotizaciones comparables y proveedores en un solo lugar.</p>
-        <a class="btn btn-ghost" href="https://colego-one.vercel.app" target="_blank" rel="noopener">Conocer Colego
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg>
-        </a>
-      </div>
-    </article>
+      <!-- Colego -->
+      <article class="pc-card pc-card--pronto" role="tabpanel" data-i="2">
+        <div class="pc-shot">
+          <!-- Colego todavía está en diseño. Cuando esté: <img src="assets/proyectos/colego.jpg" alt="App Colego"> y quitar pc-card--pronto -->
+          <div class="pc-pronto" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3 2.9-4.8 5.5-4.8s4.9 1.8 5.5 4.8"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.3c2.3.1 4 1.6 4.5 4.2"/></svg>
+          </div>
+        </div>
+        <span class="pc-live"><i></i>Producto propio · App <span class="tag-soon">En diseño</span></span>
+        <div class="pc-info">
+          <h3>Colego</h3>
+          <p>Una app chilena para organizar paseos de curso, licenciaturas, cumpleaños y celebraciones: encuestas, cotizaciones comparables y proveedores en un solo lugar.</p>
+          <!-- Enlace cuando Colego esté listo: <a class="pc-link" href="https://colego-one.vercel.app" target="_blank" rel="noopener">Conocer Colego ↗</a> -->
+        </div>
+      </article>
+
+      <!-- Somos ERA: la captura ocupa toda la tarjeta -->
+      <article class="pc-card pc-card--full" role="tabpanel" data-i="3">
+        <div class="pc-shot">
+          <img src="assets/proyectos/somosera.jpg" alt="Página de Somos ERA Consciente: Comer es tu ritual" loading="lazy" />
+        </div>
+        <span class="pc-live"><i></i>Página web · Comida consciente</span>
+        <div class="pc-info">
+          <h3>Somos ERA Consciente</h3>
+          <p>Una marca de rituales de comida consciente. Su página propia cuenta la historia de ERA, muestra cada ritual y lleva directo a la compra y a WhatsApp.</p>
+          <a class="pc-link" href="https://somosera.cl" target="_blank" rel="noopener">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -370,7 +398,7 @@
       <p>Diseño y desarrollo a la medida del negocio, con avances que puedes ver y comentar en el camino.</p>
     </li>
     <li class="meta-step meta-final" data-reveal data-delay="2">
-      <div class="meta-ic meta-ic-img"><img src="assets/logo.png" alt="" /></div>
+      <div class="meta-ic meta-ic-img"><img src="assets/logo-96.png" srcset="assets/logo-64.png 64w, assets/logo-96.png 96w, assets/logo-128.png 128w" sizes="44px" alt="" /></div>
       <span class="meta-n">03</span>
       <h3>Despegue</h3>
       <p>Entrega funcionando, conectada a tu IA, con una guía simple para administrarla. Y el sistema sigue creciendo cuando el negocio crece.</p>
@@ -403,7 +431,7 @@
     <div class="plan popular" data-reveal data-delay="1">
       <div class="plan-flag">Para crecer</div>
       <div class="pname">Oficina Completa</div>
-      <div class="pprice"><span class="amt amt-ph">[$ precio]</span><span class="per">al mes</span></div>
+      <div class="pprice"><span class="amt">$21.900</span><span class="per">al mes</span></div>
       <div class="pdesc">Para negocios que quieren crecer con orden.</div>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Todos los módulos: finanzas, marketing y bóveda</li>
@@ -433,8 +461,7 @@
 <section class="sec wrap" id="sobre-mi">
   <div class="about">
     <div class="about-photo" data-reveal>
-      <!-- Reemplazar por <img src="assets/cami.jpg" alt="Cami, creadora de Alquimistic"> -->
-      <div class="shot-placeholder">[foto de Cami]</div>
+      <img src="assets/cami.jpg" alt="Cami, creadora de Alquimistic" loading="lazy" />
     </div>
     <div class="about-copy">
       <span class="eyebrow" data-reveal><span class="dot"></span>Sobre mí</span>
@@ -497,7 +524,7 @@
   <div class="foot-grid foot-grid-simple">
     <div class="foot-brand">
       <a class="brand" href="#top">
-        <span class="brand-badge"><img src="assets/logo.png" alt="" /></span>
+        <span class="brand-badge"><img src="assets/logo-64.png" srcset="assets/logo-64.png 64w, assets/logo-96.png 96w, assets/logo-128.png 128w" sizes="32px" alt="" /></span>
         <span class="brand-name">Alquimistic</span>
       </a>
       <p>Creo el sistema que tu negocio necesita.</p>

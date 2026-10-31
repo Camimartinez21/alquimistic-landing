@@ -1,0 +1,208 @@
+/* ============================================================
+   MARCA — Manual de Marca Alquimistic (Ed. 01 · oct 2026)
+   Se carga al final: manda sobre los demás estilos.
+   Profundidad (oscuro) = carbón cálido + oro + crema.
+   Claridad (claro)     = la de siempre, en theme.css (decisión de Cami).
+   El rosa latido es el único acento, una vez por pantalla.
+   ============================================================ */
+
+:root {
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Profundidad */
+  --bg: #141311;
+  --bg-grad-top: #1a1916;
+  --surface: #1a1916;
+  --surface-2: #1d1b18;
+  --surface-3: #2a2722;
+  --border: rgba(244, 239, 230, 0.08);
+  --border-strong: rgba(244, 239, 230, 0.15);
+  --inset: rgba(0, 0, 0, 0.22);
+
+  --gold-1: #e3c88c;
+  --gold-2: #c9a35b;
+  --gold-3: #b08a45;
+  --gold-deep: #8a7244;
+  --accent: var(--gold-2);
+  --grad-gold: linear-gradient(135deg, #e6cc92 0%, #c9a35b 55%, #a98540 100%);
+
+  /* Sin turquesa ni celeste sueltos: lo "vivo" va en oro */
+  --teal: var(--gold-1);
+  --cyan: var(--gold-2);
+  /* Irisación de la mariposa: sólo en detalles pequeños */
+  --grad-iris: linear-gradient(120deg, #d7f2ee 0%, #bfd3ea 36%, #cdb8da 70%, #f2a9c8 100%);
+  --iris-soft: rgba(201, 163, 91, .14);
+  --iris-glow: 0 0 18px rgba(201, 163, 91, .18);
+  --rosa: #f2a9c8;
+
+  --text: #f4efe6;
+  --text-2: #b9b3a7;
+  --text-3: #8c867b;
+  --text-faint: #5e574b;
+
+  --glow-gold: 0 0 0 1px rgba(201,163,91,.14), 0 18px 60px -22px rgba(201,163,91,.22);
+  --grid-op: 0.25;
+}
+
+/* Claridad: la de siempre (theme.css), por decisión de Cami 2026-10-31.
+   Sólo se le devuelven los toques turquesa que tenía. */
+:root[data-theme="light"] .tag-soon,
+:root[data-theme="light"] .save-pill { border-color: rgba(15,155,137,.3); background: rgba(15,155,137,.08); }
+:root[data-theme="light"] {
+  --iris-soft: rgba(95, 227, 209, .16);
+  --iris-glow: 0 0 22px rgba(95, 227, 209, .22), 0 0 34px rgba(139, 92, 246, .12);
+}
+
+/* ---------- Fondo con halos (como el inicio del wizard), en toda la página ----------
+   ::before = base fija (oro arriba + verde bruma abajo).
+   ::after  = halos turquesa que se mueven muy lento. Antes era la grilla. */
+:root:not([data-theme="light"]) body::before {
+  background:
+    radial-gradient(900px 560px at 50% -12%, rgba(201,163,91,.10), transparent 62%),
+    radial-gradient(1100px 800px at 100% 110%, rgba(28,54,52,.55), transparent 60%),
+    radial-gradient(800px 700px at -10% 70%, rgba(28,54,52,.40), transparent 60%),
+    linear-gradient(180deg, var(--bg-grad-top), var(--bg) 40%);
+}
+:root:not([data-theme="light"]) body::after {
+  inset: -15%;
+  opacity: 1;
+  -webkit-mask-image: none; mask-image: none;
+  background-size: auto;
+  background:
+    radial-gradient(520px 420px at 18% 22%, rgba(95,227,209,.10), transparent 70%),
+    radial-gradient(460px 380px at 84% 46%, rgba(95,227,209,.07), transparent 70%),
+    radial-gradient(420px 360px at 30% 82%, rgba(95,227,209,.06), transparent 70%);
+  animation: haloDeriva 38s ease-in-out infinite alternate;
+}
+:root:not([data-theme="light"]) ::selection { background: rgba(201,163,91,.28); color: var(--text); }
+
+/* Claridad: crema con los mismos halos turquesa, más suaves */
+:root[data-theme="light"] body::before {
+  background:
+    radial-gradient(900px 560px at 50% -10%, rgba(184,144,46,.08), transparent 62%),
+    radial-gradient(1000px 760px at 100% 110%, rgba(95,227,209,.14), transparent 60%),
+    linear-gradient(180deg, #ffffff, var(--bg) 38%);
+}
+:root[data-theme="light"] body::after {
+  inset: -15%;
+  opacity: 1;
+  -webkit-mask-image: none; mask-image: none;
+  background-size: auto;
+  background:
+    radial-gradient(520px 420px at 16% 20%, rgba(95,227,209,.16), transparent 70%),
+    radial-gradient(460px 380px at 86% 50%, rgba(95,227,209,.10), transparent 70%),
+    radial-gradient(420px 360px at 28% 84%, rgba(240,171,252,.08), transparent 70%);
+  animation: haloDeriva 38s ease-in-out infinite alternate;
+}
+
+@keyframes haloDeriva {
+  0%   { transform: translate3d(0, 0, 0); }
+  50%  { transform: translate3d(4%, -3%, 0); }
+  100% { transform: translate3d(-3%, 4%, 0); }
+}
+@media (prefers-reduced-motion: reduce) { body::after { animation: none !important; } }
+
+/* ---------- Botón metal líquido (sólo oscuro) ----------
+   Píldora carbón con un borde de metal que gira: oro + la irisación de la mariposa.
+   En claro el botón sigue en oro sólido. */
+@property --lm-giro { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+:root:not([data-theme="light"]) .btn-primary {
+  position: relative;
+  color: var(--text);
+  border: 2px solid transparent;
+  background:
+    linear-gradient(180deg, #2a2823 0%, #151411 100%) padding-box,
+    conic-gradient(from var(--lm-giro),
+      #fff6dc 0%, #e3c88c 8%, #5a4520 18%, #c9a35b 26%, #7ff0de 34%, #bfe0ff 40%,
+      #e6c4ff 46%, #ffb6d6 52%, #3a2f1a 60%, #e3c88c 70%, #ffffff 78%, #a98540 88%, #fff6dc 100%) border-box;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.10),
+    inset 0 -8px 18px -10px rgba(0,0,0,.6),
+    0 12px 32px -14px rgba(0,0,0,.9),
+    0 0 26px -10px rgba(201,163,91,.45);
+  animation: lmGiro 5s linear infinite;
+}
+:root:not([data-theme="light"]) .btn-primary::after {
+  /* brillo de metal que cruza la superficie */
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,246,220,.10) 48%, rgba(95,227,209,.06) 54%, transparent 66%);
+  background-size: 250% 100%;
+  animation: lmBrillo 5s ease-in-out infinite;
+}
+:root:not([data-theme="light"]) .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.14),
+    inset 0 -8px 18px -10px rgba(0,0,0,.6),
+    0 18px 40px -14px rgba(0,0,0,.9),
+    0 0 34px -8px rgba(201,163,91,.6),
+    0 0 40px -16px rgba(95,227,209,.45);
+  animation-duration: 2.5s;
+}
+@keyframes lmGiro { to { --lm-giro: 360deg; } }
+@keyframes lmBrillo { 0%, 100% { background-position: 120% 0; } 50% { background-position: -20% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-theme="light"]) .btn-primary,
+  :root:not([data-theme="light"]) .btn-primary::after { animation: none; }
+}
+
+/* ---------- Tipografía ---------- */
+/* Titulares: Space Grotesk semibold, interlineado 1, tracking −3% */
+h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+.h2 { line-height: 1; }
+
+/* Etiquetas: JetBrains Mono, mayúsculas, espaciado amplio, sin píldora */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11.5px; font-weight: 500;
+  letter-spacing: .32em;
+  color: var(--gold-2);
+  padding: 0; border: 0; border-radius: 0; background: none;
+}
+.eyebrow .dot { display: none; }
+
+/* Firma y datos chicos en mono */
+.tag-soon, .save-pill, .oc-live { font-family: var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
+
+/* ---------- Corazón expansivo: el único acento rosado ---------- */
+.philo-heart { color: var(--rosa); }
+
+/* ---------- Movimiento: aparece, no salta ---------- */
+/* Fundido + 12 px hacia arriba, 600 ms, curva suave. 120 ms entre capas. */
+[data-reveal] {
+  transform: translateY(12px);
+  transition: opacity .6s cubic-bezier(.22,.61,.36,1), transform .6s cubic-bezier(.22,.61,.36,1);
+}
+[data-reveal][data-delay="1"] { transition-delay: .12s; }
+[data-reveal][data-delay="2"] { transition-delay: .24s; }
+[data-reveal][data-delay="3"] { transition-delay: .36s; }
+[data-reveal][data-delay="4"] { transition-delay: .48s; }
+
+/* Línea de oro que se dibuja de izquierda a derecha y se desvanece al final */
+.section-head .h2::after {
+  content: ""; display: block;
+  width: min(220px, 60%); height: 1px; margin: 22px auto 0;
+  background: linear-gradient(90deg, var(--gold-3), rgba(201,163,91,0));
+  transform: scaleX(0); transform-origin: 0 50%;
+  transition: transform .9s cubic-bezier(.22,.61,.36,1) .3s;
+}
+.section-head.left .h2::after { margin-left: 0; }
+.section-head .h2.in::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { transform: none; }
+  .section-head .h2::after { transform: none; transition: none; }
+}
+
+/* ---------- Foto de Cami ---------- */
+.about-photo img { object-position: 40% 30%; }
+
+/* ---------- Logo nítido ----------
+   Sin resplandor (difuminaba el trazo) y con versiones chicas del logo
+   (assets/logo-64/96/128.png, recortadas al dibujo) en vez de achicar el de 1172 px. */
+.brand-badge img { width: 32px; height: 32px; filter: none; }
+.meta-ic-img img { filter: none; }
+:root[data-theme="light"] .brand-badge { background: radial-gradient(circle at 35% 25%, rgba(184,144,46,.10), #ffffff); }
+/* En claro el oro del logo se pierde sobre blanco: un oro más profundo */
+:root[data-theme="light"] .brand-badge img,
+:root[data-theme="light"] .meta-ic-img img,
+:root[data-theme="light"] .hd-brand img { filter: saturate(1.4) brightness(.72) contrast(1.3); }
