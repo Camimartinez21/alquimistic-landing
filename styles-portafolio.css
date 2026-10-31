@@ -195,3 +195,18 @@
 .phone-acts { flex: none; }
 .hd-nav a { padding-block: 6px; }
 .oc-ai svg { width: 19px; height: 19px; }
+
+/* ---------- Hero: teléfono con proporción real (9 : 19,5) ---------- */
+.hero h1 { margin-top: 0; }
+.phone {
+  width: 158px; aspect-ratio: 9 / 19.5; padding: 6px;
+  right: -16px; bottom: -64px; border-radius: 28px;
+}
+.phone::before { top: 12px; width: 40px; height: 11px; background: #0a0a0d; }
+.phone-screen { height: 100%; min-height: 0; border-radius: 23px; padding: 30px 11px 12px; display: flex; flex-direction: column; overflow: hidden; }
+.phone-top { margin-bottom: 10px; }
+.phone-bal { padding: 10px 11px; border-radius: 14px; }
+.phone-acts { margin-top: 12px; }
+@media (max-width: 900px) {
+  .phone { width: 146px; right: -12px; bottom: -48px; }
+}
