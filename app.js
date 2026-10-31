@@ -115,7 +115,7 @@
     // "movil" = otra percha cuando la pantalla es angosta.
     // Alterna lados: derecha, izquierda, derecha… para que cruce la página.
     var spots = {
-      top:          { sel: ".hero-visual", ax: 1, ay: 0, rot: -8, movil: { sel: ".hero-cta", ax: 1, ay: 0, rot: -8 } },
+      top:          { sel: ".hero-visual", ax: 1, ay: 0, rot: -8, movil: { sel: ".hero-cta .btn-primary", ax: 0, ay: 0, rot: 8 } },
       problema:     { sel: "#problema .section-head .h2", ax: 0, ay: 0, rot: 8 },
       crear:        { sel: "#crear .goals", ax: 1, ay: 0, rot: -9 },
       proyectos:    { sel: '.pc-card[data-pos="0"]', ax: 0, ay: 0, rot: 10 },

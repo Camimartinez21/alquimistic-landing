@@ -37,8 +37,11 @@ próxima conversación con Cami, cuando decida el precio de la Oficina Completa.
 
 ### Próxima sesión: seguir con el manual de marca
 
-El rediseño vive en la rama `claude/nice-goldberg-1uznz7` (sin mergear a
-`main`; alquimistic.com no ha cambiado). Pendiente, en orden:
+✅ **Publicado en alquimistic.com el 2026-10-31** (rama
+`claude/nice-goldberg-1uznz7` pasada a `main`, por pedido de Cami). Un commit
+viejo de junio que estaba sólo en el `main` de este PC (DESIGN.md y
+PRODUCT.md) quedó en la rama local `respaldo/main-local-junio-2026`, sin
+publicar. Lo que se hizo, en orden:
 
 1. ✅ **Manual de marca aplicado** (2026-10-31). Todo vive en
    `styles-marca.css` (se carga al final): en oscuro, carbón cálido #141311,
@@ -70,7 +73,9 @@ El rediseño vive en la rama `claude/nice-goldberg-1uznz7` (sin mergear a
    Sin reseñas ni testimonios en la landing: eso va en redes.
    WhatsApp: todos los mensajes dicen "vengo por la Metamorfosis" (opción B).
 3. ✅ Precio de la Oficina Completa: **$21.900 al mes** (Cami, 2026-10-31), ya en `index.html` y `llms.txt`. **Falta llevarlo al hub** (`src/lib/planes.ts` y el wizard). Colego entra con captura cuando termine su diseño. (Se sacó el testimonio de Oppa por decisión de Cami; la foto de Cami ya está.)
-4. Revisar en tablet y celular y, cuando Cami lo apruebe, mergear a `main`.
+4. ✅ Revisado en celular (Cami lo probó en su teléfono) y publicado.
+5. **Pendiente:** la app (wizard y planes) todavía vende Semilla/Alquimia/Expande;
+   alinearla con Oficina Esencial / Completa $21.900.
 
 ### Gustos de Cami para el diseño (anotados en la sesión)
 
