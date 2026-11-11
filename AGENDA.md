@@ -3,6 +3,18 @@
 > Compañera de `AGENDA.md` y `NORTE.md` del repo **alquimistic-hub-app**, que
 > es donde vive el producto. Este repo es sólo la vitrina.
 
+## 🟢 2026-11-11 — Oficina Completa al día con la app
+
+- Tarjeta de la Completa: «Ideas de contenido y una Bóveda que responde con IA»
+  y «Personas adicionales a $9.900 al mes c/u» (trae 1 persona).
+- **Cami decidió quitar la promesa «conectada a tu propia IA (ChatGPT, Claude o
+  Gemini)»**: en la app todavía no se puede y el chat con la IA está en pausa.
+  Se sacó de metas, hero, servicios, Metamorfosis, preguntas frecuentes y
+  `llms.txt`. Sólo queda el bloque «Próximamente» de la oficina (y su chat de
+  ejemplo, ahora marcado «próximamente»).
+- Correo de contacto: `contacto@alquimistic.com` (JSON-LD y `llms.txt`; la
+  página no muestra correo visible).
+
 ## 🔴 LEE ESTO PRIMERO — estado al 2026-10-31
 
 ### La landing ahora es el portafolio de Cami
