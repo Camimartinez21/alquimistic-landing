@@ -27,7 +27,7 @@ FAQ = [
     ("¿Cómo es el diagnóstico?",
      "Es una conversación sin costo, por videollamada, para entender qué vendes, dónde se pierde tiempo y qué frena el crecimiento. Terminas con una propuesta clara."),
     ("¿Cuánto cuesta?",
-     "La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda o membresías) se cotiza después del diagnóstico y se paga una sola vez."),
+     "La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda, reservas, cursos o membresías) se cotiza después de una reunión breve y se paga 50% al inicio y 50% al finalizar, o en cuotas con tarjeta."),
     ("¿Cuánto demora un proyecto?",
      "Depende de lo que se construya. Antes de empezar sabes qué se hace, cuánto cuesta y cuándo está listo."),
     ("¿El sistema es mío?",

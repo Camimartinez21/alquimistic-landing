@@ -115,13 +115,13 @@
     // "movil" = otra percha cuando la pantalla es angosta.
     // Alterna lados: derecha, izquierda, derecha… para que cruce la página.
     var spots = {
-      top:          { sel: ".hero-visual", ax: 1, ay: 0, rot: -8, movil: { sel: ".hero-cta .btn-primary", ax: 0, ay: 0, rot: 8 } },
+      top:          { sel: ".hero-doors", ax: 1, ay: 0, rot: -8, movil: { sel: ".hero-doors .door", ax: 1, ay: 0, rot: -8 } },
       problema:     { sel: "#problema .section-head .h2", ax: 0, ay: 0, rot: 8 },
-      crear:        { sel: "#crear .goals", ax: 1, ay: 0, rot: -9 },
+      medida:       { sel: "#medida .section-head .h2", ax: 1, ay: 0, rot: -9 },
       proyectos:    { sel: '.pc-card[data-pos="0"]', ax: 0, ay: 0, rot: 10 },
-      oficina:      { sel: ".office-chat", ax: 1, ay: 0, rot: -8 },
+      oficina:      { sel: ".office .hero-visual", ax: 1, ay: 0, rot: -8 },
       metamorfosis: { sel: "#metamorfosis .meta-step:first-child", ax: 0, ay: 0, rot: 7 },
-      formas:       { sel: "#formas .plan.popular", ax: 1, ay: 0, rot: -10 },
+      planes:       { sel: "#planes .plan.popular", ax: 1, ay: 0, rot: -10 },
       "sobre-mi":   { sel: ".about-photo", ax: 0, ay: 0, rot: 8 },
       faq:          { sel: "#faq .faq", ax: 1, ay: 0, rot: -6 },
       cta:          { sel: ".cta-box", ax: 0, ay: 0, rot: 8 }
@@ -235,7 +235,7 @@
       });
     }, { rootMargin: "-45% 0px -45% 0px", threshold: 0 });
 
-    ["problema", "crear", "proyectos", "oficina", "metamorfosis", "formas", "sobre-mi", "faq", "cta"]
+    ["problema", "oficina", "planes", "medida", "proyectos", "metamorfosis", "sobre-mi", "faq", "cta"]
       .forEach(function (id) {
         var el = document.getElementById(id);
         if (el) io.observe(el);
@@ -328,5 +328,70 @@
 
     pcShow(0);
     pcPlay();
+  }
+
+  /* ---------- A la medida: carrusel por tipo de proyecto ----------
+     Píldoras, flechas y deslizar con el dedo. No avanza solo: la persona
+     busca su proyecto. El botón de WhatsApp lleva el tipo que está mirando. */
+  var ideas = document.querySelector("[data-ideas]");
+  if (ideas) {
+    var idPills = Array.prototype.slice.call(ideas.querySelectorAll("[data-rubro]"));
+    var idPanels = Array.prototype.slice.call(ideas.querySelectorAll("[data-idea]"));
+    var idStage = ideas.querySelector(".ideas-stage");
+    var idList = ideas.querySelector(".ideas-pills");
+    var idCta = ideas.querySelector("[data-ideas-cta]");
+    var idCur = 0;
+    var idShow = function (k, mover) {
+      var n = idPills.length;
+      var dir = k >= idCur ? 1 : -1;
+      k = (k + n) % n;
+      idCur = k;
+      if (idStage) idStage.style.setProperty("--dir", dir);
+      idPills.forEach(function (b, i) {
+        b.classList.toggle("is-on", i === k);
+        b.setAttribute("aria-selected", i === k ? "true" : "false");
+        b.tabIndex = i === k ? 0 : -1;
+      });
+      idPanels.forEach(function (p, i) { p.hidden = i !== k; });
+      if (idCta) {
+        idCta.setAttribute("href", waLink("Hola Cami, vengo por la Metamorfosis. Quiero desarrollar mi sistema: " + idPanels[k].getAttribute("data-msg") + "."));
+      }
+      // En celular las píldoras van en fila: mover la fila hasta la activa (sin mover la página)
+      if (mover && idList && idList.scrollWidth > idList.clientWidth + 4) {
+        idList.scrollTo({ left: Math.max(0, idPills[k].offsetLeft - idList.offsetLeft - 24), behavior: "smooth" });
+      }
+    };
+    idPills.forEach(function (b, k) {
+      b.addEventListener("click", function () { idShow(k, true); });
+      b.addEventListener("keydown", function (e) {
+        var go = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (!go) return;
+        e.preventDefault();
+        idShow(idCur + go, true);
+        idPills[idCur].focus();
+      });
+    });
+    var idPrev = ideas.querySelector("[data-ideas-prev]");
+    var idNext = ideas.querySelector("[data-ideas-next]");
+    if (idPrev) idPrev.addEventListener("click", function () { idShow(idCur - 1, true); });
+    if (idNext) idNext.addEventListener("click", function () { idShow(idCur + 1, true); });
+
+    // Deslizar con el dedo en el celular
+    if (idStage) {
+      var idX = null, idY = null;
+      idStage.addEventListener("touchstart", function (e) { idX = e.touches[0].clientX; idY = e.touches[0].clientY; }, { passive: true });
+      idStage.addEventListener("touchend", function (e) {
+        if (idX === null) return;
+        var dx = e.changedTouches[0].clientX - idX, dy = e.changedTouches[0].clientY - idY;
+        idX = null;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) idShow(idCur + (dx < 0 ? 1 : -1), true);
+      });
+    }
+
+    // Enlace directo a una lámina: alquimistic.com/#medida-tienda
+    var idHash = (location.hash || "").replace("#medida-", "");
+    var idStart = idPills.map(function (b) { return b.getAttribute("data-rubro"); }).indexOf(idHash);
+    idShow(idStart === -1 ? 0 : idStart, false);
+    if (idStart !== -1) window.addEventListener("load", function () { ideas.scrollIntoView(); });
   }
 })();

@@ -26,7 +26,7 @@ Antes de empezar se sabe qué se construye, cuánto cuesta y cuándo está listo
 ## Formas de trabajar (pesos chilenos)
 - Oficina Esencial — gratis: clientes y ventas en un solo lugar, agenda; lista para usar en minutos.
 - Oficina Completa — $21.900 al mes: todos los módulos (finanzas, marketing, bóveda), ideas de contenido y una Bóveda que responde con IA, incluye 1 persona (cada persona adicional, $9.900 al mes), actualizaciones y respaldo.
-- Proyecto a medida — se cotiza, pago único: página, app, tienda o membresías. Incluye diagnóstico sin costo, código y cuentas a nombre del cliente y una sesión de entrega.
+- Proyecto a medida — se cotiza según el proyecto: página, tienda, reservas, pedidos, cursos o membresías, siempre con el panel para administrarlo. Parte con una reunión breve y una propuesta sin costo. Se paga 50% al inicio y 50% al finalizar, o en cuotas con tarjeta. Código y cuentas a nombre del cliente, y una sesión de entrega. Opcional: dejarlo conectado al ChatGPT o Claude del dueño.
 Después de la entrega solo se pagan los servicios donde vive el sistema (hosting, base de datos), explicados antes de empezar. Los ajustes posteriores se cotizan aparte.
 
 ## Proyectos
@@ -40,7 +40,7 @@ Después de la entrega solo se pagan los servicios donde vive el sistema (hostin
 - ¿Para qué tipo de negocios es? Para negocios que venden por WhatsApp, Instagram o en persona y quieren dejar de improvisar: tiendas, salones de belleza, marcas de comida, servicios. Se puede partir con una pieza y sumar las demás cuando el negocio lo pida.
 - ¿Cómo empiezo? Escríbele a Cami por WhatsApp y cuéntale de tu negocio. Si prefieres partir por tu cuenta, crea tu oficina gratis: respondes unas preguntas y queda armada para tu industria.
 - ¿Cómo es el diagnóstico? Es una conversación sin costo, por videollamada, para entender qué vendes, dónde se pierde tiempo y qué frena el crecimiento. Terminas con una propuesta clara.
-- ¿Cuánto cuesta? La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda o membresías) se cotiza después del diagnóstico y se paga una sola vez.
+- ¿Cuánto cuesta? La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda, reservas, cursos o membresías) se cotiza después de una reunión breve y se paga 50% al inicio y 50% al finalizar, o en cuotas con tarjeta.
 - ¿Cuánto demora un proyecto? Depende de lo que se construya. Antes de empezar sabes qué se hace, cuánto cuesta y cuándo está listo.
 - ¿El sistema es mío? Sí. Al pagar el proyecto completo, el código, los datos y las cuentas quedan a tu nombre.
 - ¿Necesito saber programar? No. Te lo entrego funcionando y con una guía simple para administrarlo.

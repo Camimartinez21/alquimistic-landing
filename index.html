@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="styles-sections.css" />
 <link rel="stylesheet" href="styles-portafolio.css" />
+<link rel="stylesheet" href="styles-ideas.css" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles-marca.css" />
 <!-- Tema claro/oscuro: se aplica ANTES de pintar para evitar parpadeo -->
@@ -140,7 +141,7 @@
       "name": "¿Cuánto cuesta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda o membresías) se cotiza después del diagnóstico y se paga una sola vez."
+        "text": "La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda, reservas, cursos o membresías) se cotiza después de una reunión breve y se paga 50% al inicio y 50% al finalizar, o en cuotas con tarjeta."
       }
     },
     {
@@ -229,10 +230,10 @@
       <span class="brand-name">Alquimistic</span>
     </a>
     <div class="nav-links">
-      <a href="#crear">Servicios</a>
+      <a href="#problema">Oficina</a>
+      <a href="#medida">A la medida</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="#oficina">La oficina</a>
-      <a href="#formas">Formas de trabajar</a>
+      <a href="#metamorfosis">Cómo trabajamos</a>
       <a href="#sobre-mi">Sobre mí</a>
     </div>
     <div class="nav-actions">
@@ -248,23 +249,87 @@
 
 <span id="top"></span>
 
-<!-- ============ 1. HERO ============ -->
-<header class="hero wrap">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <h1 data-reveal data-delay="1">El sistema que <span class="gold-text">tu negocio necesita</span>, hecho a la medida.</h1>
-      <p class="lead" data-reveal data-delay="2">Páginas, apps, tiendas y la oficina digital de tu negocio, en orden y listas para crecer contigo.</p>
-      <div class="hero-cta" data-reveal data-delay="3">
-        <a class="btn btn-primary btn-lg" href="#" data-wa="Hola Cami, vengo por la Metamorfosis. Quiero contarte de mi negocio.">Cuéntame tu negocio
+<!-- ============ 1. HERO ============
+     Dos puertas, sin mezclarlas: la Oficina (Acto 1) y los sistemas a la medida (Acto 2). -->
+<header class="hero hero-puertas wrap">
+  <div class="hero-copy">
+    <h1 data-reveal data-delay="1">Tu idea. Tu sistema. <span class="gold-text">Tu manera de hacer negocio.</span></h1>
+    <div class="hero-doors" data-reveal data-delay="2">
+      <div class="door">
+        <span class="door-k">Alquimistic Oficina</span>
+        <h2>Ordena tu negocio con Alquimistic Oficina.</h2>
+        <a class="btn btn-primary btn-lg" href="#" data-wizard>Crear mi oficina gratis</a>
+      </div>
+      <div class="door">
+        <span class="door-k">A la medida</span>
+        <h2>Crea tu web o app a la medida.</h2>
+        <a class="btn btn-primary btn-lg" href="#medida">Quiero desarrollar mi sistema</a>
+      </div>
+    </div>
+    <div class="hero-trust" data-reveal data-delay="3">
+      <span>Todo <b>a tu nombre</b></span>
+      <span>Hecho en <b>Chile</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 2. ACTO 1 · ALQUIMISTIC OFICINA: el problema ============ -->
+<section class="sec problem wrap" id="problema">
+  <div class="section-head">
+    <span class="eyebrow" data-reveal><span class="dot"></span>Alquimistic Oficina</span>
+    <h2 class="h2" data-reveal data-delay="1">Tu negocio no debería vivir <span class="gold-text">en tu cabeza.</span></h2>
+    <p class="lead" data-reveal data-delay="2">Pedidos en WhatsApp, clientes en Instagram, números en un cuaderno y la agenda en otra app. Ya conversas con tu IA, pero armar un sistema que funcione se complica. <b class="lead-strong">Hay una forma más simple.</b></p>
+  </div>
+
+  <div class="chaos chaos-9" data-reveal data-delay="2" aria-hidden="true">
+    <div class="chip" style="--rot:-6deg; top:4%; left:2%; animation-delay:.0s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Pedidos en WhatsApp</div>
+    <div class="chip" style="--rot:4deg; top:0; left:36%; animation-delay:.8s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h0"/></svg>Clientes en Instagram</div>
+    <div class="chip" style="--rot:7deg; top:8%; right:2%; animation-delay:1.4s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>Correos sin leer</div>
+    <div class="chip danger" style="--rot:-3deg; top:36%; left:8%; animation-delay:.4s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Números en un cuaderno</div>
+    <div class="chip" style="--rot:5deg; top:40%; left:44%; animation-delay:1.0s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>Excel disperso</div>
+    <div class="chip danger" style="--rot:-5deg; top:34%; right:4%; animation-delay:.2s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Drive sin orden</div>
+    <div class="chip" style="--rot:-4deg; bottom:6%; left:4%; animation-delay:1.6s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5z"/><path d="M15 3v6h6"/></svg>Notas sueltas</div>
+    <div class="chip" style="--rot:6deg; bottom:0; left:34%; animation-delay:.6s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>La agenda en otra app</div>
+    <div class="chip danger" style="--rot:-6deg; bottom:8%; right:6%; animation-delay:1.2s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l3-2 3 2 3-2 3 2 3-2 1 .7V2l-1 .7-3-2-3 2-3-2-3 2-3-2z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Facturas perdidas</div>
+  </div>
+  <div class="pains">
+    <div class="pain" data-reveal><h4>Nadie ve el negocio completo</h4><p>Cada dato vive en un lugar distinto. Decidir toma más tiempo del que debería.</p></div>
+    <div class="pain" data-reveal data-delay="1"><h4>Horas que se van</h4><p>Copiar, buscar y repetir lo que podría hacerse solo.</p></div>
+    <div class="pain" data-reveal data-delay="2"><h4>Ventas que se enfrían</h4><p>Clientes que no vuelven porque nadie les escribió a tiempo.</p></div>
+    <div class="pain" data-reveal data-delay="3"><h4>Crecer se vuelve caos</h4><p>Si todo depende de ti, más ventas significa más desorden, no más libertad.</p></div>
+  </div>
+</section>
+
+<!-- ============ 3. ACTO 1: la solución (la Oficina) ============ -->
+<section class="sec wrap" id="oficina">
+  <div class="office">
+    <div class="office-copy">
+      <span class="eyebrow" data-reveal><span class="dot"></span>La solución</span>
+      <h2 class="h2" data-reveal data-delay="1">Alquimistic es <span class="gold-text">la oficina.</span></h2>
+      <p class="lead" data-reveal data-delay="2">El negocio completo en una app. Respondes unas preguntas y queda armada para tu negocio.</p>
+
+      <ul class="office-mods" data-reveal data-delay="2">
+        <li>Hoy</li><li>Clientes</li><li>Ventas</li><li>Agenda</li><li>Finanzas</li><li>Marketing</li><li>Bóveda</li><li class="mod-ia">IA</li>
+      </ul>
+
+
+      <ul class="idea-pts office-pts" data-reveal data-delay="2">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Sabes a quién escribirle hoy: clientes que no vuelven hace un tiempo</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Ves qué se está acabando antes de quedarte sin stock</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Recibes ideas de contenido cada semana</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Le preguntas a tu Bóveda y responde desde tus archivos</li>
+      </ul>
+
+      <div class="office-ia" data-reveal data-delay="3">
+        <span class="soon-pill">Próximamente</span>
+        <h3>IA conectada</h3>
+        <p>Conecta Claude, ChatGPT o Gemini. Le pides algo y lo hace: anota la venta, agenda la cita, le escribe al cliente. Usas la IA que ya pagas.</p>
+      </div>
+
+      <div class="office-cta" data-reveal data-delay="3">
+        <a class="btn btn-primary btn-lg" href="#" data-wizard>Crear mi oficina
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost btn-lg" href="#" data-wizard>Crear mi oficina gratis</a>
-      </div>
-      <p class="hero-alt" data-reveal data-delay="3">O mira primero los <a href="#proyectos">proyectos</a>.</p>
-      <div class="hero-trust" data-reveal data-delay="4">
-        <span>Tu sistema <b>a la medida</b></span>
-        <span>Todo <b>a tu nombre</b></span>
-        <span>Hecho en <b>Chile</b></span>
       </div>
     </div>
 
@@ -317,85 +382,348 @@
       </div>
     </div>
   </div>
-</header>
+</section>
 
-<!-- ============ 2. EL PROBLEMA ============ -->
-<section class="sec problem wrap" id="problema">
+<!-- ============ 4. ACTO 1: planes de la Oficina ============ -->
+<section class="sec wrap" id="planes">
   <div class="section-head">
-    <span class="eyebrow" data-reveal><span class="dot"></span>El problema</span>
-    <h2 class="h2" data-reveal data-delay="1">Tu negocio no debería vivir <span class="gold-text">en tu cabeza.</span></h2>
-    <p class="lead" data-reveal data-delay="2">Pedidos en WhatsApp, clientes en Instagram, números en un cuaderno y la agenda en otra app. Ya conversas con tu IA, pero armar un sistema que funcione se complica. <b class="lead-strong">Hay una forma más simple.</b></p>
+    <h2 class="h2" data-reveal>Planes de la <span class="gold-text">Oficina</span></h2>
+    <p class="lead" data-reveal data-delay="1">Empieza gratis y crece cuando el negocio lo pida. Precios en pesos chilenos.</p>
   </div>
 
-  <div class="chaos chaos-9" data-reveal data-delay="2" aria-hidden="true">
-    <div class="chip" style="--rot:-6deg; top:4%; left:2%; animation-delay:.0s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Pedidos en WhatsApp</div>
-    <div class="chip" style="--rot:4deg; top:0; left:36%; animation-delay:.8s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h0"/></svg>Clientes en Instagram</div>
-    <div class="chip" style="--rot:7deg; top:8%; right:2%; animation-delay:1.4s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>Correos sin leer</div>
-    <div class="chip danger" style="--rot:-3deg; top:36%; left:8%; animation-delay:.4s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>Números en un cuaderno</div>
-    <div class="chip" style="--rot:5deg; top:40%; left:44%; animation-delay:1.0s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>Excel disperso</div>
-    <div class="chip danger" style="--rot:-5deg; top:34%; right:4%; animation-delay:.2s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Drive sin orden</div>
-    <div class="chip" style="--rot:-4deg; bottom:6%; left:4%; animation-delay:1.6s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5z"/><path d="M15 3v6h6"/></svg>Notas sueltas</div>
-    <div class="chip" style="--rot:6deg; bottom:0; left:34%; animation-delay:.6s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>La agenda en otra app</div>
-    <div class="chip danger" style="--rot:-6deg; bottom:8%; right:6%; animation-delay:1.2s"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l3-2 3 2 3-2 3 2 3-2 1 .7V2l-1 .7-3-2-3 2-3-2-3 2-3-2z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>Facturas perdidas</div>
-  </div>
-  <div class="pains">
-    <div class="pain" data-reveal><h4>Nadie ve el negocio completo</h4><p>Cada dato vive en un lugar distinto. Decidir toma más tiempo del que debería.</p></div>
-    <div class="pain" data-reveal data-delay="1"><h4>Horas que se van</h4><p>Copiar, buscar y repetir lo que podría hacerse solo.</p></div>
-    <div class="pain" data-reveal data-delay="2"><h4>Ventas que se enfrían</h4><p>Clientes que no vuelven porque nadie les escribió a tiempo.</p></div>
-    <div class="pain" data-reveal data-delay="3"><h4>Crecer se vuelve caos</h4><p>Si todo depende de ti, más ventas significa más desorden, no más libertad.</p></div>
+  <div class="plans plans-2">
+    <div class="plan" data-reveal>
+      <div class="pname">Oficina Esencial</div>
+      <div class="pprice"><span class="amt">Gratis</span></div>
+      <div class="pdesc">Para ordenar el negocio desde hoy.</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Clientes y ventas en un solo lugar</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Agenda</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Lista para usar en minutos</li>
+      </ul>
+      <a class="btn btn-ghost" href="#" data-wizard>Crear mi oficina</a>
+    </div>
+
+    <div class="plan popular" data-reveal data-delay="1">
+      <div class="plan-flag">Para crecer</div>
+      <div class="pname">Oficina Completa</div>
+      <div class="pprice"><span class="amt">$21.900</span><span class="per">al mes</span></div>
+      <div class="pdesc">Para negocios que quieren crecer con orden.</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Todos los módulos: finanzas, marketing y bóveda</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Ideas de contenido y una Bóveda que responde con IA</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Personas adicionales a $9.900 al mes c/u</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Actualizaciones y respaldo</li>
+      </ul>
+      <a class="btn btn-primary" href="#" data-wizard>Crear mi oficina</a>
+    </div>
   </div>
 </section>
 
-<!-- ============ 3. LO QUE SE PUEDE CREAR (por objetivo de crecimiento) ============ -->
-<section class="sec wrap" id="crear">
+<!-- ============ 5. ACTO 2 · SISTEMAS HECHOS A LA MEDIDA ============
+     Carrusel por tipo de proyecto. Cada lámina = «lo que ves tú» (panel) + «lo que ve tu cliente» (teléfono).
+     Las marcas son de ejemplo. Estilos en styles-ideas.css; lógica en app.js (data-ideas).
+     Sin data-reveal dentro de .idea: las que parten ocultas no se revelarían.
+     Enlace directo a una lámina: alquimistic.com/#medida-tienda -->
+<section class="sec wrap acto-2" id="medida" data-ideas>
   <div class="section-head">
-    <h2 class="h2" data-reveal>Lo que se puede <span class="gold-text">crear.</span></h2>
-    <p class="lead" data-reveal data-delay="1">Cada pieza resuelve una etapa del crecimiento. Se puede partir por una y sumar las demás cuando el negocio lo pida.</p>
+    <span class="eyebrow" data-reveal><span class="dot"></span>A la medida</span>
+    <h2 class="h2" data-reveal data-delay="1">Y si necesitas algo propio, <span class="gold-text">lo construimos.</span></h2>
+    <p class="lead" data-reveal data-delay="2">Llega con tu idea, aunque venga a medias o la hayas armado con una IA. Sale funcionando, con el sistema que sostiene el negocio.</p>
   </div>
 
-  <div class="goals">
-    <article class="goal" data-reveal>
-      <span class="goal-n">01</span>
-      <h3>Que te encuentren</h3>
-      <p class="goal-lead">Aparecer en Google y que reservar o comprar sea fácil.</p>
-      <ul>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><span><b>Página web y Google</b>Que te encuentren y te reserven.</span></li>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4M9 15l2 2 4-4"/></svg></span><span><b>Agenda y reservas</b>Conectada a la herramienta que ya usas.</span></li>
-      </ul>
-    </article>
-    <article class="goal" data-reveal data-delay="1">
-      <span class="goal-n">02</span>
-      <h3>Que te compren</h3>
-      <p class="goal-lead">Vender sin depender de responder cada mensaje.</p>
-      <ul>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><span><b>Tienda online</b>Catálogo, pedidos y pagos.</span></li>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span><span><b>App propia</b>Tu marca en el celular de tus clientes.</span></li>
-      </ul>
-    </article>
-    <article class="goal" data-reveal data-delay="2">
-      <span class="goal-n">03</span>
-      <h3>Que vuelvan</h3>
-      <p class="goal-lead">Convertir compras sueltas en ingresos que se repiten.</p>
-      <ul>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><span><b>Membresías y comunidad</b>Ingresos que se repiten cada mes.</span></li>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></span><span><b>Beneficios y fidelización</b>Cashback, descuentos y premios para quien vuelve.</span></li>
-      </ul>
-    </article>
-    <article class="goal goal-main" data-reveal data-delay="3">
-      <span class="goal-n">04</span>
-      <h3>Que funcione sin ti</h3>
-      <p class="goal-lead">Ordenar la operación para crecer con estructura, no con más caos.</p>
-      <ul>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span><b>La oficina de tu negocio</b>Clientes, fechas, archivos y finanzas en un solo lugar.</span></li>
-        <li><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span><span><b>Ideas y Bóveda con IA</b>Ideas de contenido cada semana y una Bóveda que responde tus preguntas.</span></li>
-      </ul>
-    </article>
+  <div class="ideas-nav" data-reveal data-delay="2">
+    <button class="ideas-arrow" type="button" data-ideas-prev aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <div class="ideas-pills" role="tablist" aria-label="Tipos de proyecto">
+      <button class="idea-pill is-on" type="button" role="tab" aria-selected="true" data-rubro="pagina">Página</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="tienda">Tienda</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="reservas">Reservas</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="pedidos">Pedidos</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="formacion">Formación</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="membresias">Membresías</button>
+    </div>
+    <button class="ideas-arrow" type="button" data-ideas-next aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
   </div>
 
-  <p class="sec-close" data-reveal>Cada negocio necesita algo distinto. <b>Primero el problema, después la herramienta.</b></p>
+  <div class="ideas-stage" data-reveal data-delay="3">
+
+    <!-- Página -->
+    <article class="idea" role="tabpanel" data-idea="pagina" data-msg="una página para dar a conocer mis servicios" style="--m:#3f6f7a">
+      <div class="idea-copy">
+        <h3>Una página para dar a conocer tus servicios</h3>
+        <ul class="idea-pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Tus servicios, tu historia y tus reseñas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Aparece en Google y lleva directo a WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Cada consulta queda guardada en tu panel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>La cambias cuando quieras, sin depender de nadie</li>
+        </ul>
+      </div>
+      <div class="idea-mock" aria-hidden="true">
+        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
+        <div class="im-panel">
+          <div class="im-bar"><i></i><i></i><i></i><span>panel.clararuiz.cl</span></div>
+          <div class="im-body">
+            <aside class="im-side"><b>Clara Ruiz</b><span class="on">Consultas</span><span>Página</span><span>Servicios</span><span>Reseñas</span><span>Google</span></aside>
+            <div class="im-main">
+              <div class="im-h"><b>Consultas</b><span>Esta semana</span></div>
+              <div class="im-stats"><div class="im-stat"><small>Visitas</small><b>1.240</b></div><div class="im-stat"><small>Consultas</small><b>18</b></div><div class="im-stat"><small>Desde Google</small><b>64%</b></div></div>
+              <div class="im-rows">
+                <div class="im-row"><span class="t">Hoy</span><span><b>Marcela T.</b><small>Kinesiología a domicilio</small></span><span class="im-tag ok">Nueva</span></div>
+                <div class="im-row"><span class="t">Ayer</span><span><b>Rodrigo P.</b><small>Evaluación postural</small></span><span class="im-tag">Respondida</span></div>
+                <div class="im-row"><span class="t">Lun</span><span><b>Elena V.</b><small>Plan de 8 sesiones</small></span><span class="im-tag">Agendada</span></div>
+              </div>
+              <div class="im-alert"><span>3 consultas sin responder</span><b>Responder</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
+          <div class="ip-top"><b>Clara Ruiz</b><small>Kinesióloga · Ñuñoa y a domicilio</small></div>
+          <div class="ip-hero"><b>Vuelve a moverte sin dolor.</b><span>Pedir hora</span></div>
+          <span class="ip-lbl">Servicios</span>
+          <div>
+            <div class="ip-ben"><span>Kinesiología a domicilio</span><small>$28.000</small></div>
+            <div class="ip-ben"><span>Evaluación postural</span><small>$22.000</small></div>
+            <div class="ip-ben"><span>Plan de 8 sesiones</span><small>$190.000</small></div>
+          </div>
+          <div class="ip-bar"><span>4,9 · 86 reseñas</span><span>WhatsApp</span></div>
+        </div></div>
+      </div>
+    </article>
+
+    <!-- Tienda -->
+    <article class="idea" role="tabpanel" data-idea="tienda" data-msg="una tienda para vender mis productos" style="--m:#5c7a52" hidden>
+      <div class="idea-copy">
+        <h3>Una tienda para vender tus productos</h3>
+        <ul class="idea-pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Catálogo, carro y pago en línea</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Pedidos por preparar y despachos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Stock con aviso antes del quiebre</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Códigos de descuento cuando quieras</li>
+        </ul>
+      </div>
+      <div class="idea-mock" aria-hidden="true">
+        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
+        <div class="im-panel">
+          <div class="im-bar"><i></i><i></i><i></i><span>panel.almacensauce.cl</span></div>
+          <div class="im-body">
+            <aside class="im-side"><b>Almacén Sauce</b><span class="on">Pedidos</span><span>Productos</span><span>Stock</span><span>Despachos</span><span>Descuentos</span></aside>
+            <div class="im-main">
+              <div class="im-h"><b>Pedidos</b><span>Esta semana</span></div>
+              <div class="im-stats"><div class="im-stat"><small>Pedidos</small><b>38</b></div><div class="im-stat"><small>Ventas</small><b>$612.300</b></div><div class="im-stat"><small>Por preparar</small><b>5</b></div></div>
+              <div class="im-rows">
+                <div class="im-row"><span class="t">#2041</span><span><b>Camila T.</b><small>3 productos · $26.480</small></span><span class="im-tag ok">Por preparar</span></div>
+                <div class="im-row"><span class="t">#2040</span><span><b>Ignacio V.</b><small>1 producto · $12.990</small></span><span class="im-tag">Despachado</span></div>
+                <div class="im-row"><span class="t">#2039</span><span><b>Paula G.</b><small>2 productos · $13.490</small></span><span class="im-tag">Entregado</span></div>
+              </div>
+              <div class="im-alert"><span>Vela de soya · quedan 4</span><b>Reponer</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
+          <div class="ip-top"><b>Almacén Sauce</b><small>Despacho a todo Chile</small></div>
+          <div class="ip-chips"><span class="on">Todo</span><span>Velas</span><span>Baño</span></div>
+          <div class="ip-grid">
+            <div class="ip-prod"><span class="th caja"></span><b>Vela de soya</b><small>$8.990</small></div>
+            <div class="ip-prod"><span class="th caja t2"></span><b>Jabón de avena</b><small>$4.500</small></div>
+            <div class="ip-prod"><span class="th caja t3"></span><b>Difusor de lavanda</b><small>$12.990</small></div>
+            <div class="ip-prod"><span class="th caja t2"></span><b>Set de regalo</b><small>$19.990</small></div>
+          </div>
+          <div class="ip-bar"><span>Carro · 3</span><span>$26.480</span></div>
+        </div></div>
+      </div>
+    </article>
+
+    <!-- Reservas -->
+    <article class="idea" role="tabpanel" data-idea="reservas" data-msg="un sistema para agendar y reservar" style="--m:#a8577a" hidden>
+      <div class="idea-copy">
+        <h3>Un sistema para agendar y reservar</h3>
+        <ul class="idea-pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Tus trabajos y servicios con precio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Reserva en línea con abono</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Recordatorios automáticos antes de cada hora</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Pagos y ficha de cada cliente</li>
+        </ul>
+      </div>
+      <div class="idea-mock" aria-hidden="true">
+        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
+        <div class="im-panel">
+          <div class="im-bar"><i></i><i></i><i></i><span>panel.estudionacar.cl</span></div>
+          <div class="im-body">
+            <aside class="im-side"><b>Estudio Nácar</b><span class="on">Agenda</span><span>Clientes</span><span>Servicios</span><span>Pagos</span><span>Recordatorios</span></aside>
+            <div class="im-main">
+              <div class="im-h"><b>Agenda</b><span>Jueves 19</span></div>
+              <div class="im-stats"><div class="im-stat"><small>Horas de hoy</small><b>7</b></div><div class="im-stat"><small>Abonos</small><b>$35.000</b></div><div class="im-stat"><small>Por confirmar</small><b>1</b></div></div>
+              <div class="im-rows">
+                <div class="im-row"><span class="t">10:00</span><span><b>Valentina R.</b><small>Manicure semipermanente</small></span><span class="im-tag ok">Confirmada</span></div>
+                <div class="im-row"><span class="t">11:30</span><span><b>Josefa M.</b><small>Diseño de cejas</small></span><span class="im-tag ok">Abono pagado</span></div>
+                <div class="im-row"><span class="t">15:00</span><span><b>Carla P.</b><small>Manicure y pedicure</small></span><span class="im-tag">Recordatorio enviado</span></div>
+              </div>
+              <div class="im-alert"><span>Antonia S. no viene hace 2 meses</span><b>Escribirle</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
+          <div class="ip-top"><b>Estudio Nácar</b><small>Uñas y cejas · Providencia</small></div>
+          <div class="ip-gal"><span class="th foto"></span><span class="th foto t2"></span><span class="th foto t3"></span></div>
+          <div class="ip-list">
+            <div class="ip-item"><span class="th foto t2"></span><span><b>Manicure semipermanente</b><small>60 min · $18.000</small></span><span class="ip-plus">+</span></div>
+            <div class="ip-item"><span class="th foto t3"></span><span><b>Diseño de cejas</b><small>30 min · $12.000</small></span><span class="ip-plus">+</span></div>
+          </div>
+          <span class="ip-lbl">Jueves 19</span>
+          <div class="ip-slots"><span>10:00</span><span class="on">11:30</span><span>15:00</span><span>16:30</span></div>
+          <div class="ip-bar"><span>Reservar con abono</span><span>$5.000</span></div>
+        </div></div>
+      </div>
+    </article>
+
+    <!-- Pedidos -->
+    <article class="idea" role="tabpanel" data-idea="pedidos" data-msg="un menú para recibir pedidos" style="--m:#b4532a" hidden>
+      <div class="idea-copy">
+        <h3>Un menú para recibir pedidos</h3>
+        <ul class="idea-pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Menú con fotos, pedido y pago en línea</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Los pedidos llegan a tu panel al instante</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>El inventario se descuenta con cada venta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Proveedores y compras en el mismo lugar</li>
+        </ul>
+      </div>
+      <div class="idea-mock" aria-hidden="true">
+        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
+        <div class="im-panel">
+          <div class="im-bar"><i></i><i></i><i></i><span>panel.casabrasa.cl</span></div>
+          <div class="im-body">
+            <aside class="im-side"><b>Casa Brasa</b><span class="on">Pedidos</span><span>Menú</span><span>Inventario</span><span>Proveedores</span><span>Ventas</span></aside>
+            <div class="im-main">
+              <div class="im-h"><b>Pedidos</b><span>Hoy</span></div>
+              <div class="im-stats"><div class="im-stat"><small>Pedidos</small><b>24</b></div><div class="im-stat"><small>Ventas</small><b>$386.400</b></div><div class="im-stat"><small>Ticket promedio</small><b>$16.100</b></div></div>
+              <div class="im-cols">
+                <div class="im-col"><small>Nuevos</small>
+                  <div class="im-card"><b>#128 · Retiro</b><small>2 productos</small><em>$18.400</em></div>
+                  <div class="im-card"><b>#129 · Despacho</b><small>4 productos</small><em>$31.200</em></div>
+                </div>
+                <div class="im-col"><small>En cocina</small>
+                  <div class="im-card"><b>#127 · Retiro</b><small>1 producto</small><em>$9.900</em></div>
+                </div>
+                <div class="im-col"><small>Listos</small>
+                  <div class="im-card"><b>#126 · Despacho</b><small>3 productos</small><em>$25.300</em></div>
+                </div>
+              </div>
+              <div class="im-alert"><span>Palta Hass · quedan 2 kg</span><b>Pedir a proveedor</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
+          <div class="ip-top"><b>Casa Brasa</b><small>Abierto · retiro en 25 min</small></div>
+          <div class="ip-chips"><span class="on">Fondos</span><span>Entradas</span><span>Postres</span></div>
+          <div class="ip-list">
+            <div class="ip-item"><span class="th plato"></span><span><b>Plateada con puré</b><small>$9.900</small></span><span class="ip-plus">+</span></div>
+            <div class="ip-item"><span class="th plato t2"></span><span><b>Pollo al cilantro</b><small>$8.500</small></span><span class="ip-plus">+</span></div>
+            <div class="ip-item"><span class="th plato t3"></span><span><b>Ensalada de quínoa</b><small>$6.900</small></span><span class="ip-plus">+</span></div>
+            <div class="ip-item"><span class="th plato"></span><span><b>Pastel de choclo</b><small>$8.900</small></span><span class="ip-plus">+</span></div>
+          </div>
+          <div class="ip-bar"><span>Ver pedido · 2</span><span>$18.400</span></div>
+        </div></div>
+      </div>
+    </article>
+
+    <!-- Formación -->
+    <article class="idea" role="tabpanel" data-idea="formacion" data-msg="una academia para ofrecer mi formación" style="--m:#8a6a2f" hidden>
+      <div class="idea-copy">
+        <h3>Una academia para ofrecer tu formación</h3>
+        <ul class="idea-pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Cursos con clases en video y material</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Venta e inscripción en línea</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Avance de cada persona a la vista</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Lista de espera y cupos por curso</li>
+        </ul>
+      </div>
+      <div class="idea-mock" aria-hidden="true">
+        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
+        <div class="im-panel">
+          <div class="im-bar"><i></i><i></i><i></i><span>panel.tallerraiz.cl</span></div>
+          <div class="im-body">
+            <aside class="im-side"><b>Taller Raíz</b><span class="on">Cursos</span><span>Alumnos</span><span>Ventas</span><span>Clases</span><span>Certificados</span></aside>
+            <div class="im-main">
+              <div class="im-h"><b>Cursos</b><span>Noviembre</span></div>
+              <div class="im-stats"><div class="im-stat"><small>Inscritos</small><b>142</b></div><div class="im-stat"><small>Ventas del mes</small><b>$1.180.000</b></div><div class="im-stat"><small>Terminaron</small><b>38%</b></div></div>
+              <div class="im-rows">
+                <div class="im-row"><span class="t">10 clases</span><span><b>Cerámica desde cero</b><small>64 inscritos</small></span><span class="im-tag ok">Abierto</span></div>
+                <div class="im-row"><span class="t">6 clases</span><span><b>Esmaltes y color</b><small>41 inscritos</small></span><span class="im-tag ok">Abierto</span></div>
+                <div class="im-row"><span class="t">8 clases</span><span><b>Torno inicial</b><small>37 inscritos</small></span><span class="im-tag">Lista de espera</span></div>
+              </div>
+              <div class="im-alert"><span>12 personas en lista de espera</span><b>Abrir cupos</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
+          <div class="ip-top"><b>Taller Raíz</b><small>Mis cursos</small></div>
+          <div class="ip-card"><small>Cerámica desde cero</small><b>Clase 7 de 10</b><span class="ip-prog"><i style="width:70%"></i></span></div>
+          <span class="ip-lbl">Sigue con</span>
+          <div>
+            <div class="ip-ben"><span>7 · Esmaltado</span><small>18 min</small></div>
+            <div class="ip-ben"><span>8 · Primera quema</span><small>24 min</small></div>
+            <div class="ip-ben"><span>9 · Decoración</span><small>21 min</small></div>
+          </div>
+          <div class="ip-bar"><span>Continuar clase</span><span>7 · Esmaltado</span></div>
+        </div></div>
+      </div>
+    </article>
+
+    <!-- Membresías -->
+    <article class="idea" role="tabpanel" data-idea="membresias" data-msg="una app con membresías y comunidad" style="--m:#5a4378" hidden>
+      <div class="idea-copy">
+        <h3>Una app con membresías y comunidad</h3>
+        <ul class="idea-pts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>App con la marca de tu negocio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Planes mensuales con cobro en línea</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Beneficios, cashback y comunidad</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Renovaciones y cobros a la vista</li>
+        </ul>
+      </div>
+      <div class="idea-mock" aria-hidden="true">
+        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
+        <div class="im-panel">
+          <div class="im-bar"><i></i><i></i><i></i><span>panel.clubaurora.cl</span></div>
+          <div class="im-body">
+            <aside class="im-side"><b>Club Aurora</b><span class="on">Membresías</span><span>Cobros</span><span>Comunidad</span><span>Pedidos</span><span>Beneficios</span></aside>
+            <div class="im-main">
+              <div class="im-h"><b>Membresías</b><span>Noviembre</span></div>
+              <div class="im-stats"><div class="im-stat"><small>Activas</small><b>86</b></div><div class="im-stat"><small>Ingreso mensual</small><b>$1.289.000</b></div><div class="im-stat"><small>Renuevan esta semana</small><b>12</b></div></div>
+              <div class="im-rows">
+                <div class="im-row"><span class="t">Oro</span><span><b>Daniela F.</b><small>Renueva el 21</small></span><span class="im-tag ok">Al día</span></div>
+                <div class="im-row"><span class="t">Plata</span><span><b>Marcela O.</b><small>Renueva el 23</small></span><span class="im-tag ok">Al día</span></div>
+                <div class="im-row"><span class="t">Oro</span><span><b>Rocío B.</b><small>Venció el 12</small></span><span class="im-tag">Por cobrar</span></div>
+              </div>
+              <div class="im-alert"><span>3 membresías vencen esta semana</span><b>Avisar</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
+          <div class="ip-top"><b>Club Aurora</b><small>Hola, Daniela</small></div>
+          <div class="ip-card"><small>Miembro desde marzo</small><b>Plan Oro</b><span>Cashback disponible · $7.400</span></div>
+          <span class="ip-lbl">Beneficios</span>
+          <div>
+            <div class="ip-ben"><span>10% en toda la tienda</span><small>Activo</small></div>
+            <div class="ip-ben"><span>Clase del mes</span><small>Disponible</small></div>
+            <div class="ip-ben"><span>Comunidad</span><small>3 nuevos</small></div>
+          </div>
+          <div class="ip-bar"><span>Renovar plan</span><span>$14.990 al mes</span></div>
+        </div></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="medida-cta" data-reveal>
+    <p class="medida-ia">Si quieres, queda conectado a tu ChatGPT o Claude para preguntarle por tus ventas o pedirle que suba un producto.</p>
+    <a class="btn btn-primary btn-lg" href="#" data-ideas-cta data-wa="Hola Cami, vengo por la Metamorfosis. Quiero desarrollar mi sistema.">Quiero desarrollar mi sistema
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <p class="medida-precio">Se cotiza según el proyecto.</p>
+  </div>
 </section>
 
-<!-- ============ 4. PROYECTOS ============ -->
+<!-- ============ 6. PROYECTOS ============ -->
 <section class="sec wrap" id="proyectos">
   <div class="section-head">
     <h2 class="h2" data-reveal><span class="gold-text">Proyectos</span></h2>
@@ -425,16 +753,20 @@
 
     <div class="pc-stage">
       <!-- Soberana -->
-      <article class="pc-card pc-card--claro" role="tabpanel" data-i="0">
+      <article class="pc-card pc-card--pronto" role="tabpanel" data-i="0">
         <div class="pc-shot">
-          <img src="assets/proyectos/soberana.jpg" alt="App Soberana by Oppa Beauty Store: compra mayorista, cashback, academia y comunidad" loading="lazy" />
+          <!-- Sin captura hasta que Cami confirme el permiso. Para devolverla:
+               <img src="assets/proyectos/soberana.jpg" alt="App Soberana by Oppa Beauty Store" loading="lazy" />
+               y cambiar pc-card--pronto por pc-card--claro. -->
+          <div class="pc-pronto" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+          </div>
         </div>
         <span class="pc-live"><i></i>App propia · Belleza</span>
         <div class="pc-info">
           <h3>Soberana by Oppa</h3>
-          <p>Oppa transformó su forma de vender con una app propia: compra mayorista desde una unidad, capacitaciones y una comunidad que fideliza a sus clientas.</p>
+          <p>Oppa transformó su forma de vender con una app propia: compra mayorista desde una unidad, capacitaciones y una comunidad que fideliza a sus clientes.</p>
           <p class="pc-result">Ingresos recurrentes por membresías desde el primer mes.</p>
-          <a class="pc-link" href="https://www.oppasoberana.cl" target="_blank" rel="noopener">Ver proyecto <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
       </article>
 
@@ -482,55 +814,10 @@
   </div>
 </section>
 
-<!-- ============ 5. LA OFICINA ============ -->
-<section class="sec wrap" id="oficina">
-  <div class="office">
-    <div class="office-copy">
-      <span class="eyebrow" data-reveal><span class="dot"></span>La oficina</span>
-      <h2 class="h2" data-reveal data-delay="1">Alquimistic es <span class="gold-text">la oficina.</span></h2>
-      <p class="lead" data-reveal data-delay="2">El negocio completo en una app: clientes, ventas, agenda, finanzas y una bóveda donde viven los archivos. Tú lo administras; la IA te propone ideas de contenido y responde desde tu Bóveda. Y cuando crezcas, sumas personas y módulos sin sumar caos.</p>
-
-      <ul class="office-mods" data-reveal data-delay="2">
-        <li>Hoy</li><li>Clientes</li><li>Ventas</li><li>Agenda</li><li>Finanzas</li><li>Marketing</li><li>Bóveda</li><li class="mod-ia">IA</li>
-      </ul>
-
-      <div class="office-ia" data-reveal data-delay="3">
-        <span class="soon-pill">Próximamente</span>
-        <h3>IA conectada</h3>
-        <p>Conecta Claude, ChatGPT o Gemini. Le pides algo y lo hace: anota la venta, agenda la cita, le escribe al cliente. Usas la IA que ya pagas.</p>
-      </div>
-
-      <div class="office-cta" data-reveal data-delay="3">
-        <a class="btn btn-primary btn-lg" href="#" data-wizard>Crear mi oficina
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Visual: tu IA accionando en la oficina (ejemplo ilustrativo) -->
-    <div class="office-chat" data-reveal data-delay="2" aria-hidden="true">
-      <div class="oc-head">
-        <span class="oc-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg></span>
-        <span><b>IA</b><small>conectada a la oficina</small></span>
-        <span class="oc-live"><i></i>próximamente</span>
-      </div>
-      <div class="oc-msgs">
-        <div class="oc-msg me">Anota una venta de dos tortas a Andrés.</div>
-        <div class="oc-act"><span class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5 9-11"/></svg></span>Quedó registrada en <b>Ventas</b></div>
-        <div class="oc-msg me">Agéndala para el jueves a las 11.</div>
-        <div class="oc-act"><span class="oc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12l5 5 9-11"/></svg></span>Cita creada en <b>Agenda</b></div>
-        <div class="oc-msg me">¿A quién debería escribirle hoy?</div>
-        <div class="oc-msg ai">Revisé <b>Clientes</b>: hay tres que no vuelven hace más de un mes. ¿Te preparo el mensaje?</div>
-      </div>
-      <div class="oc-tools"><span>Claude</span><span>ChatGPT</span><span>Gemini</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6. CÓMO SE TRABAJA (metamorfosis como símbolo, pasos concretos) ============ -->
+<!-- ============ 7. CÓMO SE TRABAJA (metamorfosis como símbolo, pasos concretos) ============ -->
 <section class="sec wrap" id="metamorfosis">
   <div class="section-head">
-    <span class="eyebrow" data-reveal><span class="dot"></span>Metamorfosis</span>
+    <span class="eyebrow" data-reveal><span class="dot"></span>Cómo trabajamos · Metamorfosis</span>
     <h2 class="h2" data-reveal data-delay="1">De improvisar a <span class="gold-text">operar con sistema.</span></h2>
     <p class="lead" data-reveal data-delay="2">Tres etapas, sin letra chica. Sabes qué se construye, cuánto cuesta y cuándo está listo antes de empezar.</p>
   </div>
@@ -542,7 +829,7 @@
       </div>
       <span class="meta-n">01</span>
       <h3>Diagnóstico</h3>
-      <p>Una conversación sin costo para entender el negocio: qué vendes, dónde se pierde tiempo y qué frena el crecimiento. Sales con una propuesta clara.</p>
+      <p>Una reunión breve y sin costo para entender el negocio: qué vendes, dónde se pierde tiempo y qué frena el crecimiento. Después llega una propuesta clara.</p>
     </li>
     <li class="meta-step" data-reveal data-delay="1">
       <div class="meta-ic">
@@ -560,56 +847,12 @@
     </li>
   </ol>
 
+  <div class="pago" data-reveal>
+    <div><small>Forma de pago</small><b>50% al inicio y 50% al finalizar.</b></div>
+    <div><small>O si prefieres</small><b>En cuotas, con tarjeta.</b></div>
+  </div>
+
   <p class="sec-close" data-reveal><b>Tu sistema, tus datos, tu código.</b> Todo queda a tu nombre.</p>
-</section>
-
-<!-- ============ 7. FORMAS DE TRABAJAR ============ -->
-<section class="sec wrap" id="formas">
-  <div class="section-head">
-    <h2 class="h2" data-reveal>Formas de <span class="gold-text">trabajar</span></h2>
-    <p class="lead" data-reveal data-delay="1">Empieza gratis, crece con la oficina completa o encarga un proyecto a medida. Precios en pesos chilenos.</p>
-  </div>
-
-  <div class="plans">
-    <div class="plan" data-reveal>
-      <div class="pname">Oficina Esencial</div>
-      <div class="pprice"><span class="amt">Gratis</span></div>
-      <div class="pdesc">Para ordenar el negocio desde hoy.</div>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Clientes y ventas en un solo lugar</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Agenda</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Lista para usar en minutos</li>
-      </ul>
-      <a class="btn btn-ghost" href="#" data-wizard>Crear mi oficina</a>
-    </div>
-
-    <div class="plan popular" data-reveal data-delay="1">
-      <div class="plan-flag">Para crecer</div>
-      <div class="pname">Oficina Completa</div>
-      <div class="pprice"><span class="amt">$21.900</span><span class="per">al mes</span></div>
-      <div class="pdesc">Para negocios que quieren crecer con orden.</div>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Todos los módulos: finanzas, marketing y bóveda</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Ideas de contenido y una Bóveda que responde con IA</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Personas adicionales a $9.900 al mes c/u</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Actualizaciones y respaldo</li>
-      </ul>
-      <a class="btn btn-primary" href="#" data-wizard>Crear mi oficina</a>
-    </div>
-
-    <div class="plan" data-reveal data-delay="2">
-      <div class="pname">Proyecto a medida</div>
-      <div class="pprice"><span class="amt">Cotiza</span></div>
-      <div class="pdesc">Página, app, tienda o membresías, con pago único.</div>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Diagnóstico sin costo</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Diseño y desarrollo a medida</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Código y cuentas a tu nombre</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Sesión de entrega para dejar todo conectado</li>
-      </ul>
-      <a class="btn btn-ghost" href="#" data-wa="Hola Cami, vengo por la Metamorfosis. Quiero cotizar un proyecto a medida para mi negocio.">Cuéntame tu negocio</a>
-    </div>
-  </div>
 </section>
 
 <!-- ============ 8. SOBRE MÍ ============ -->
@@ -661,7 +904,7 @@
     </details>
     <details>
       <summary>¿Cuánto cuesta?</summary>
-      <p>La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda o membresías) se cotiza después del diagnóstico y se paga una sola vez.</p>
+      <p>La Oficina Esencial es gratis. La Oficina Completa cuesta $21.900 al mes e incluye 1 persona; cada persona adicional cuesta $9.900 al mes. Un proyecto a medida (página, app, tienda, reservas, cursos o membresías) se cotiza después de una reunión breve y se paga 50% al inicio y 50% al finalizar, o en cuotas con tarjeta.</p>
     </details>
     <details>
       <summary>¿Cuánto demora un proyecto?</summary>
@@ -725,14 +968,14 @@
         <span class="brand-badge"><img src="assets/logo-64.png" srcset="assets/logo-64.png 64w, assets/logo-96.png 96w, assets/logo-128.png 128w" sizes="32px" alt="" /></span>
         <span class="brand-name">Alquimistic</span>
       </a>
-      <p>El sistema que tu negocio necesita, hecho a la medida.</p>
+      <p>Tu idea. Tu sistema. Tu manera de hacer negocio.</p>
     </div>
     <div class="foot-col">
       <h5>Explora</h5>
-      <a href="#crear">Servicios</a>
+      <a href="#problema">Oficina</a>
+      <a href="#medida">A la medida</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="#oficina">La oficina</a>
-      <a href="#formas">Formas de trabajar</a>
+      <a href="#metamorfosis">Cómo trabajamos</a>
     </div>
     <div class="foot-col">
       <h5>Conversemos</h5>

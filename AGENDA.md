@@ -3,6 +3,30 @@
 > Compañera de `AGENDA.md` y `NORTE.md` del repo **alquimistic-hub-app**, que
 > es donde vive el producto. Este repo es sólo la vitrina.
 
+## 🟡 2026-11-15 — Rama `feat/ideas-por-rubro`: la página en dos actos (SIN publicar)
+
+Pedido de Cami: la Oficina y lo a medida estaban mezclados. Ahora son dos actos.
+Todo está en la rama, **sin commit ni push**; `main` y alquimistic.com no cambiaron.
+
+- **Inicio:** «Tu idea. Tu sistema. Tu manera de hacer negocio.» con dos puertas
+  (Oficina → wizard; A la medida → baja al Acto 2). El mockup de la Oficina salió del inicio.
+- **Acto 1 · Oficina:** problema → solución (mockup de la app + 4 ejemplos) → planes
+  (sólo Esencial y Completa; `#formas` pasó a `#planes`).
+- **Acto 2 · A la medida** (`#medida`): carrusel por tipo de proyecto (Página, Tienda,
+  Reservas, Pedidos, Formación, Membresías). Cada lámina = «lo que ves tú» (panel) +
+  «lo que ve tu cliente» (teléfono). Marcas de ejemplo, inventadas. Estilos en
+  `styles-ideas.css`, lógica en `app.js` (`data-ideas`). Enlace directo: `/#medida-tienda`.
+  El botón de WhatsApp lleva el tipo de proyecto que la persona está mirando.
+  Reemplaza a «Lo que se puede crear» (`#crear`), que ya no existe.
+- **IA conectada:** vuelve sólo para lo a medida, como opcional en una línea
+  (Soberana ya está conectada al ChatGPT de su dueña). En la Oficina sigue «Próximamente».
+- **Soberana en Proyectos:** sin captura ni enlace hasta que Cami confirme el permiso
+  (el comentario del HTML dice cómo devolverla).
+- **Cómo trabajamos:** reunión breve y propuesta; pago 50% y 50%, o en cuotas con tarjeta
+  (también en `_faq.py` y `llms.txt`).
+- **Pendiente:** agendar sigue por WhatsApp (Cami quiere calendario); el JSON-LD de
+  ofertas y la sección «Qué puede crear» de `llms.txt` aún describen la estructura anterior.
+
 ## 🟢 2026-11-11 — Oficina Completa al día con la app
 
 - Tarjeta de la Completa: «Ideas de contenido y una Bóveda que responde con IA»
