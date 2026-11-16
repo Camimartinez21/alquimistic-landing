@@ -344,7 +344,11 @@
   .ib-stage .tel { width: 168px; }
   .ib-stage .tel-shot { height: 140px; }
   .ib-stage .sys { left: 0; bottom: 14px; min-width: 0; max-width: 170px; }
-  .ib-stage .site-grid { grid-template-columns: repeat(2, 1fr); }
+  /* Los cuatro productos en una fila y sin nombres: en dos filas la ventana
+     quedaba más alta que el escenario y se montaba sobre la sección siguiente. */
+  .ib-stage .site-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 10px; }
+  .ib-stage .prod b, .ib-stage .prod small { display: none; }
+  .ib-stage .prod .shot { border-radius: 8px; }
   .ib-stage .site-hero { height: 150px; }
 }
 
