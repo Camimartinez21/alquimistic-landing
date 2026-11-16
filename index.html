@@ -250,25 +250,38 @@
 <span id="top"></span>
 
 <!-- ============ 1. HERO ============
-     Dos puertas, sin mezclarlas: la Oficina (Acto 1) y los sistemas a la medida (Acto 2). -->
-<header class="hero hero-puertas wrap">
-  <div class="hero-copy">
-    <h1 data-reveal data-delay="1">Tu idea. Tu sistema. <span class="gold-text">Tu manera de hacer negocio.</span></h1>
-    <div class="hero-doors" data-reveal data-delay="2">
-      <div class="door">
-        <span class="door-k">Alquimistic Oficina</span>
-        <h2>Ordena tu negocio con Alquimistic Oficina.</h2>
-        <a class="btn btn-primary btn-lg" href="#" data-wizard>Crear mi oficina gratis</a>
+     Título y las dos puertas a la izquierda; a la derecha, un proyecto armado
+     (la web, el teléfono y un aviso del panel). Diseño elegido por Cami el 2026-11-15. -->
+<header class="hero wrap">
+  <div class="ib">
+    <div class="hero-copy">
+      <h1 data-reveal data-delay="1">Tu idea. Tu sistema. <span class="gold-text">Tu manera de hacer negocio.</span></h1>
+      <div class="ib-cta" data-reveal data-delay="2">
+        <a href="#" data-wizard><span><span class="kk">Alquimistic Oficina</span><b>Crear mi oficina gratis</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#medida"><span><span class="kk">A la medida</span><b>Quiero desarrollar mi sistema</b></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <div class="door">
-        <span class="door-k">A la medida</span>
-        <h2>Crea tu web o app a la medida.</h2>
-        <a class="btn btn-primary btn-lg" href="#medida">Quiero desarrollar mi sistema</a>
+      <div class="hero-trust" data-reveal data-delay="3">
+        <span>Todo <b>a tu nombre</b></span>
+        <span>Hecho en <b>Chile</b></span>
       </div>
     </div>
-    <div class="hero-trust" data-reveal data-delay="3">
-      <span>Todo <b>a tu nombre</b></span>
-      <span>Hecho en <b>Chile</b></span>
+    <div class="ib-stage" data-reveal data-delay="2" aria-hidden="true">
+      <div class="win">
+        <div class="win-bar"><i></i><i></i><i></i><span>tunegocio.cl</span></div>
+        <div class="site-nav"><b>El Mercado</b><span><i>Tienda</i><i>Historia</i><i>Carro · 2</i></span></div>
+        <div class="site-hero shot" style="background-image:url(assets/ideas/ritual-energia-web.jpg)"><div><h4>Comer es tu ritual.</h4><em>Ver la tienda</em></div></div>
+        <div class="site-grid">
+          <div class="prod"><div class="shot" style="background-image:url(assets/ideas/merc-chorizo.jpg)"></div><b>Chorizo español</b><small>$6.500</small></div>
+          <div class="prod"><div class="shot" style="background-image:url(assets/ideas/merc-dip-pimentos.jpg)"></div><b>Dip de pimientos</b><small>$5.900</small></div>
+          <div class="prod"><div class="shot" style="background-image:url(assets/ideas/merc-frutos-secos.jpg)"></div><b>Frutos secos</b><small>$4.800</small></div>
+          <div class="prod"><div class="shot" style="background-image:url(assets/ideas/merc-queso-vegano.jpg)"></div><b>Cremoso de almendras</b><small>$7.900</small></div>
+        </div>
+      </div>
+      <div class="tel"><div class="tel-in">
+          <div class="tel-shot shot" style="background-image:url(assets/ideas/merc-queso-vegano.jpg)"></div>
+          <div class="tel-body"><small>Quesos vegetales</small><b>Cremoso de almendras</b><div class="tel-row"><span>$7.900</span></div><div class="tel-btn">Agregar al carro</div></div>
+        </div></div>
+      <div class="sys"><small>Tu panel</small><b>Pedido nuevo · $26.480</b><span>3 productos · despacho a Ñuñoa</span></div>
     </div>
   </div>
 </header>
@@ -333,52 +346,30 @@
       </div>
     </div>
 
-    <!-- Visual: la oficina (vista "Hoy") + teléfono -->
-    <div class="hero-visual" data-reveal data-delay="2" aria-hidden="true">
+    <!-- Visual: la Oficina tal como es hoy (pantalla «Hoy»). El escritorio está
+         redibujado con tareas de ejemplo (la captura real trae nombres de clientes);
+         el teléfono es una captura real de la app, en oscuro y en claro. -->
+    <div class="hero-visual of-visual" data-reveal data-delay="2" aria-hidden="true">
       <div class="mockup-glow"></div>
-      <div class="mockup hero-dash">
-        <aside class="hd-side">
-          <div class="hd-brand"><img src="assets/logo-64.png" srcset="assets/logo-64.png 64w, assets/logo-96.png 96w, assets/logo-128.png 128w" sizes="22px" alt="" /><span>Alquimistic<small>OFICINA</small></span></div>
-          <nav class="hd-nav">
-            <a class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>Hoy</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Clientes</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Ventas</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>Agenda</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Finanzas</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>Marketing</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="12" cy="12" r="3.5"/></svg>Bóveda</a>
-            <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></svg>IA</a>
-          </nav>
+      <div class="mockup of-app">
+        <aside class="of-side">
+          <div class="of-brand"><img src="assets/logo-64.png" alt="" /><span>Tu negocio<small>OFICINA</small></span></div>
+          <span class="on">Hoy</span><span>Clientes</span><span>Pedidos</span><span>Agenda</span><span>Finanzas</span><span>Marketing</span><span>Bóveda</span><span>IA</span>
         </aside>
-        <div class="hd-main">
-          <div class="hd-top">
-            <b>Hoy</b>
-            <span class="hd-range">Qué mueve la aguja</span>
-          </div>
-          <div class="hd-today">
-            <div class="hd-today-item"><span class="hti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><span><b>Qué vender</b><small>Lo que más se pidió esta semana</small></span></div>
-            <div class="hd-today-item"><span class="hti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span><b>A quién escribirle</b><small>Clientes que no vuelven hace un tiempo</small></span></div>
-            <div class="hd-today-item"><span class="hti-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><span><b>Qué se está acabando</b><small>Productos con poco stock</small></span></div>
+        <div class="of-main">
+          <div class="of-hola"><b>Hola, Cami.</b><p>Tienes 5 cosas para hoy.</p><i>Empezar mi día <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></div>
+          <div class="of-card">
+            <div class="of-card-h"><span>Tus cosas de hoy</span><span>5 pendientes</span></div>
+            <div class="of-row"><span><small>Oficina · Cobros</small><b>Cobrar un pedido entregado</b></span><i class="oro">Cobrar</i></div>
+            <div class="of-row"><span><small>Oficina · Inventario</small><b>Reponer: 2 productos con poco stock</b></span><i>Reponer</i></div>
+            <div class="of-row"><span><small>Clientes · Seguimiento</small><b>Escribirle a un cliente que respondió</b></span><i>Seguir</i></div>
+            <div class="of-row"><span><small>Agenda</small><b>Reunión con un proveedor a las 16:00</b></span><i>Ver</i></div>
           </div>
         </div>
       </div>
-
-      <!-- Teléfono -->
-      <div class="phone">
-        <div class="phone-screen">
-          <div class="phone-top">
-            <span class="ph-greet"><b>Buenos días</b><small>Resumen de hoy</small></span>
-          </div>
-          <div class="phone-bal">
-            <div class="k">Pregúntale a tu Bóveda</div>
-            <div class="phone-ask">¿Qué precio le di al último pedido de bodas?</div>
-            <div class="phone-ans">Respuesta desde tus archivos.</div>
-          </div>
-          <div class="phone-acts">
-            <div class="lbl">Hoy</div>
-            <div class="phone-act"><span class="pa-ic" style="background:var(--grad-gold);color:#1a1407"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="pa-t">Escribirle a un cliente<small>Clientes</small></span></div>
-          </div>
-        </div>
+      <div class="phone phone-real">
+        <img class="solo-oscuro" src="assets/oficina-hoy-oscuro.jpg" alt="" loading="lazy" width="540" height="954" />
+        <img class="solo-claro" src="assets/oficina-hoy-claro.jpg" alt="" loading="lazy" width="540" height="954" />
       </div>
     </div>
   </div>
@@ -421,8 +412,10 @@
 </section>
 
 <!-- ============ 5. ACTO 2 · SISTEMAS HECHOS A LA MEDIDA ============
-     Carrusel por tipo de proyecto. Cada lámina = «lo que ves tú» (panel) + «lo que ve tu cliente» (teléfono).
-     Las marcas son de ejemplo. Estilos en styles-ideas.css; lógica en app.js (data-ideas).
+     Carrusel «de la idea al sistema»: tu idea → lo que ve tu cliente → lo que ves tú.
+     Tienda y Pedidos usan fotos reales de ERA (assets/ideas/); las demás, pantallas dibujadas
+     con marcas de ejemplo. La última lámina («Tu idea») invita a contar el proyecto.
+     Estilos en styles-ideas.css; lógica en app.js (data-ideas).
      Sin data-reveal dentro de .idea: las que parten ocultas no se revelarían.
      Enlace directo a una lámina: alquimistic.com/#medida-tienda -->
 <section class="sec wrap acto-2" id="medida" data-ideas>
@@ -435,281 +428,207 @@
   <div class="ideas-nav" data-reveal data-delay="2">
     <button class="ideas-arrow" type="button" data-ideas-prev aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
     <div class="ideas-pills" role="tablist" aria-label="Tipos de proyecto">
-      <button class="idea-pill is-on" type="button" role="tab" aria-selected="true" data-rubro="pagina">Página</button>
-      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="tienda">Tienda</button>
-      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="reservas">Reservas</button>
+      <button class="idea-pill is-on" type="button" role="tab" aria-selected="true" data-rubro="tienda">Tienda</button>
       <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="pedidos">Pedidos</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="pagina">Página</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="reservas">Reservas</button>
       <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="formacion">Formación</button>
       <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="membresias">Membresías</button>
+      <button class="idea-pill" type="button" role="tab" aria-selected="false" data-rubro="otra">Tu idea</button>
     </div>
     <button class="ideas-arrow" type="button" data-ideas-next aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
   </div>
 
   <div class="ideas-stage" data-reveal data-delay="3">
 
-    <!-- Página -->
-    <article class="idea" role="tabpanel" data-idea="pagina" data-msg="una página para dar a conocer mis servicios" style="--m:#3f6f7a">
-      <div class="idea-copy">
-        <h3>Una página para dar a conocer tus servicios</h3>
-        <ul class="idea-pts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Tus servicios, tu historia y tus reseñas</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Aparece en Google y lleva directo a WhatsApp</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Cada consulta queda guardada en tu panel</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>La cambias cuando quieras, sin depender de nadie</li>
-        </ul>
-      </div>
-      <div class="idea-mock" aria-hidden="true">
-        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
-        <div class="im-panel">
-          <div class="im-bar"><i></i><i></i><i></i><span>panel.clararuiz.cl</span></div>
-          <div class="im-body">
-            <aside class="im-side"><b>Clara Ruiz</b><span class="on">Consultas</span><span>Página</span><span>Servicios</span><span>Reseñas</span><span>Google</span></aside>
-            <div class="im-main">
-              <div class="im-h"><b>Consultas</b><span>Esta semana</span></div>
-              <div class="im-stats"><div class="im-stat"><small>Visitas</small><b>1.240</b></div><div class="im-stat"><small>Consultas</small><b>18</b></div><div class="im-stat"><small>Desde Google</small><b>64%</b></div></div>
-              <div class="im-rows">
-                <div class="im-row"><span class="t">Hoy</span><span><b>Marcela T.</b><small>Kinesiología a domicilio</small></span><span class="im-tag ok">Nueva</span></div>
-                <div class="im-row"><span class="t">Ayer</span><span><b>Rodrigo P.</b><small>Evaluación postural</small></span><span class="im-tag">Respondida</span></div>
-                <div class="im-row"><span class="t">Lun</span><span><b>Elena V.</b><small>Plan de 8 sesiones</small></span><span class="im-tag">Agendada</span></div>
-              </div>
-              <div class="im-alert"><span>3 consultas sin responder</span><b>Responder</b></div>
-            </div>
-          </div>
-        </div>
-        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
-          <div class="ip-top"><b>Clara Ruiz</b><small>Kinesióloga · Ñuñoa y a domicilio</small></div>
-          <div class="ip-hero"><b>Vuelve a moverte sin dolor.</b><span>Pedir hora</span></div>
-          <span class="ip-lbl">Servicios</span>
-          <div>
-            <div class="ip-ben"><span>Kinesiología a domicilio</span><small>$28.000</small></div>
-            <div class="ip-ben"><span>Evaluación postural</span><small>$22.000</small></div>
-            <div class="ip-ben"><span>Plan de 8 sesiones</span><small>$190.000</small></div>
-          </div>
-          <div class="ip-bar"><span>4,9 · 86 reseñas</span><span>WhatsApp</span></div>
-        </div></div>
-      </div>
-    </article>
-
     <!-- Tienda -->
-    <article class="idea" role="tabpanel" data-idea="tienda" data-msg="una tienda para vender mis productos" style="--m:#5c7a52" hidden>
-      <div class="idea-copy">
-        <h3>Una tienda para vender tus productos</h3>
-        <ul class="idea-pts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Catálogo, carro y pago en línea</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Pedidos por preparar y despachos</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Stock con aviso antes del quiebre</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Códigos de descuento cuando quieras</li>
-        </ul>
-      </div>
-      <div class="idea-mock" aria-hidden="true">
-        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
-        <div class="im-panel">
-          <div class="im-bar"><i></i><i></i><i></i><span>panel.almacensauce.cl</span></div>
-          <div class="im-body">
-            <aside class="im-side"><b>Almacén Sauce</b><span class="on">Pedidos</span><span>Productos</span><span>Stock</span><span>Despachos</span><span>Descuentos</span></aside>
-            <div class="im-main">
-              <div class="im-h"><b>Pedidos</b><span>Esta semana</span></div>
-              <div class="im-stats"><div class="im-stat"><small>Pedidos</small><b>38</b></div><div class="im-stat"><small>Ventas</small><b>$612.300</b></div><div class="im-stat"><small>Por preparar</small><b>5</b></div></div>
-              <div class="im-rows">
-                <div class="im-row"><span class="t">#2041</span><span><b>Camila T.</b><small>3 productos · $26.480</small></span><span class="im-tag ok">Por preparar</span></div>
-                <div class="im-row"><span class="t">#2040</span><span><b>Ignacio V.</b><small>1 producto · $12.990</small></span><span class="im-tag">Despachado</span></div>
-                <div class="im-row"><span class="t">#2039</span><span><b>Paula G.</b><small>2 productos · $13.490</small></span><span class="im-tag">Entregado</span></div>
-              </div>
-              <div class="im-alert"><span>Vela de soya · quedan 4</span><b>Reponer</b></div>
-            </div>
+    <article class="idea mb" role="tabpanel" data-idea="tienda" data-msg="una tienda para vender mis productos">
+      <h3>Una tienda para vender tus productos</h3>
+      <div class="mb-flow">
+        <div class="mb-col">
+          <span class="kk">Tu idea</span>
+          <div class="mb-idea">«Quiero vender mis productos en línea, con despacho, y que me avise cuando se acabe el stock.»</div>
+        </div>
+        <div class="mb-tel" aria-hidden="true">
+          <span class="kk">Lo que ve tu cliente</span>
+          <div class="tel"><div class="tel-in">
+          <div class="tel-shot shot" style="background-image:url(assets/ideas/merc-queso-vegano.jpg)"></div>
+          <div class="tel-body"><small>El Mercado · Quesos vegetales</small><b>Cremoso de almendras</b><p>Hecho a mano, 200 g.</p><div class="tel-row"><span>$7.900</span></div><div class="tel-btn">Agregar al carro</div></div>
+        </div></div>
+        </div>
+        <div class="mb-col fin">
+          <span class="kk">Lo que ves tú</span>
+          <div class="mb-panel" aria-hidden="true">
+            <div class="sys"><small>Pedidos</small><b>Pedido nuevo · $26.480</b><span>3 productos · despacho a Ñuñoa</span></div>
+            <div class="sys"><small>Stock</small><b>Cremoso de almendras</b><span>Quedan 4 · reponer</span></div>
+            <div class="sys"><small>Ventas de la semana</small><b>$612.300</b><span>38 pedidos</span></div>
           </div>
         </div>
-        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
-          <div class="ip-top"><b>Almacén Sauce</b><small>Despacho a todo Chile</small></div>
-          <div class="ip-chips"><span class="on">Todo</span><span>Velas</span><span>Baño</span></div>
-          <div class="ip-grid">
-            <div class="ip-prod"><span class="th caja"></span><b>Vela de soya</b><small>$8.990</small></div>
-            <div class="ip-prod"><span class="th caja t2"></span><b>Jabón de avena</b><small>$4.500</small></div>
-            <div class="ip-prod"><span class="th caja t3"></span><b>Difusor de lavanda</b><small>$12.990</small></div>
-            <div class="ip-prod"><span class="th caja t2"></span><b>Set de regalo</b><small>$19.990</small></div>
-          </div>
-          <div class="ip-bar"><span>Carro · 3</span><span>$26.480</span></div>
-        </div></div>
-      </div>
-    </article>
-
-    <!-- Reservas -->
-    <article class="idea" role="tabpanel" data-idea="reservas" data-msg="un sistema para agendar y reservar" style="--m:#a8577a" hidden>
-      <div class="idea-copy">
-        <h3>Un sistema para agendar y reservar</h3>
-        <ul class="idea-pts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Tus trabajos y servicios con precio</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Reserva en línea con abono</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Recordatorios automáticos antes de cada hora</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Pagos y ficha de cada cliente</li>
-        </ul>
-      </div>
-      <div class="idea-mock" aria-hidden="true">
-        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
-        <div class="im-panel">
-          <div class="im-bar"><i></i><i></i><i></i><span>panel.estudionacar.cl</span></div>
-          <div class="im-body">
-            <aside class="im-side"><b>Estudio Nácar</b><span class="on">Agenda</span><span>Clientes</span><span>Servicios</span><span>Pagos</span><span>Recordatorios</span></aside>
-            <div class="im-main">
-              <div class="im-h"><b>Agenda</b><span>Jueves 19</span></div>
-              <div class="im-stats"><div class="im-stat"><small>Horas de hoy</small><b>7</b></div><div class="im-stat"><small>Abonos</small><b>$35.000</b></div><div class="im-stat"><small>Por confirmar</small><b>1</b></div></div>
-              <div class="im-rows">
-                <div class="im-row"><span class="t">10:00</span><span><b>Valentina R.</b><small>Manicure semipermanente</small></span><span class="im-tag ok">Confirmada</span></div>
-                <div class="im-row"><span class="t">11:30</span><span><b>Josefa M.</b><small>Diseño de cejas</small></span><span class="im-tag ok">Abono pagado</span></div>
-                <div class="im-row"><span class="t">15:00</span><span><b>Carla P.</b><small>Manicure y pedicure</small></span><span class="im-tag">Recordatorio enviado</span></div>
-              </div>
-              <div class="im-alert"><span>Antonia S. no viene hace 2 meses</span><b>Escribirle</b></div>
-            </div>
-          </div>
-        </div>
-        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
-          <div class="ip-top"><b>Estudio Nácar</b><small>Uñas y cejas · Providencia</small></div>
-          <div class="ip-gal"><span class="th foto"></span><span class="th foto t2"></span><span class="th foto t3"></span></div>
-          <div class="ip-list">
-            <div class="ip-item"><span class="th foto t2"></span><span><b>Manicure semipermanente</b><small>60 min · $18.000</small></span><span class="ip-plus">+</span></div>
-            <div class="ip-item"><span class="th foto t3"></span><span><b>Diseño de cejas</b><small>30 min · $12.000</small></span><span class="ip-plus">+</span></div>
-          </div>
-          <span class="ip-lbl">Jueves 19</span>
-          <div class="ip-slots"><span>10:00</span><span class="on">11:30</span><span>15:00</span><span>16:30</span></div>
-          <div class="ip-bar"><span>Reservar con abono</span><span>$5.000</span></div>
-        </div></div>
       </div>
     </article>
 
     <!-- Pedidos -->
-    <article class="idea" role="tabpanel" data-idea="pedidos" data-msg="un menú para recibir pedidos" style="--m:#b4532a" hidden>
-      <div class="idea-copy">
-        <h3>Un menú para recibir pedidos</h3>
-        <ul class="idea-pts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Menú con fotos, pedido y pago en línea</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Los pedidos llegan a tu panel al instante</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>El inventario se descuenta con cada venta</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Proveedores y compras en el mismo lugar</li>
-        </ul>
-      </div>
-      <div class="idea-mock" aria-hidden="true">
-        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
-        <div class="im-panel">
-          <div class="im-bar"><i></i><i></i><i></i><span>panel.casabrasa.cl</span></div>
-          <div class="im-body">
-            <aside class="im-side"><b>Casa Brasa</b><span class="on">Pedidos</span><span>Menú</span><span>Inventario</span><span>Proveedores</span><span>Ventas</span></aside>
-            <div class="im-main">
-              <div class="im-h"><b>Pedidos</b><span>Hoy</span></div>
-              <div class="im-stats"><div class="im-stat"><small>Pedidos</small><b>24</b></div><div class="im-stat"><small>Ventas</small><b>$386.400</b></div><div class="im-stat"><small>Ticket promedio</small><b>$16.100</b></div></div>
-              <div class="im-cols">
-                <div class="im-col"><small>Nuevos</small>
-                  <div class="im-card"><b>#128 · Retiro</b><small>2 productos</small><em>$18.400</em></div>
-                  <div class="im-card"><b>#129 · Despacho</b><small>4 productos</small><em>$31.200</em></div>
-                </div>
-                <div class="im-col"><small>En cocina</small>
-                  <div class="im-card"><b>#127 · Retiro</b><small>1 producto</small><em>$9.900</em></div>
-                </div>
-                <div class="im-col"><small>Listos</small>
-                  <div class="im-card"><b>#126 · Despacho</b><small>3 productos</small><em>$25.300</em></div>
-                </div>
-              </div>
-              <div class="im-alert"><span>Palta Hass · quedan 2 kg</span><b>Pedir a proveedor</b></div>
-            </div>
+    <article class="idea mb" role="tabpanel" data-idea="pedidos" data-msg="un menú para recibir pedidos" hidden>
+      <h3>Un menú para recibir pedidos</h3>
+      <div class="mb-flow">
+        <div class="mb-col">
+          <span class="kk">Tu idea</span>
+          <div class="mb-idea">«Quiero un menú donde pidan y paguen, y que el pedido me llegue ordenado a la cocina.»</div>
+        </div>
+        <div class="mb-tel" aria-hidden="true">
+          <span class="kk">Lo que ve tu cliente</span>
+          <div class="tel"><div class="tel-in">
+          <div class="tel-shot shot" style="background-image:url(assets/ideas/ritual-raices-web.jpg)"></div>
+          <div class="tel-body"><small>Para compartir · 4 personas</small><b>Tabla de la casa</b><p>Retiro en 25 minutos o despacho.</p><div class="tel-row"><span>$24.900</span></div><div class="tel-btn">Pedir para hoy</div></div>
+        </div></div>
+        </div>
+        <div class="mb-col fin">
+          <span class="kk">Lo que ves tú</span>
+          <div class="mb-panel" aria-hidden="true">
+            <div class="sys"><small>Pedidos de hoy</small><b>#128 · Retiro a las 13:30</b><span>2 productos · pagado</span></div>
+            <div class="sys"><small>Inventario</small><b>Palta Hass · quedan 2 kg</b><span>Pedir a proveedor</span></div>
+            <div class="sys"><small>Ventas del día</small><b>$386.400</b><span>24 pedidos</span></div>
           </div>
         </div>
-        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
-          <div class="ip-top"><b>Casa Brasa</b><small>Abierto · retiro en 25 min</small></div>
-          <div class="ip-chips"><span class="on">Fondos</span><span>Entradas</span><span>Postres</span></div>
-          <div class="ip-list">
-            <div class="ip-item"><span class="th plato"></span><span><b>Plateada con puré</b><small>$9.900</small></span><span class="ip-plus">+</span></div>
-            <div class="ip-item"><span class="th plato t2"></span><span><b>Pollo al cilantro</b><small>$8.500</small></span><span class="ip-plus">+</span></div>
-            <div class="ip-item"><span class="th plato t3"></span><span><b>Ensalada de quínoa</b><small>$6.900</small></span><span class="ip-plus">+</span></div>
-            <div class="ip-item"><span class="th plato"></span><span><b>Pastel de choclo</b><small>$8.900</small></span><span class="ip-plus">+</span></div>
+      </div>
+    </article>
+
+    <!-- Página -->
+    <article class="idea mb" role="tabpanel" data-idea="pagina" data-msg="una página para dar a conocer mis servicios" hidden>
+      <h3>Una página para dar a conocer tus servicios</h3>
+      <div class="mb-flow">
+        <div class="mb-col">
+          <span class="kk">Tu idea</span>
+          <div class="mb-idea">«Quiero una página que muestre lo que hago, que salga en Google y que me escriban directo.»</div>
+        </div>
+        <div class="mb-tel" aria-hidden="true">
+          <span class="kk">Lo que ve tu cliente</span>
+          <div class="im-phone" style="--m:#3f6f7a;--ms:color-mix(in srgb, #3f6f7a 13%, #fff)"><div class="im-screen">
+            <div class="ip-top"><b>Clara Ruiz</b><small>Kinesióloga · Ñuñoa y a domicilio</small></div>
+            <div class="ip-hero"><b>Vuelve a moverte sin dolor.</b><span>Pedir hora</span></div>
+            <span class="ip-lbl">Servicios</span>
+            <div>
+              <div class="ip-ben"><span>Kinesiología a domicilio</span><small>$28.000</small></div>
+              <div class="ip-ben"><span>Evaluación postural</span><small>$22.000</small></div>
+              <div class="ip-ben"><span>Plan de 8 sesiones</span><small>$190.000</small></div>
+            </div>
+            <div class="ip-bar"><span>4,9 · 86 reseñas</span><span>WhatsApp</span></div>
+          </div></div>
+        </div>
+        <div class="mb-col fin">
+          <span class="kk">Lo que ves tú</span>
+          <div class="mb-panel" aria-hidden="true">
+            <div class="sys"><small>Consultas</small><b>3 sin responder</b><span>La última llegó hoy</span></div>
+            <div class="sys"><small>Visitas de la semana</small><b>1.240</b><span>64% desde Google</span></div>
+            <div class="sys"><small>Reseñas</small><b>4,9 de 5</b><span>86 opiniones</span></div>
           </div>
-          <div class="ip-bar"><span>Ver pedido · 2</span><span>$18.400</span></div>
-        </div></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Reservas -->
+    <article class="idea mb" role="tabpanel" data-idea="reservas" data-msg="un sistema para agendar y reservar" hidden>
+      <h3>Un sistema para agendar y reservar</h3>
+      <div class="mb-flow">
+        <div class="mb-col">
+          <span class="kk">Tu idea</span>
+          <div class="mb-idea">«Quiero que reserven hora sin escribirme, con abono, y que les llegue un recordatorio.»</div>
+        </div>
+        <div class="mb-tel" aria-hidden="true">
+          <span class="kk">Lo que ve tu cliente</span>
+          <div class="im-phone" style="--m:#a8577a;--ms:color-mix(in srgb, #a8577a 13%, #fff)"><div class="im-screen">
+            <div class="ip-top"><b>Estudio Nácar</b><small>Uñas y cejas · Providencia</small></div>
+            <div class="ip-gal"><span class="th foto"></span><span class="th foto t2"></span><span class="th foto t3"></span></div>
+            <div class="ip-list">
+              <div class="ip-item"><span class="th foto t2"></span><span><b>Manicure semipermanente</b><small>60 min · $18.000</small></span><span class="ip-plus">+</span></div>
+              <div class="ip-item"><span class="th foto t3"></span><span><b>Diseño de cejas</b><small>30 min · $12.000</small></span><span class="ip-plus">+</span></div>
+            </div>
+            <span class="ip-lbl">Jueves 19</span>
+            <div class="ip-slots"><span>10:00</span><span class="on">11:30</span><span>15:00</span><span>16:30</span></div>
+            <div class="ip-bar"><span>Reservar con abono</span><span>$5.000</span></div>
+          </div></div>
+        </div>
+        <div class="mb-col fin">
+          <span class="kk">Lo que ves tú</span>
+          <div class="mb-panel" aria-hidden="true">
+            <div class="sys"><small>Agenda de hoy</small><b>7 horas tomadas</b><span>1 por confirmar</span></div>
+            <div class="sys"><small>Recordatorios</small><b>Enviados para mañana</b><span>5 clientes avisados</span></div>
+            <div class="sys"><small>Abonos</small><b>$35.000</b><span>Pagados en línea</span></div>
+          </div>
+        </div>
       </div>
     </article>
 
     <!-- Formación -->
-    <article class="idea" role="tabpanel" data-idea="formacion" data-msg="una academia para ofrecer mi formación" style="--m:#8a6a2f" hidden>
-      <div class="idea-copy">
-        <h3>Una academia para ofrecer tu formación</h3>
-        <ul class="idea-pts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Cursos con clases en video y material</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Venta e inscripción en línea</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Avance de cada persona a la vista</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Lista de espera y cupos por curso</li>
-        </ul>
-      </div>
-      <div class="idea-mock" aria-hidden="true">
-        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
-        <div class="im-panel">
-          <div class="im-bar"><i></i><i></i><i></i><span>panel.tallerraiz.cl</span></div>
-          <div class="im-body">
-            <aside class="im-side"><b>Taller Raíz</b><span class="on">Cursos</span><span>Alumnos</span><span>Ventas</span><span>Clases</span><span>Certificados</span></aside>
-            <div class="im-main">
-              <div class="im-h"><b>Cursos</b><span>Noviembre</span></div>
-              <div class="im-stats"><div class="im-stat"><small>Inscritos</small><b>142</b></div><div class="im-stat"><small>Ventas del mes</small><b>$1.180.000</b></div><div class="im-stat"><small>Terminaron</small><b>38%</b></div></div>
-              <div class="im-rows">
-                <div class="im-row"><span class="t">10 clases</span><span><b>Cerámica desde cero</b><small>64 inscritos</small></span><span class="im-tag ok">Abierto</span></div>
-                <div class="im-row"><span class="t">6 clases</span><span><b>Esmaltes y color</b><small>41 inscritos</small></span><span class="im-tag ok">Abierto</span></div>
-                <div class="im-row"><span class="t">8 clases</span><span><b>Torno inicial</b><small>37 inscritos</small></span><span class="im-tag">Lista de espera</span></div>
-              </div>
-              <div class="im-alert"><span>12 personas en lista de espera</span><b>Abrir cupos</b></div>
+    <article class="idea mb" role="tabpanel" data-idea="formacion" data-msg="una academia para ofrecer mi formación" hidden>
+      <h3>Una academia para ofrecer tu formación</h3>
+      <div class="mb-flow">
+        <div class="mb-col">
+          <span class="kk">Tu idea</span>
+          <div class="mb-idea">«Quiero vender mis cursos, que vean las clases cuando quieran y saber quién va avanzando.»</div>
+        </div>
+        <div class="mb-tel" aria-hidden="true">
+          <span class="kk">Lo que ve tu cliente</span>
+          <div class="im-phone" style="--m:#8a6a2f;--ms:color-mix(in srgb, #8a6a2f 13%, #fff)"><div class="im-screen">
+            <div class="ip-top"><b>Taller Raíz</b><small>Mis cursos</small></div>
+            <div class="ip-card"><small>Cerámica desde cero</small><b>Clase 7 de 10</b><span class="ip-prog"><i style="width:70%"></i></span></div>
+            <span class="ip-lbl">Sigue con</span>
+            <div>
+              <div class="ip-ben"><span>7 · Esmaltado</span><small>18 min</small></div>
+              <div class="ip-ben"><span>8 · Primera quema</span><small>24 min</small></div>
+              <div class="ip-ben"><span>9 · Decoración</span><small>21 min</small></div>
             </div>
+            <div class="ip-bar"><span>Continuar clase</span><span>7 · Esmaltado</span></div>
+          </div></div>
+        </div>
+        <div class="mb-col fin">
+          <span class="kk">Lo que ves tú</span>
+          <div class="mb-panel" aria-hidden="true">
+            <div class="sys"><small>Inscritos</small><b>142 personas</b><span>64 en Cerámica desde cero</span></div>
+            <div class="sys"><small>Ventas del mes</small><b>$1.180.000</b><span>3 cursos abiertos</span></div>
+            <div class="sys"><small>Lista de espera</small><b>12 personas</b><span>Abrir cupos</span></div>
           </div>
         </div>
-        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
-          <div class="ip-top"><b>Taller Raíz</b><small>Mis cursos</small></div>
-          <div class="ip-card"><small>Cerámica desde cero</small><b>Clase 7 de 10</b><span class="ip-prog"><i style="width:70%"></i></span></div>
-          <span class="ip-lbl">Sigue con</span>
-          <div>
-            <div class="ip-ben"><span>7 · Esmaltado</span><small>18 min</small></div>
-            <div class="ip-ben"><span>8 · Primera quema</span><small>24 min</small></div>
-            <div class="ip-ben"><span>9 · Decoración</span><small>21 min</small></div>
-          </div>
-          <div class="ip-bar"><span>Continuar clase</span><span>7 · Esmaltado</span></div>
-        </div></div>
       </div>
     </article>
 
     <!-- Membresías -->
-    <article class="idea" role="tabpanel" data-idea="membresias" data-msg="una app con membresías y comunidad" style="--m:#5a4378" hidden>
-      <div class="idea-copy">
-        <h3>Una app con membresías y comunidad</h3>
-        <ul class="idea-pts">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>App con la marca de tu negocio</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Planes mensuales con cobro en línea</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Beneficios, cashback y comunidad</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5 9-11"/></svg>Renovaciones y cobros a la vista</li>
-        </ul>
-      </div>
-      <div class="idea-mock" aria-hidden="true">
-        <span class="im-lbl im-lbl-tu">Lo que ves tú</span>
-        <div class="im-panel">
-          <div class="im-bar"><i></i><i></i><i></i><span>panel.clubaurora.cl</span></div>
-          <div class="im-body">
-            <aside class="im-side"><b>Club Aurora</b><span class="on">Membresías</span><span>Cobros</span><span>Comunidad</span><span>Pedidos</span><span>Beneficios</span></aside>
-            <div class="im-main">
-              <div class="im-h"><b>Membresías</b><span>Noviembre</span></div>
-              <div class="im-stats"><div class="im-stat"><small>Activas</small><b>86</b></div><div class="im-stat"><small>Ingreso mensual</small><b>$1.289.000</b></div><div class="im-stat"><small>Renuevan esta semana</small><b>12</b></div></div>
-              <div class="im-rows">
-                <div class="im-row"><span class="t">Oro</span><span><b>Daniela F.</b><small>Renueva el 21</small></span><span class="im-tag ok">Al día</span></div>
-                <div class="im-row"><span class="t">Plata</span><span><b>Marcela O.</b><small>Renueva el 23</small></span><span class="im-tag ok">Al día</span></div>
-                <div class="im-row"><span class="t">Oro</span><span><b>Rocío B.</b><small>Venció el 12</small></span><span class="im-tag">Por cobrar</span></div>
-              </div>
-              <div class="im-alert"><span>3 membresías vencen esta semana</span><b>Avisar</b></div>
+    <article class="idea mb" role="tabpanel" data-idea="membresias" data-msg="una app con membresías y comunidad" hidden>
+      <h3>Una app con membresías y comunidad</h3>
+      <div class="mb-flow">
+        <div class="mb-col">
+          <span class="kk">Tu idea</span>
+          <div class="mb-idea">«Quiero una app con mi marca, planes mensuales y una comunidad para quienes me compran.»</div>
+        </div>
+        <div class="mb-tel" aria-hidden="true">
+          <span class="kk">Lo que ve tu cliente</span>
+          <div class="im-phone" style="--m:#5a4378;--ms:color-mix(in srgb, #5a4378 13%, #fff)"><div class="im-screen">
+            <div class="ip-top"><b>Club Aurora</b><small>Hola, Daniela</small></div>
+            <div class="ip-card"><small>Miembro desde marzo</small><b>Plan Oro</b><span>Cashback disponible · $7.400</span></div>
+            <span class="ip-lbl">Beneficios</span>
+            <div>
+              <div class="ip-ben"><span>10% en toda la tienda</span><small>Activo</small></div>
+              <div class="ip-ben"><span>Clase del mes</span><small>Disponible</small></div>
+              <div class="ip-ben"><span>Comunidad</span><small>3 nuevos</small></div>
             </div>
+            <div class="ip-bar"><span>Renovar plan</span><span>$14.990 al mes</span></div>
+          </div></div>
+        </div>
+        <div class="mb-col fin">
+          <span class="kk">Lo que ves tú</span>
+          <div class="mb-panel" aria-hidden="true">
+            <div class="sys"><small>Membresías activas</small><b>86</b><span>12 renuevan esta semana</span></div>
+            <div class="sys"><small>Ingreso mensual</small><b>$1.289.000</b><span>Cobro automático</span></div>
+            <div class="sys"><small>Por cobrar</small><b>3 vencen esta semana</b><span>Avisar</span></div>
           </div>
         </div>
-        <div class="im-phone"><span class="im-lbl">Lo que ve tu cliente</span><div class="im-screen">
-          <div class="ip-top"><b>Club Aurora</b><small>Hola, Daniela</small></div>
-          <div class="ip-card"><small>Miembro desde marzo</small><b>Plan Oro</b><span>Cashback disponible · $7.400</span></div>
-          <span class="ip-lbl">Beneficios</span>
-          <div>
-            <div class="ip-ben"><span>10% en toda la tienda</span><small>Activo</small></div>
-            <div class="ip-ben"><span>Clase del mes</span><small>Disponible</small></div>
-            <div class="ip-ben"><span>Comunidad</span><small>3 nuevos</small></div>
-          </div>
-          <div class="ip-bar"><span>Renovar plan</span><span>$14.990 al mes</span></div>
-        </div></div>
       </div>
+    </article>
+
+    <!-- Tu idea: la lámina que cierra el carrusel -->
+    <article class="idea mb mb-otra" role="tabpanel" data-idea="otra" data-msg="tengo una idea y quiero contártela" hidden>
+      <span class="kk">¿No está aquí?</span>
+      <h3>Cuéntame qué tienes en mente <span class="gold-text">y lo hacemos realidad.</span></h3>
     </article>
 
   </div>
